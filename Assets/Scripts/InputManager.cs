@@ -1,43 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-    private PlayerInput playerInput;
-    private PlayerInput.OnFootActions onFoot;
-    private PlayerLook look;
-    private PlayerMotor motor;
-    // Start is called before the first frame update
-    void Awake()
-    {
-        playerInput = new PlayerInput();
-        onFoot = playerInput.OnFoot;
-        motor = GetComponent<PlayerMotor>();
-        look = GetComponent<PlayerLook>();
-        onFoot.Jump.performed += ctx => motor.Jump();
-    }
-    
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        //tell the playermotor to move using value from our movement action
-        motor.ProcessMove(onFoot.Movement.ReadValue<Vector2>());
-    }
+    [SerializeField] private float verticalKeys;
+    [SerializeField] private float horizontalKeys;
 
-    private void LateUpdate()
-    {
-        look.ProcessLook(onFoot.Look.ReadValue<Vector2>());
-    }
+    public float VerticalKeys { get => verticalKeys; set => verticalKeys = value; }
+    public float HorizontalKeys { get => horizontalKeys; set => horizontalKeys = value; }
 
-    private void OnEnable()
+    void Update()
     {
-        onFoot.Enable();
-    }
-
-    private void OnDisable()
-    {
-        onFoot.Disable();
+        verticalKeys = Input.GetAxisRaw("Vertical");
+        horizontalKeys = Input.GetAxisRaw("Horizontal");
     }
 }
