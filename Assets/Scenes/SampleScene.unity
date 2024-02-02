@@ -211,7 +211,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b5d065e5ecb6040a47558d6b0a5e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 580073723}
+  player: {fileID: 580073723}
   offset: {x: 0, y: 0.5, z: 0}
 --- !u!1 &410087039
 GameObject:
@@ -408,9 +408,10 @@ GameObject:
   - component: {fileID: 580073724}
   - component: {fileID: 580073719}
   - component: {fileID: 580073725}
+  - component: {fileID: 580073726}
   m_Layer: 0
-  m_Name: Capsule
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -427,8 +428,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e14b08312a6f66408d77f2af7245ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  verticalKeys: 0
-  horizontalKeys: 0
 --- !u!136 &580073720
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -436,7 +435,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580073718}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3d13003537672634a81f4f5606a82a9b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -525,7 +524,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580073718}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 60
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -541,9 +540,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &580073725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,8 +555,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 655100e5caaef8545b638b40c14d0064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputManager: {fileID: 580073719}
-  rb: {fileID: 580073724}
+  playerRigidbody: {fileID: 580073724}
+  movementForce: 1000
+  maximumSpeed: 4
+--- !u!114 &580073726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580073718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a95be3e14b227c5448a1616d82f188e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseSensitivity: 400
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,7 +633,7 @@ GameObject:
   - component: {fileID: 1619661538}
   - component: {fileID: 1619661537}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -633,7 +646,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1619661536}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9f848fe36ee5d304ca30db974edd889f, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
