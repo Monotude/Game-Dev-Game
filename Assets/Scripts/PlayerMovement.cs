@@ -5,19 +5,26 @@ public class PlayerMovement : MonoBehaviour
     private InputManager inputManager;
     [SerializeField] private Rigidbody playerRigidbody;
     [SerializeField] private float movementForce;
-    [SerializeField] private float maximumSpeed;
+    [SerializeField] private float walkingSpeed;
+    private float maximumSpeed;
 
     public float MaximumSpeed { get => maximumSpeed; set => maximumSpeed = value; }
 
     private void Start()
     {
         inputManager = GetComponent<InputManager>();
+        maximumSpeed = walkingSpeed;
     }
 
     private void FixedUpdate()
     {
         playerRigidbody.AddRelativeForce(GetForceVector());
         LimitSpeed();
+    }
+
+    public void ResetMaximumSpeed()
+    {
+        maximumSpeed = walkingSpeed;
     }
 
     private Vector3 GetForceVector()

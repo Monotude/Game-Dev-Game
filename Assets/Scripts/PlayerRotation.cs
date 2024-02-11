@@ -24,12 +24,18 @@ public class PlayerRotation : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
-        Rotate();
+        CalculateRotation();
+        RotateCamera();
     }
 
-    private void Rotate()
+    private void FixedUpdate()
+    {
+        RotatePlayer();
+    }
+
+    private void CalculateRotation()
     {
         float horizontalMouseMovement = inputManager.HorizontalMouseMovement * Time.deltaTime * mouseSensitivity;
         float verticalMouseMovement = inputManager.VerticalMouseMovement * Time.deltaTime * mouseSensitivity;
@@ -38,8 +44,15 @@ public class PlayerRotation : MonoBehaviour
         rotationX -= verticalMouseMovement;
 
         rotationX = Mathf.Clamp(rotationX, -90f, 90f);
+    }
 
+    private void RotateCamera()
+    {
         mainCamera.transform.rotation = Quaternion.Euler(rotationX, rotationY, 0);
+    }
+
+    private void RotatePlayer()
+    {
         transform.rotation = Quaternion.Euler(0f, rotationY, 0f);
     }
 }
