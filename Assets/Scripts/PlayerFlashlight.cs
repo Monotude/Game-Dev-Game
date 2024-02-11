@@ -3,11 +3,21 @@ using UnityEngine;
 public class PlayerFlashlight : MonoBehaviour
 {
     private InputManager inputManager;
-    [SerializeField] private GameObject flashlightLight;
     private PlayerUVLight playerUVLight;
     private bool isFlashlightOn;
+    [SerializeField] private GameObject flashlightLight;
 
-    public bool IsFlashlightOn { get => isFlashlightOn; }
+    public bool IsFlashlightOn
+    {
+        get => isFlashlightOn;
+
+        set
+        {
+            flashlightLight.SetActive(value);
+            isFlashlightOn = value;
+        }
+    }
+
 
     private void Start()
     {
@@ -17,17 +27,9 @@ public class PlayerFlashlight : MonoBehaviour
 
     private void Update()
     {
-        isFlashlightOn = flashlightLight.activeInHierarchy;
-
         if (inputManager.FlashlightButtonDown && !playerUVLight.IsUVLightOn)
         {
-            ChangeFlashlightState(!flashlightLight.activeInHierarchy);
+            IsFlashlightOn = !flashlightLight.activeInHierarchy;
         }
-    }
-
-    public void ChangeFlashlightState(bool state)
-    {
-        flashlightLight.SetActive(state);
-        isFlashlightOn = state;
     }
 }

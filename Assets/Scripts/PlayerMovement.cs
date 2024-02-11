@@ -6,14 +6,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody playerRigidbody;
     [SerializeField] private float movementForce;
     [SerializeField] private float walkingSpeed;
-    private float maximumSpeed;
 
-    public float MaximumSpeed { get => maximumSpeed; set => maximumSpeed = value; }
+    public float MaximumSpeed { get; set; }
 
     private void Start()
     {
         inputManager = GetComponent<InputManager>();
-        maximumSpeed = walkingSpeed;
+        MaximumSpeed = walkingSpeed;
     }
 
     private void FixedUpdate()
@@ -24,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void ResetMaximumSpeed()
     {
-        maximumSpeed = walkingSpeed;
+        MaximumSpeed = walkingSpeed;
     }
 
     private Vector3 GetForceVector()
@@ -38,9 +37,9 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 flatMovementVector = new Vector3(playerRigidbody.velocity.x, 0f, playerRigidbody.velocity.z);
 
-        if (flatMovementVector.magnitude > maximumSpeed)
+        if (flatMovementVector.magnitude > MaximumSpeed)
         {
-            flatMovementVector = flatMovementVector.normalized * maximumSpeed;
+            flatMovementVector = flatMovementVector.normalized * MaximumSpeed;
             playerRigidbody.velocity = new Vector3(flatMovementVector.x, playerRigidbody.velocity.y, flatMovementVector.z);
         }
     }

@@ -2,23 +2,14 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    private float forwardMovement;
-    private float rightMovement;
-    private float verticalMouseMovement;
-    private float horizontalMouseMovement;
-    private bool sprintButtonDown;
-    private bool sprintButtonUp;
-    private bool flashlightButtonDown;
-    private bool uVLightButtonDown;
-
-    public float ForwardMovement { get => forwardMovement; set => forwardMovement = value; }
-    public float RightMovement { get => rightMovement; set => rightMovement = value; }
-    public float VerticalMouseMovement { get => verticalMouseMovement; set => verticalMouseMovement = value; }
-    public float HorizontalMouseMovement { get => horizontalMouseMovement; set => horizontalMouseMovement = value; }
-    public bool SprintButtonDown { get => sprintButtonDown; set => sprintButtonDown = value; }
-    public bool SprintButtonUp { get => sprintButtonUp; set => sprintButtonUp = value; }
-    public bool FlashlightButtonDown { get => flashlightButtonDown; set => flashlightButtonDown = value; }
-    public bool UVLightButtonDown { get => uVLightButtonDown; set => uVLightButtonDown = value; }
+    public float ForwardMovement { get; set; }
+    public float RightMovement { get; set; }
+    public float VerticalMouseMovement { get; set; }
+    public float HorizontalMouseMovement { get; set; }
+    public bool SprintButtonDown { get; set; }
+    public bool SprintButtonUp { get; set; }
+    public bool FlashlightButtonDown { get; set; }
+    public bool UVLightButtonDown { get; set; }
 
     private void Update()
     {
@@ -27,13 +18,13 @@ public class InputManager : MonoBehaviour
 
     private void GetPlayerInput()
     {
-        forwardMovement = Input.GetAxisRaw("Vertical");
-        rightMovement = Input.GetAxisRaw("Horizontal");
-        verticalMouseMovement = Input.GetAxisRaw("Mouse Y");
-        horizontalMouseMovement = Input.GetAxisRaw("Mouse X");
-        sprintButtonDown = Input.GetKeyDown(KeyCode.LeftShift);
-        sprintButtonUp = Input.GetKeyUp(KeyCode.LeftShift);
-        flashlightButtonDown = Input.GetKeyDown(KeyCode.Mouse0);
-        uVLightButtonDown = Input.GetKeyDown(KeyCode.Mouse1);
+        ForwardMovement = Input.GetAxisRaw("Vertical");
+        RightMovement = Input.GetAxisRaw("Horizontal");
+        VerticalMouseMovement = Input.GetAxisRaw("Mouse Y");
+        HorizontalMouseMovement = Input.GetAxisRaw("Mouse X");
+        SprintButtonDown = Input.GetKeyDown(KeyCode.LeftShift);
+        SprintButtonUp = Input.GetKeyUp(KeyCode.LeftShift);
+        FlashlightButtonDown = Input.GetKeyDown(KeyCode.Mouse0);
+        UVLightButtonDown = Input.GetKeyDown(KeyCode.Mouse1);
     }
 }

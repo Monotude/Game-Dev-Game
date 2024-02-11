@@ -4,13 +4,22 @@ public class PlayerUVLight : MonoBehaviour
 {
     private InputManager inputManager;
     private PlayerFlashlight playerFlashlight;
-    [SerializeField] private GameObject uVLight;
     private bool canUseUVLight;
     private bool isUVLightOn;
     private float currentUVLightSeconds;
+    [SerializeField] private GameObject uVLight;
     [SerializeField] private float uVLightSeconds;
 
-    public bool IsUVLightOn { get => isUVLightOn; set => isUVLightOn = value; }
+    public bool IsUVLightOn
+    {
+        get => isUVLightOn;
+
+        set
+        {
+            uVLight.SetActive(value);
+            isUVLightOn = value;
+        }
+    }
 
     private void Start()
     {
@@ -25,25 +34,17 @@ public class PlayerUVLight : MonoBehaviour
 
         if (canUseUVLight)
         {
-            playerFlashlight.ChangeFlashlightState(false);
-            ChangeUVLightState(true);
+            IsUVLightOn = true;
         }
 
-        if (isUVLightOn)
+        if (IsUVLightOn)
         {
             currentUVLightSeconds -= Time.deltaTime;
             if (currentUVLightSeconds <= 0)
             {
-                ChangeUVLightState(false);
-                playerFlashlight.ChangeFlashlightState(true);
+                IsUVLightOn = false;
                 currentUVLightSeconds = uVLightSeconds;
             }
         }
-    }
-
-    private void ChangeUVLightState(bool state)
-    {
-        uVLight.SetActive(state);
-        isUVLightOn = state;
     }
 }

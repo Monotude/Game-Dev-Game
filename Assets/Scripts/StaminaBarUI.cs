@@ -6,12 +6,17 @@ public class StaminaBar : MonoBehaviour
     private PlayerSprint playerSprint;
     [SerializeField] private Image staminaBar;
 
-    void Start()
+    private void Start()
     {
         playerSprint = GameObject.Find("Player").GetComponent<PlayerSprint>();
     }
 
-    void Update()
+    private void Update()
+    {
+        UpdateStaminaBar();
+    }
+
+    private void UpdateStaminaBar()
     {
         staminaBar.fillAmount = playerSprint.RemainingSprintSeconds / playerSprint.MaximumSprintSeconds;
     }
