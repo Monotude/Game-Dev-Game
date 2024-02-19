@@ -4,6 +4,7 @@ public class PlayerSprint : MonoBehaviour
 {
     private InputManager inputManager;
     private PlayerMovement playerMovement;
+    private PlayerCrouching playerCrouch;
     private bool canSprint;
     private bool isSprinting;
     [SerializeField] private float maximumSprintSeconds;
@@ -36,13 +37,14 @@ public class PlayerSprint : MonoBehaviour
     {
         inputManager = GetComponent<InputManager>();
         playerMovement = GetComponent<PlayerMovement>();
+        playerCrouch = GetComponent<PlayerCrouching>();
         RemainingSprintSeconds = maximumSprintSeconds;
     }
 
     private void Update()
     {
         canSprint = RemainingSprintSeconds > 0; //check for crouching when we add crouching;
-        if (canSprint && inputManager.SprintButtonDown)
+        if (canSprint && inputManager.SprintButtonDown && !playerCrouch.IsCrouching)
         {
             IsSprinting = true;
         }

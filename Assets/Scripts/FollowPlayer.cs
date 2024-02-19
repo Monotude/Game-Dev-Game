@@ -3,9 +3,15 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     [SerializeField] private Transform player;
-    [SerializeField] private Vector3 offset;
+    [SerializeField] private Vector3 standingOffset;
+    [SerializeField] private Vector3 crouchingOffset;
 
-    public Vector3 Offset { get => offset; set => offset = value; }
+    private PlayerCrouching crouchController;
+
+    private void Start()
+    {
+        crouchController = player.GetComponent<PlayerCrouching>();
+    }
 
     private void LateUpdate()
     {
@@ -14,6 +20,7 @@ public class FollowPlayer : MonoBehaviour
 
     private void Move()
     {
+        Vector3 offset = crouchController.IsCrouching ? crouchingOffset : standingOffset;
         transform.position = player.position + offset;
     }
 }
