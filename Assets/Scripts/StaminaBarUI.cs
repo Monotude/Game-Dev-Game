@@ -4,7 +4,12 @@ using UnityEngine.UI;
 public class StaminaBar : MonoBehaviour
 {
     private PlayerSprint playerSprint;
-    [SerializeField] private Image staminaBar;
+    [SerializeField] private Image staminaBarFill;
+
+    private void UpdateStaminaBar()
+    {
+        staminaBarFill.fillAmount = playerSprint.CurrentStamina / playerSprint.MaximumStamina;
+    }
 
     private void Start()
     {
@@ -14,10 +19,5 @@ public class StaminaBar : MonoBehaviour
     private void Update()
     {
         UpdateStaminaBar();
-    }
-
-    private void UpdateStaminaBar()
-    {
-        staminaBar.fillAmount = playerSprint.RemainingSprintSeconds / playerSprint.MaximumSprintSeconds;
     }
 }

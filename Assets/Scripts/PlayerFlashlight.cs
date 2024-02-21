@@ -3,9 +3,9 @@ using UnityEngine;
 public class PlayerFlashlight : MonoBehaviour
 {
     private InputManager inputManager;
+    private Light flashlightLight;
     private PlayerUVLight playerUVLight;
     private bool isFlashlightOn;
-    [SerializeField] private GameObject flashlightLight;
 
     public bool IsFlashlightOn
     {
@@ -13,23 +13,23 @@ public class PlayerFlashlight : MonoBehaviour
 
         set
         {
-            flashlightLight.SetActive(value);
+            flashlightLight.enabled = value;
             isFlashlightOn = value;
         }
     }
 
-
     private void Start()
     {
-        inputManager = GetComponent<InputManager>();
-        playerUVLight = GetComponent<PlayerUVLight>();
+        inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
+        flashlightLight = GameObject.Find("Flashlight Light").GetComponent<Light>();
+        playerUVLight = GameObject.Find("UV Light").GetComponent<PlayerUVLight>();
     }
 
     private void Update()
     {
         if (inputManager.FlashlightButtonDown && !playerUVLight.IsUVLightOn)
         {
-            IsFlashlightOn = !flashlightLight.activeInHierarchy;
+            IsFlashlightOn = !flashlightLight.enabled;
         }
     }
 }

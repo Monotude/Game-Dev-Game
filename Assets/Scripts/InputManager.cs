@@ -8,13 +8,10 @@ public class InputManager : MonoBehaviour
     public float HorizontalMouseMovement { get; set; }
     public bool SprintButtonDown { get; set; }
     public bool SprintButtonUp { get; set; }
+    public bool CrouchButtonDown { get; set; }
+    public bool CrouchButtonUp { get; set; }
     public bool FlashlightButtonDown { get; set; }
     public bool UVLightButtonDown { get; set; }
-
-    private void Update()
-    {
-        GetPlayerInput();
-    }
 
     private void GetPlayerInput()
     {
@@ -24,7 +21,14 @@ public class InputManager : MonoBehaviour
         HorizontalMouseMovement = Input.GetAxisRaw("Mouse X");
         SprintButtonDown = Input.GetKeyDown(KeyCode.LeftShift);
         SprintButtonUp = Input.GetKeyUp(KeyCode.LeftShift);
+        CrouchButtonDown = Input.GetKeyDown(KeyCode.LeftControl);
+        CrouchButtonUp = Input.GetKeyUp(KeyCode.LeftControl);
         FlashlightButtonDown = Input.GetKeyDown(KeyCode.Mouse0);
         UVLightButtonDown = Input.GetKeyDown(KeyCode.Mouse1);
+    }
+
+    private void Update()
+    {
+        GetPlayerInput();
     }
 }

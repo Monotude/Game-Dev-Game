@@ -4,12 +4,17 @@ public class PlayerSprint : MonoBehaviour
 {
     private InputManager inputManager;
     private PlayerMovement playerMovement;
+<<<<<<< Updated upstream
     private PlayerCrouching playerCrouch;
+=======
+    private PlayerCrouch playerCrouch;
+>>>>>>> Stashed changes
     private bool canSprint;
     private bool isSprinting;
-    [SerializeField] private float maximumSprintSeconds;
-    [SerializeField] private float regenerationRatePerSecond;
     [SerializeField] private float sprintSpeed;
+    [SerializeField] private float maximumStamina;
+    [SerializeField] private float staminaDecayPerSecond;
+    [SerializeField] private float staminaRegenerationPerSecond;
 
     public bool IsSprinting
     {
@@ -20,31 +25,51 @@ public class PlayerSprint : MonoBehaviour
             if (value)
             {
                 playerMovement.MaximumSpeed = sprintSpeed;
-                isSprinting = true;
             }
 
             else
             {
                 playerMovement.ResetMaximumSpeed();
-                isSprinting = false;
             }
+
+            isSprinting = value;
         }
     }
-    public float RemainingSprintSeconds { get; set; }
-    public float MaximumSprintSeconds { get => maximumSprintSeconds; set => maximumSprintSeconds = value; }
+    public float CurrentStamina { get; set; }
+    public float MaximumStamina { get => maximumStamina; set => maximumStamina = value; }
+
+    private void DecreaseStamina()
+    {
+        CurrentStamina -= Time.deltaTime * staminaDecayPerSecond;
+    }
+
+    private void IncreaseStamina()
+    {
+        CurrentStamina = Mathf.Clamp(CurrentStamina + (Time.deltaTime * staminaRegenerationPerSecond), 0, maximumStamina);
+    }
 
     private void Start()
     {
-        inputManager = GetComponent<InputManager>();
+        inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
         playerMovement = GetComponent<PlayerMovement>();
+<<<<<<< Updated upstream
         playerCrouch = GetComponent<PlayerCrouching>();
         RemainingSprintSeconds = maximumSprintSeconds;
+=======
+        playerCrouch = GetComponent<PlayerCrouch>();
+        CurrentStamina = maximumStamina;
+>>>>>>> Stashed changes
     }
 
     private void Update()
     {
+<<<<<<< Updated upstream
         canSprint = RemainingSprintSeconds > 0; //check for crouching when we add crouching;
         if (canSprint && inputManager.SprintButtonDown && !playerCrouch.IsCrouching)
+=======
+        canSprint = CurrentStamina > 0 && !playerCrouch.IsCrouching;
+        if (canSprint && inputManager.SprintButtonDown)
+>>>>>>> Stashed changes
         {
             IsSprinting = true;
         }
@@ -52,7 +77,7 @@ public class PlayerSprint : MonoBehaviour
         if (IsSprinting)
         {
             DecreaseStamina();
-            if (RemainingSprintSeconds <= 0 || inputManager.SprintButtonUp)
+            if (CurrentStamina <= 0 || inputManager.SprintButtonUp)
             {
                 IsSprinting = false;
             }
@@ -62,15 +87,5 @@ public class PlayerSprint : MonoBehaviour
         {
             IncreaseStamina();
         }
-    }
-
-    private void DecreaseStamina()
-    {
-        RemainingSprintSeconds -= Time.deltaTime;
-    }
-
-    private void IncreaseStamina()
-    {
-        RemainingSprintSeconds = Mathf.Clamp(RemainingSprintSeconds + (Time.deltaTime * regenerationRatePerSecond), 0, maximumSprintSeconds);
     }
 }

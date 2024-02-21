@@ -10,29 +10,9 @@ public class PlayerRotation : MonoBehaviour
 
     private void Start()
     {
-        inputManager = GetComponent<InputManager>();
+        inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
         mainCamera = Camera.main;
-    }
-
-    private void OnEnable()
-    {
         Cursor.lockState = CursorLockMode.Locked;
-    }
-
-    private void OnDisable()
-    {
-        Cursor.lockState = CursorLockMode.None;
-    }
-
-    private void LateUpdate()
-    {
-        CalculateRotation();
-        RotateCamera();
-    }
-
-    private void FixedUpdate()
-    {
-        RotatePlayer();
     }
 
     private void CalculateRotation()
@@ -54,5 +34,16 @@ public class PlayerRotation : MonoBehaviour
     private void RotatePlayer()
     {
         transform.rotation = Quaternion.Euler(0f, rotationY, 0f);
+    }
+
+    private void LateUpdate()
+    {
+        CalculateRotation();
+        RotateCamera();
+    }
+
+    private void FixedUpdate()
+    {
+        RotatePlayer();
     }
 }

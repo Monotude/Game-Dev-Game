@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerCrouching playerCrouch;
     public float MaximumSpeed { get; set; }
 
+<<<<<<< Updated upstream
     private void Start()
     {
         inputManager = GetComponent<InputManager>();
@@ -25,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
         LimitSpeed();
     }
 
+=======
+>>>>>>> Stashed changes
     public void ResetMaximumSpeed()
     {
         if (playerCrouch.IsCrouching) 
@@ -49,5 +52,17 @@ public class PlayerMovement : MonoBehaviour
             flatMovementVector = flatMovementVector.normalized * MaximumSpeed;
             playerRigidbody.velocity = new Vector3(flatMovementVector.x, playerRigidbody.velocity.y, flatMovementVector.z);
         }
+    }
+
+    private void Start()
+    {
+        inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
+        MaximumSpeed = walkingSpeed;
+    }
+
+    private void FixedUpdate()
+    {
+        playerRigidbody.AddRelativeForce(GetForceVector());
+        LimitSpeed();
     }
 }
