@@ -5,7 +5,6 @@ public class PlayerCrouch : MonoBehaviour
     private InputManager inputManager;
     private PlayerMovement playerMovement;
     private PlayerSprint playerSprint;
-    private bool canCrouch;
     private bool isCrouching;
     [SerializeField] private float crouchSpeed;
 
@@ -49,8 +48,7 @@ public class PlayerCrouch : MonoBehaviour
 
     private void Update()
     {
-        canCrouch = !playerSprint.IsSprinting;
-
+        bool canCrouch = !playerSprint.IsSprinting;
         if (canCrouch)
         {
             if (inputManager.CrouchButtonDown)

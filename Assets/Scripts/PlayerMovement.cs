@@ -6,34 +6,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody playerRigidbody;
     [SerializeField] private float movementForce;
     [SerializeField] private float walkingSpeed;
-    [SerializeField] private float crouchingSpeed;
 
-
-    private PlayerCrouching playerCrouch;
     public float MaximumSpeed { get; set; }
 
-<<<<<<< Updated upstream
-    private void Start()
-    {
-        inputManager = GetComponent<InputManager>();
-        playerCrouch = GetComponent<PlayerCrouching>();
-        MaximumSpeed = walkingSpeed;
-    }
-
-    private void FixedUpdate()
-    {
-        playerRigidbody.AddRelativeForce(GetForceVector());
-        LimitSpeed();
-    }
-
-=======
->>>>>>> Stashed changes
     public void ResetMaximumSpeed()
     {
-        if (playerCrouch.IsCrouching) 
-            MaximumSpeed = crouchingSpeed;
-        else
-            MaximumSpeed = walkingSpeed;
+        MaximumSpeed = walkingSpeed;
     }
 
     private Vector3 GetForceVector()

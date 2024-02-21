@@ -27,7 +27,7 @@ public class PlayerFlashlight : MonoBehaviour
 
     private void Update()
     {
-        if (inputManager.FlashlightButtonDown && !playerUVLight.IsUVLightOn)
+        if (!playerUVLight.IsUVLightOn && inputManager.FlashlightButtonDown)
         {
             IsFlashlightOn = !flashlightLight.enabled;
         }
