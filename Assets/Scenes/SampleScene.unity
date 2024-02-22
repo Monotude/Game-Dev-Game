@@ -1228,6 +1228,7 @@ GameObject:
   - component: {fileID: 1098011560}
   - component: {fileID: 1098011559}
   - component: {fileID: 1098011558}
+  - component: {fileID: 1098011563}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1345,6 +1346,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1098011563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098011557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f690f7d9bcdb33d44aae759323b31815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ai: {fileID: 0}
+  destinations: []
+  aiAnim: {fileID: 0}
+  walkSpeed: 0
+  chaseSpeed: 0
+  minIdleTime: 0
+  maxIdleTime: 0
+  sightDistance: 0
+  catchDistance: 0
+  chaseTime: 0
+  minChaseTime: 0
+  maxChaseTime: 0
+  jumpScareTime: 0
+  isWalking: 0
+  isChasing: 0
+  player: {fileID: 0}
+  destinationAmount: 0
+  idleTime: 0
+  rayCastOffset: {x: 0, y: 0, z: 0}
+  deathScene: 
 --- !u!1 &1119864729
 GameObject:
   m_ObjectHideFlags: 0
