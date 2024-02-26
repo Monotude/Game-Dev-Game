@@ -13,6 +13,8 @@ public class InputManager : MonoBehaviour
     public bool FlashlightButtonDown { get; set; }
     public bool UVLightButtonDown { get; set; }
 
+    public bool InteractButtonDown{ get; set; }
+
     private void GetPlayerInput()
     {
         ForwardMovement = Input.GetAxisRaw("Vertical");
@@ -25,6 +27,7 @@ public class InputManager : MonoBehaviour
         CrouchButtonUp = Input.GetKeyUp(KeyCode.LeftControl);
         FlashlightButtonDown = Input.GetKeyDown(KeyCode.Mouse0);
         UVLightButtonDown = Input.GetKeyDown(KeyCode.Mouse1);
+        InteractButtonDown = Input.GetKeyDown(KeyCode.E);
     }
 
     private void Update()

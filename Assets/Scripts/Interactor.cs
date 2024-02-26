@@ -10,17 +10,19 @@ public class Interactor : MonoBehaviour
     [SerializeField] private Transform InteractorSource;
     [SerializeField] private float InteractRange;
 
+    private InputManager inputManager;
+
     //[SerializeField] private ObjectiveKeys objectiveKeys;
 
     private void Start()
     {
-
+        inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (inputManager.InteractButtonDown)
         {
             Ray ray = new Ray(InteractorSource.position, InteractorSource.forward);
             if (Physics.Raycast(ray, out RaycastHit hitInfo, InteractRange))

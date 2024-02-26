@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private InputManager inputManager;
+    [SerializeField] private InputManager inputManager;
     [SerializeField] private Rigidbody playerRigidbody;
     [SerializeField] private float movementForce;
     [SerializeField] private float walkingSpeed;
