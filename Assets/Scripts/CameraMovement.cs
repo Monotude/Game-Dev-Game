@@ -3,14 +3,15 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     private PlayerCrouch playerCrouch;
-    [SerializeField] private GameObject player;
+    [SerializeField] private Transform player;
+    [SerializeField] private float updateSpeed;
     [SerializeField] private Vector3 standingOffset;
     [SerializeField] private Vector3 crouchingOffset;
 
-    private void Move()
+    private void MoveCamera()
     {
         Vector3 offset = playerCrouch.IsCrouching ? crouchingOffset : standingOffset;
-        transform.position = player.transform.position + offset;
+        transform.position = Vector3.MoveTowards(transform.position, player.position + offset, updateSpeed * Time.deltaTime);
     }
 
     private void Start()
@@ -20,6 +21,6 @@ public class CameraMovement : MonoBehaviour
 
     private void LateUpdate()
     {
-        Move();
+        MoveCamera();
     }
 }
