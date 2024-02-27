@@ -444,7 +444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b5d065e5ecb6040a47558d6b0a5e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 580073718}
+  player: {fileID: 580073723}
+  updateSpeed: 5
   standingOffset: {x: 0, y: 0.5, z: 0}
   crouchingOffset: {x: 0, y: -0.25, z: 0}
 --- !u!1 &342721038
@@ -976,10 +977,10 @@ MonoBehaviour:
   - {fileID: 411367222}
   - {fileID: 1564929749}
   - {fileID: 1663311760}
-  patrolSpeed: 1
+  patrolSpeed: 2.25
   idleTime: 3
   chaseSpeed: 5
-  timeUntilChase: 4
+  timeUntilChase: 20
   uvLightRange: 12
 --- !u!136 &574179676
 CapsuleCollider:
@@ -1123,6 +1124,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6eee7f295d5ff8b4f934dec7f44eaf97, type: 3}
   - {fileID: 8300000, guid: 9b1f6289334342841afe6a5a8349e7ec, type: 3}
   - {fileID: 8300000, guid: afeb90013e6764449ae1616f47705ff7, type: 3}
+  clipsRun: []
 --- !u!1 &580073718
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,7 +1276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 655100e5caaef8545b638b40c14d0064, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRigidbody: {fileID: 580073724}
+  player: {fileID: 580073718}
   movementForce: 1500
   walkingSpeed: 2.8
 --- !u!114 &580073726
@@ -1289,7 +1291,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a95be3e14b227c5448a1616d82f188e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 580073718}
   mouseSensitivity: 300
+  lookAngle: 75
 --- !u!114 &580073727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1478,7 +1482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75bb635c8b7193443898e30d99fe8dd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uVLightSeconds: 1.75
+  uVLightDuration: 1.75
   maxCharges: 3
   chargeRegenerationPerSecond: 0.1
 --- !u!1001 &749655299
