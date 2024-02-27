@@ -3,14 +3,18 @@ using UnityEngine;
 public class PlayerRotation : MonoBehaviour
 {
     private InputManager inputManager;
+    private Rigidbody playerRigidbody;
     private Camera mainCamera;
     private float rotationX;
     private float rotationY;
+    [SerializeField] private GameObject player;
     [SerializeField] private float mouseSensitivity;
+    [SerializeField] private float lookAngle;
 
     private void Start()
     {
         inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
+        playerRigidbody = player.GetComponent<Rigidbody>();
         mainCamera = Camera.main;
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -23,7 +27,8 @@ public class PlayerRotation : MonoBehaviour
         rotationY += horizontalMouseMovement;
         rotationX -= verticalMouseMovement;
 
-        rotationX = Mathf.Clamp(rotationX, -90f, 90f);
+        rotationY %= 360f;
+        rotationX = Mathf.Clamp(rotationX, -lookAngle, lookAngle);
     }
 
     private void RotateCamera()
@@ -33,7 +38,7 @@ public class PlayerRotation : MonoBehaviour
 
     private void RotatePlayer()
     {
-        transform.rotation = Quaternion.Euler(0f, rotationY, 0f);
+        playerRigidbody.MoveRotation(Quaternion.Euler(0, rotationY, 0));
     }
 
     private void LateUpdate()

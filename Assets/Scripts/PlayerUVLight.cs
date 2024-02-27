@@ -3,12 +3,11 @@ using UnityEngine;
 public class PlayerUVLight : MonoBehaviour
 {
     private InputManager inputManager;
-    private Light uVLight;
     private PlayerFlashlight playerFlashlight;
-    private bool canUseUVLight;
+    private Light uVLight;
     private bool isUVLightOn;
-    private float currentUVLightSeconds;
-    [SerializeField] private float uVLightSeconds;
+    private float remainingUVLightDuration;
+    [SerializeField] private float uVLightDuration;
     [SerializeField] private int maxCharges;
     [SerializeField] private float chargeRegenerationPerSecond;
 
@@ -22,8 +21,8 @@ public class PlayerUVLight : MonoBehaviour
             isUVLightOn = value;
         }
     }
-    public int MaxCharges { get => this.maxCharges; set => this.maxCharges = value; }
     public float CurrentCharges { get; set; }
+    public int MaxCharges { get => this.maxCharges; set => this.maxCharges = value; }
 
     private void RechargeUVLightCharges()
     {
@@ -33,15 +32,15 @@ public class PlayerUVLight : MonoBehaviour
     private void Start()
     {
         inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
-        uVLight = GameObject.Find("UV Light").GetComponent<Light>();
         playerFlashlight = GameObject.Find("Flashlight Light").GetComponent<PlayerFlashlight>();
-        currentUVLightSeconds = uVLightSeconds;
+        uVLight = GameObject.Find("UV Light").GetComponent<Light>();
+        remainingUVLightDuration = uVLightDuration;
         CurrentCharges = MaxCharges;
     }
 
     private void Update()
     {
-        canUseUVLight = playerFlashlight.IsFlashlightOn && CurrentCharges >= 1;
+        bool canUseUVLight = playerFlashlight.IsFlashlightOn && CurrentCharges >= 1;
 
         if (canUseUVLight && inputManager.UVLightButtonDown)
         {
@@ -51,13 +50,13 @@ public class PlayerUVLight : MonoBehaviour
 
         if (IsUVLightOn)
         {
-            currentUVLightSeconds -= Time.deltaTime;
-            if (currentUVLightSeconds <= 0)
+            remainingUVLightDuration -= Time.deltaTime;
+            if (remainingUVLightDuration <= 0)
             {
                 IsUVLightOn = false;
                 playerFlashlight.IsFlashlightOn = true;
                 CurrentCharges -= 1f;
-                currentUVLightSeconds = uVLightSeconds;
+                remainingUVLightDuration = uVLightDuration;
             }
         }
 
