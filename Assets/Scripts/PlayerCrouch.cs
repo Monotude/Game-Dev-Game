@@ -16,27 +16,17 @@ public class PlayerCrouch : MonoBehaviour
         {
             if (value)
             {
-                Crouch();
+                playerMovement.MaximumSpeed = crouchSpeed;
             }
 
             else
             {
-                StandUp();
+                playerMovement.ResetMaximumSpeed();
             }
 
             isCrouching = value;
 
         }
-    }
-
-    private void Crouch()
-    {
-        playerMovement.MaximumSpeed = crouchSpeed;
-    }
-
-    private void StandUp()
-    {
-        playerMovement.ResetMaximumSpeed();
     }
 
     private void Start()

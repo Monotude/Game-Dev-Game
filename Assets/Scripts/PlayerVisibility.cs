@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class PlayerVisibility : MonoBehaviour
 {
-    private Light playerVisibilityLight;
     private PlayerFlashlight playerFlashlight;
     private PlayerUVLight playerUVLight;
+    private Light playerVisibilityLight;
 
     private void Start()
     {
-        playerVisibilityLight = GetComponent<Light>();
         playerFlashlight = GameObject.Find("Flashlight Light").GetComponent<PlayerFlashlight>();
         playerUVLight = GameObject.Find("UV Light").GetComponent<PlayerUVLight>();
+        playerVisibilityLight = GetComponent<Light>();
     }
 
     private void Update()

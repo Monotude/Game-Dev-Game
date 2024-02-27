@@ -3,8 +3,8 @@ using UnityEngine;
 public class PlayerFlashlight : MonoBehaviour
 {
     private InputManager inputManager;
-    private Light flashlightLight;
     private PlayerUVLight playerUVLight;
+    private Light flashlightLight;
     private bool isFlashlightOn;
 
     public bool IsFlashlightOn
@@ -21,8 +21,8 @@ public class PlayerFlashlight : MonoBehaviour
     private void Start()
     {
         inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
-        flashlightLight = GameObject.Find("Flashlight Light").GetComponent<Light>();
         playerUVLight = GameObject.Find("UV Light").GetComponent<PlayerUVLight>();
+        flashlightLight = GameObject.Find("Flashlight Light").GetComponent<Light>();
     }
 
     private void Update()

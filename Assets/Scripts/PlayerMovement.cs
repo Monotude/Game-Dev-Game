@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private InputManager inputManager;
-    [SerializeField] private Rigidbody playerRigidbody;
+    private InputManager inputManager;
+    private Rigidbody playerRigidbody;
+    [SerializeField] private GameObject player;
     [SerializeField] private float movementForce;
     [SerializeField] private float walkingSpeed;
 
@@ -35,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
+        playerRigidbody = player.GetComponent<Rigidbody>();
         MaximumSpeed = walkingSpeed;
     }
 
