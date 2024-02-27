@@ -6,12 +6,12 @@ public class PlayMonsterFootsteps : MonoBehaviour
     [SerializeField] private AudioClip[] patrolFootsteps;
     [SerializeField] private AudioClip[] chaseFootsteps;
 
-    private void PlayPatrolFootstep()
+    public void PlayPatrolFootstep()
     {
         audioSource.PlayOneShot(GetPatrolFootstep());
     }
 
-    private void PlayChaseFootstep()
+    public void PlayChaseFootstep()
     {
         audioSource.PlayOneShot(GetChaseFootstep());
     }

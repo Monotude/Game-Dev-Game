@@ -2789,10 +2789,10 @@ MonoBehaviour:
   - {fileID: 411367222}
   - {fileID: 1564929749}
   - {fileID: 1663311760}
-  patrolSpeed: 2
+  patrolSpeed: 1.5
   idleTime: 3
-  chaseSpeed: 4.75
-  timeUntilChase: 30
+  chaseSpeed: 4.6
+  timeUntilChase: 5
   uvLightRange: 17.5
 --- !u!4 &1906727751
 Transform:
@@ -2823,7 +2823,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.35
   m_Speed: 2
-  m_Acceleration: 16
+  m_Acceleration: 12
   avoidancePriority: 50
   m_AngularSpeed: 240
   m_StoppingDistance: 0
@@ -2874,7 +2874,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 39567d1e15e1d67418a028b1da71121e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 

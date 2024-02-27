@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+
 public class EnemyAI : MonoBehaviour
 {
     private NavMeshAgent navMeshAgent;
@@ -56,11 +57,10 @@ public class EnemyAI : MonoBehaviour
         if (!IsChasing)
         {
             currentTimeUntilChase -= Time.deltaTime;
-        }
-
-        if (currentTimeUntilChase <= 0)
-        {
-            IsChasing = true;
+            if (currentTimeUntilChase <= 0)
+            {
+                IsChasing = true;
+            }
         }
 
         if (IsChasing)

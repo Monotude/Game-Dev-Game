@@ -51,7 +51,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 69244d5d61d523c49b7b1515ba8c7610, type: 2}
+  m_Motion: {fileID: 7400000, guid: b4eb5a248385be2489ab7a7395dbb561, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -80,7 +80,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: fbd483e39654fc940ae3e1f36753b3ef, type: 2}
+  m_Motion: {fileID: 7400000, guid: 725624e4bc6c7a24ab5ccb897b8753f0, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -212,7 +212,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Monster Walk
-  m_Speed: 2.5
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8058865932784336534}
@@ -227,7 +227,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 1478098751ab11b4ca6f6b5a2e450803, type: 2}
+  m_Motion: {fileID: 7400000, guid: b4d35884de5d94c4abfa0494178e38ed, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

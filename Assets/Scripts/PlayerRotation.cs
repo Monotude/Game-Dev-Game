@@ -10,13 +10,6 @@ public class PlayerRotation : MonoBehaviour
     [SerializeField] private float mouseSensitivity;
     [SerializeField] private float lookAngle;
 
-    private void Start()
-    {
-        playerRigidbody = player.GetComponent<Rigidbody>();
-        mainCamera = Camera.main;
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
     private void CalculateRotation()
     {
         float horizontalMouseMovement = InputManager.Instance.HorizontalMouseMovement * Time.deltaTime * mouseSensitivity;
@@ -39,9 +32,20 @@ public class PlayerRotation : MonoBehaviour
         playerRigidbody.MoveRotation(Quaternion.Euler(0, rotationY, 0));
     }
 
-    private void LateUpdate()
+    private void Start()
+    {
+        playerRigidbody = player.GetComponent<Rigidbody>();
+        mainCamera = Camera.main;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void Update()
     {
         CalculateRotation();
+    }
+
+    private void LateUpdate()
+    {
         RotateCamera();
     }
 
