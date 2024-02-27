@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public class ElectricalBoxInteract : MonoBehaviour, IInteractable
 {
@@ -30,3 +30,4 @@ public class ElectricalBoxInteract : MonoBehaviour, IInteractable
     }
 
 }
+*/

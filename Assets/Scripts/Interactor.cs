@@ -1,4 +1,4 @@
-using UnityEngine;
+ /*using UnityEngine;
 
 internal interface IInteractable
 {
@@ -32,4 +32,4 @@ public class Interactor : MonoBehaviour
             }
         }
     }
-}
+} */

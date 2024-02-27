@@ -18,6 +18,9 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private float timeUntilChase;
     [SerializeField] private float uvLightRange;
 
+    //added
+    private Animator animator;
+
     public bool IsChasing
     {
         get => this.isChasing;
@@ -40,6 +43,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         playerUVLight = GameObject.Find("UV Light").GetComponent<PlayerUVLight>();
         patrolDestination = GetPatrolDestination();
@@ -96,8 +100,14 @@ public class EnemyAI : MonoBehaviour
 
     private void Patrol()
     {
+       
         if (AtDestination())
         {
+            //animate idle
+            animator.SetBool("isIdle", true);
+            animator.SetBool("isChasing", false);
+     
+
             currentIdleTime -= Time.deltaTime;
             if (currentIdleTime <= 0)
             {
@@ -106,10 +116,22 @@ public class EnemyAI : MonoBehaviour
                 currentIdleTime = idleTime;
             }
         }
+
+        else
+        {
+            //animate patrol
+            animator.SetBool("isIdle", false);
+            animator.SetBool("isChasing", false);
+        }
     }
 
     private void Chase()
     {
+        //animate chase
+        animator.SetBool("isChasing", true);
+        animator.SetBool("isIdle", false);
+  
+
         navMeshAgent.destination = player.position;
 
         if (isStunned())

@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public class ObjectiveKeyInteract : MonoBehaviour, IInteractable
 {
@@ -14,3 +14,4 @@ public class ObjectiveKeyInteract : MonoBehaviour, IInteractable
     }
 
 }
+*/
