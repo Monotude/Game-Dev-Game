@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerCrouch : MonoBehaviour
 {
-    private InputManager inputManager;
     private PlayerMovement playerMovement;
     private PlayerSprint playerSprint;
     private bool isCrouching;
@@ -31,7 +30,6 @@ public class PlayerCrouch : MonoBehaviour
 
     private void Start()
     {
-        inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
         playerMovement = GetComponent<PlayerMovement>();
         playerSprint = GetComponent<PlayerSprint>();
     }
@@ -41,12 +39,12 @@ public class PlayerCrouch : MonoBehaviour
         bool canCrouch = !playerSprint.IsSprinting;
         if (canCrouch)
         {
-            if (inputManager.CrouchButtonDown)
+            if (InputManager.Instance.CrouchButtonDown)
             {
                 IsCrouching = true;
             }
 
-            else if (inputManager.CrouchButtonUp)
+            else if (InputManager.Instance.CrouchButtonUp)
             {
                 IsCrouching = false;
             }

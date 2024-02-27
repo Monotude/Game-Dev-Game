@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StaminaBar : MonoBehaviour
+public class StaminaBarUI : MonoBehaviour
 {
     private PlayerSprint playerSprint;
     [SerializeField] private Image staminaBarFill;

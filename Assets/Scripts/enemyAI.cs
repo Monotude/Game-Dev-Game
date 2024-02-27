@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
 public class EnemyAI : MonoBehaviour
 {
     private NavMeshAgent navMeshAgent;
@@ -77,7 +76,7 @@ public class EnemyAI : MonoBehaviour
 
     private Vector3 GetPatrolDestination()
     {
-        return destinations[Random.Range(0, destinations.Capacity)].position;
+        return destinations[Random.Range(0, destinations.Count)].position;
     }
 
     private bool isStunned()
@@ -100,13 +99,13 @@ public class EnemyAI : MonoBehaviour
 
     private void Patrol()
     {
-       
+
         if (AtDestination())
         {
             //animate idle
             animator.SetBool("isIdle", true);
             animator.SetBool("isChasing", false);
-     
+
 
             currentIdleTime -= Time.deltaTime;
             if (currentIdleTime <= 0)
@@ -130,7 +129,6 @@ public class EnemyAI : MonoBehaviour
         //animate chase
         animator.SetBool("isChasing", true);
         animator.SetBool("isIdle", false);
-  
 
         navMeshAgent.destination = player.position;
 

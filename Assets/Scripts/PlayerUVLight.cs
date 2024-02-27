@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerUVLight : MonoBehaviour
 {
-    private InputManager inputManager;
     private PlayerFlashlight playerFlashlight;
     private Light uVLight;
     private bool isUVLightOn;
@@ -31,7 +30,6 @@ public class PlayerUVLight : MonoBehaviour
 
     private void Start()
     {
-        inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
         playerFlashlight = GameObject.Find("Flashlight Light").GetComponent<PlayerFlashlight>();
         uVLight = GameObject.Find("UV Light").GetComponent<Light>();
         remainingUVLightDuration = uVLightDuration;
@@ -42,7 +40,7 @@ public class PlayerUVLight : MonoBehaviour
     {
         bool canUseUVLight = playerFlashlight.IsFlashlightOn && CurrentCharges >= 1;
 
-        if (canUseUVLight && inputManager.UVLightButtonDown)
+        if (canUseUVLight && InputManager.Instance.UVLightButtonDown)
         {
             playerFlashlight.IsFlashlightOn = false;
             IsUVLightOn = true;

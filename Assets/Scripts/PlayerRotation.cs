@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerRotation : MonoBehaviour
 {
-    private InputManager inputManager;
     private Rigidbody playerRigidbody;
     private Camera mainCamera;
     private float rotationX;
@@ -13,7 +12,6 @@ public class PlayerRotation : MonoBehaviour
 
     private void Start()
     {
-        inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
         playerRigidbody = player.GetComponent<Rigidbody>();
         mainCamera = Camera.main;
         Cursor.lockState = CursorLockMode.Locked;
@@ -21,8 +19,8 @@ public class PlayerRotation : MonoBehaviour
 
     private void CalculateRotation()
     {
-        float horizontalMouseMovement = inputManager.HorizontalMouseMovement * Time.deltaTime * mouseSensitivity;
-        float verticalMouseMovement = inputManager.VerticalMouseMovement * Time.deltaTime * mouseSensitivity;
+        float horizontalMouseMovement = InputManager.Instance.HorizontalMouseMovement * Time.deltaTime * mouseSensitivity;
+        float verticalMouseMovement = InputManager.Instance.VerticalMouseMovement * Time.deltaTime * mouseSensitivity;
 
         rotationY += horizontalMouseMovement;
         rotationX -= verticalMouseMovement;

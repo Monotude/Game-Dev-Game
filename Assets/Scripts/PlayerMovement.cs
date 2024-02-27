@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private InputManager inputManager;
     private Rigidbody playerRigidbody;
     [SerializeField] private GameObject player;
     [SerializeField] private float movementForce;
@@ -17,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 GetForceVector()
     {
-        Vector3 forceVector = new Vector3(inputManager.RightMovement, 0f, inputManager.ForwardMovement);
+        Vector3 forceVector = new Vector3(InputManager.Instance.RightMovement, 0f, InputManager.Instance.ForwardMovement);
         forceVector = forceVector.normalized * movementForce;
         return forceVector;
     }
@@ -35,7 +34,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
         playerRigidbody = player.GetComponent<Rigidbody>();
         MaximumSpeed = walkingSpeed;
     }

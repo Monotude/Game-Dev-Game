@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    public static InputManager Instance { get; private set; }
     public float ForwardMovement { get; set; }
     public float RightMovement { get; set; }
     public float VerticalMouseMovement { get; set; }
@@ -25,6 +26,20 @@ public class InputManager : MonoBehaviour
         CrouchButtonUp = Input.GetKeyUp(KeyCode.LeftControl);
         FlashlightButtonDown = Input.GetKeyDown(KeyCode.Mouse0);
         UVLightButtonDown = Input.GetKeyDown(KeyCode.Mouse1);
+    }
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Update()
