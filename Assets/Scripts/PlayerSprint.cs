@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerSprint : MonoBehaviour
 {
-    private InputManager inputManager;
     private PlayerMovement playerMovement;
     private PlayerCrouch playerCrouch;
     private bool isSprinting;
@@ -45,7 +44,6 @@ public class PlayerSprint : MonoBehaviour
 
     private void Start()
     {
-        inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
         playerMovement = GetComponent<PlayerMovement>();
         playerCrouch = GetComponent<PlayerCrouch>();
         CurrentStamina = MaximumStamina;
@@ -54,7 +52,7 @@ public class PlayerSprint : MonoBehaviour
     private void Update()
     {
         bool canSprint = CurrentStamina > 0 && !playerCrouch.IsCrouching;
-        if (canSprint && inputManager.SprintButtonDown)
+        if (canSprint && InputManager.Instance.SprintButtonDown)
         {
             IsSprinting = true;
         }
@@ -62,7 +60,7 @@ public class PlayerSprint : MonoBehaviour
         if (IsSprinting)
         {
             DecreaseStamina();
-            if (CurrentStamina <= 0 || inputManager.SprintButtonUp)
+            if (CurrentStamina <= 0 || InputManager.Instance.SprintButtonUp)
             {
                 IsSprinting = false;
             }

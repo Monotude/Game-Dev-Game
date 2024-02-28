@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerRotation : MonoBehaviour
 {
-    private InputManager inputManager;
     private Rigidbody playerRigidbody;
     private Camera mainCamera;
     private float rotationX;
@@ -11,18 +10,10 @@ public class PlayerRotation : MonoBehaviour
     [SerializeField] private float mouseSensitivity;
     [SerializeField] private float lookAngle;
 
-    private void Start()
-    {
-        inputManager = GameObject.Find("Input Manager").GetComponent<InputManager>();
-        playerRigidbody = player.GetComponent<Rigidbody>();
-        mainCamera = Camera.main;
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
     private void CalculateRotation()
     {
-        float horizontalMouseMovement = inputManager.HorizontalMouseMovement * Time.deltaTime * mouseSensitivity;
-        float verticalMouseMovement = inputManager.VerticalMouseMovement * Time.deltaTime * mouseSensitivity;
+        float horizontalMouseMovement = InputManager.Instance.HorizontalMouseMovement * Time.deltaTime * mouseSensitivity;
+        float verticalMouseMovement = InputManager.Instance.VerticalMouseMovement * Time.deltaTime * mouseSensitivity;
 
         rotationY += horizontalMouseMovement;
         rotationX -= verticalMouseMovement;
@@ -41,9 +32,20 @@ public class PlayerRotation : MonoBehaviour
         playerRigidbody.MoveRotation(Quaternion.Euler(0, rotationY, 0));
     }
 
-    private void LateUpdate()
+    private void Start()
+    {
+        playerRigidbody = player.GetComponent<Rigidbody>();
+        mainCamera = Camera.main;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void Update()
     {
         CalculateRotation();
+    }
+
+    private void LateUpdate()
+    {
         RotateCamera();
     }
 

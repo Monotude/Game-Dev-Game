@@ -1,24 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FuseBoxInteract : MonoBehaviour, IInteractable
 {
-    [SerializeField] private ObjectiveKeys objectiveKey;
-    [SerializeField] private PowerOn powerTracker;
     [SerializeField] private GameObject fuse;
-    [SerializeField] private int boxNumber;
-    void Start()
+    [SerializeField] private int fuseBoxNumber;
+
+    private bool IsFuseBoxPowered()
     {
-        fuse.SetActive(false);
+        return ObjectiveManager.Instance.IsFuseBoxPowered[fuseBoxNumber];
     }
 
-    public void Interact() {
-        if(objectiveKey.GetObjectiveKey()) {
+    public void Interact()
+    {
+        if (!IsFuseBoxPowered() && ObjectiveManager.Instance.FuseCollectedCount > 0)
+        {
+            --ObjectiveManager.Instance.FuseCollectedCount;
+            ObjectiveManager.Instance.IsFuseBoxPowered[fuseBoxNumber] = true;
             fuse.SetActive(true);
-            objectiveKey.SetObjectiveKey(false);
-            powerTracker.UpdateFuses(boxNumber);
         }
     }
-
 }
