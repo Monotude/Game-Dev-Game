@@ -3428,7 +3428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2338831504448196075}
-  updateSpeed: 10
+  updateSpeed: 6
   standingOffset: {x: 0, y: 0.5, z: 0}
   crouchingOffset: {x: 0, y: -0.25, z: 0}
 --- !u!114 &1362697486
@@ -6772,7 +6772,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -8418019662413110148, guid: e5b1fdcd954e8514da135dcd9c2b3024, type: 3}
+  - {fileID: -6629797300637803691, guid: 47e10d1358be2f942a8949ba956d8a25, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
