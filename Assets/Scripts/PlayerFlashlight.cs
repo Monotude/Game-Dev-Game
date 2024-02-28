@@ -21,6 +21,7 @@ public class PlayerFlashlight : MonoBehaviour
     {
         playerUVLight = GameObject.Find("UV Light").GetComponent<PlayerUVLight>();
         flashlightLight = GameObject.Find("Flashlight Light").GetComponent<Light>();
+        IsFlashlightOn = true;
     }
 
     private void Update()

@@ -2757,10 +2757,11 @@ GameObject:
   - component: {fileID: 1906727759}
   - component: {fileID: 1906727753}
   - component: {fileID: 1906727757}
+  - component: {fileID: 1906727763}
   - component: {fileID: 1906727752}
-  - component: {fileID: 1906727750}
+  - component: {fileID: 1906727762}
   - component: {fileID: 1906727760}
-  - component: {fileID: 1906727761}
+  - component: {fileID: 1906727764}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -2768,32 +2769,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1906727750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906727749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f690f7d9bcdb33d44aae759323b31815, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 580073723}
-  destinations:
-  - {fileID: 246344402}
-  - {fileID: 1576438293}
-  - {fileID: 1474366671}
-  - {fileID: 1301952204}
-  - {fileID: 411367222}
-  - {fileID: 1564929749}
-  - {fileID: 1663311760}
-  patrolSpeed: 1.5
-  idleTime: 3
-  chaseSpeed: 4.6
-  timeUntilChase: 5
-  uvLightRange: 17.5
 --- !u!4 &1906727751
 Transform:
   m_ObjectHideFlags: 0
@@ -2917,7 +2892,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e95d5f9a2d8ed54d9052682683160f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1906727761
+--- !u!114 &1906727762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906727749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b40ba1d78b91e64fa26a6b258274167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolState:
+    patrolSpeed: 1.5
+    destinations:
+    - {fileID: 246344402}
+    - {fileID: 1576438293}
+    - {fileID: 1474366671}
+    - {fileID: 1301952204}
+    - {fileID: 411367222}
+    - {fileID: 1564929749}
+    - {fileID: 1663311760}
+    monsterVisionRange: 8
+    chaseCooldownTime: 5
+  idleState:
+    idleTime: 3
+    monsterVisionRange: 10
+  chaseState:
+    player: {fileID: 580073723}
+    uVLight: {fileID: 600202932}
+    playerUVLight: {fileID: 600202935}
+    chaseSpeed: 4.75
+    timeUntilChase: 35
+--- !u!114 &1906727763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906727749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cdd9afe74fc3384794edbc67c216137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1906727764
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
