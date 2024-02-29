@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ObjectiveManager : MonoBehaviour
 {
+    private bool isPowerOn;
     [SerializeField] private int fusesCount;
     [SerializeField] private GameObject lights;
     [SerializeField] private GameObject monster;
@@ -9,7 +10,7 @@ public class ObjectiveManager : MonoBehaviour
     public static ObjectiveManager Instance { get; private set; }
     public int FuseCollectedCount { get; set; }
     public bool[] IsFuseBoxPowered { get; set; }
-    public bool[] IsElectricalBoxPowered { get; set; }
+    public bool[] IsElectricalBoxOn { get; set; }
 
     private void Awake()
     {
@@ -28,20 +29,25 @@ public class ObjectiveManager : MonoBehaviour
     private void Start()
     {
         IsFuseBoxPowered = new bool[fusesCount];
-        IsElectricalBoxPowered = new bool[fusesCount];
+        IsElectricalBoxOn = new bool[fusesCount];
     }
 
     private void Update()
     {
-        foreach (bool powered in IsElectricalBoxPowered)
+        foreach (bool isOn in IsElectricalBoxOn)
         {
-            if (!powered)
+            if (!isOn)
             {
                 return;
             }
         }
 
-        lights.SetActive(true);
-        Destroy(monster);
+        if (!isPowerOn)
+        {
+            isPowerOn = true;
+            RenderSettings.ambientLight = new Color32(150, 150, 150, 0);
+            lights.SetActive(true);
+            Destroy(monster);
+        }
     }
 }

@@ -7,7 +7,7 @@ public class ElectricalBoxInteract : MonoBehaviour, IInteractable
 
     private bool IsElectricalBoxOn()
     {
-        return ObjectiveManager.Instance.IsElectricalBoxPowered[electricalBoxNumber];
+        return ObjectiveManager.Instance.IsElectricalBoxOn[electricalBoxNumber];
     }
 
     private bool IsAssociatedFuseBoxPowered()
@@ -20,7 +20,7 @@ public class ElectricalBoxInteract : MonoBehaviour, IInteractable
         if (!IsElectricalBoxOn() && IsAssociatedFuseBoxPowered())
         {
             animator.Play("LeverDown");
-            ObjectiveManager.Instance.IsElectricalBoxPowered[electricalBoxNumber] = true;
+            ObjectiveManager.Instance.IsElectricalBoxOn[electricalBoxNumber] = true;
         }
     }
 }
