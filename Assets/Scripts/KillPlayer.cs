@@ -7,6 +7,7 @@ public class KillPlayer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            ObjectiveSave.Instance.SaveObjective();
             SceneManager.LoadScene("Section 1");
         }
     }

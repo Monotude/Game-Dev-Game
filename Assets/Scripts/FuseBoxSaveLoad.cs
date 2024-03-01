@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class FuseBoxInteract : MonoBehaviour, IInteractable
+public class FuseBoxSaveLoad : MonoBehaviour
 {
     [SerializeField] private GameObject fuse;
     [SerializeField] private int fuseBoxNumber;
 
-    public void Interact()
+    private void Start()
     {
-        if (ObjectiveManager.Instance.Objective.PowerFuseBox(fuseBoxNumber))
+        if (ObjectiveManager.Instance.Objective.IsFuseBoxPowered(fuseBoxNumber))
         {
             fuse.SetActive(true);
         }

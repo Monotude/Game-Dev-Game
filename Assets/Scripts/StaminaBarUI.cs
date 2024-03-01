@@ -13,7 +13,7 @@ public class StaminaBarUI : MonoBehaviour
 
     private void Start()
     {
-        playerSprint = GameObject.Find("Player").GetComponent<PlayerSprint>();
+        playerSprint = GameObject.FindWithTag("Player").GetComponent<PlayerSprint>();
     }
 
     private void Update()

@@ -393,6 +393,7 @@ GameObject:
   - component: {fileID: 458726448}
   - component: {fileID: 458726447}
   - component: {fileID: 458726446}
+  - component: {fileID: 458726450}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -552,6 +553,7 @@ GameObject:
   - component: {fileID: 7288159386480922384}
   - component: {fileID: 7288159386480922383}
   - component: {fileID: 7288159386480922382}
+  - component: {fileID: 7288159386480922386}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -585,8 +587,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1496644586}
   - component: {fileID: 1496644589}
-  - component: {fileID: 1496644588}
   - component: {fileID: 1496644587}
+  - component: {fileID: 1496644588}
+  - component: {fileID: 1496644590}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -624,6 +627,7 @@ GameObject:
   - component: {fileID: 798769354}
   - component: {fileID: 798769353}
   - component: {fileID: 798769352}
+  - component: {fileID: 798769356}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -1192,6 +1196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f895de1966a4d5d41a15d7d2f1d041b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fuseNumber: 3
 --- !u!136 &458726447
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1266,6 +1271,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115975004}
   m_Mesh: {fileID: 6255687079079774844, guid: 3ebb8a48c3ad1b648927a598965976e8, type: 3}
+--- !u!114 &458726450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115975004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328412fc7c1eed6479a7bbdf12810e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuseNumber: 3
 --- !u!1 &476555221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,6 +1498,7 @@ GameObject:
   - component: {fileID: 628806107}
   - component: {fileID: 628806109}
   - component: {fileID: 628806108}
+  - component: {fileID: 628806110}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -1500,6 +1519,7 @@ GameObject:
   - component: {fileID: 575821021}
   - component: {fileID: 575821020}
   - component: {fileID: 575821019}
+  - component: {fileID: 575821023}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -1519,6 +1539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f895de1966a4d5d41a15d7d2f1d041b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fuseNumber: 2
 --- !u!136 &575821020
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1593,6 +1614,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575821018}
   m_Mesh: {fileID: 6255687079079774844, guid: 3ebb8a48c3ad1b648927a598965976e8, type: 3}
+--- !u!114 &575821023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575821018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328412fc7c1eed6479a7bbdf12810e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuseNumber: 2
 --- !u!1 &617445509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,7 +1787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuse: {fileID: 1528421406}
-  fuseBoxNumber: 3
+  fuseBoxNumber: 4
 --- !u!65 &628806109
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1775,6 +1809,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.44515455, y: 0.23923251, z: 0.66823673}
   m_Center: {x: -0.9981495, y: 0.0028599987, z: -0.0057199304}
+--- !u!114 &628806110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569711233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262541f5e41e8cc4989f6e9f8b7b9590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuse: {fileID: 1528421406}
+  fuseBoxNumber: 4
 --- !u!4 &643266642
 Transform:
   m_ObjectHideFlags: 0
@@ -1820,7 +1868,7 @@ GameObject:
   - component: {fileID: 1964213571}
   m_Layer: 0
   m_Name: UV Light
-  m_TagString: Untagged
+  m_TagString: UV Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2019,6 +2067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f895de1966a4d5d41a15d7d2f1d041b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fuseNumber: 4
 --- !u!136 &798769353
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2093,6 +2142,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299989465}
   m_Mesh: {fileID: 6255687079079774844, guid: 3ebb8a48c3ad1b648927a598965976e8, type: 3}
+--- !u!114 &798769356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299989465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328412fc7c1eed6479a7bbdf12810e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuseNumber: 4
 --- !u!1 &817532714
 GameObject:
   m_ObjectHideFlags: 0
@@ -2332,6 +2394,7 @@ GameObject:
   - component: {fileID: 1050670305}
   - component: {fileID: 1050670307}
   - component: {fileID: 1050670306}
+  - component: {fileID: 1050670308}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -2371,7 +2434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuse: {fileID: 2082465588}
-  fuseBoxNumber: 1
+  fuseBoxNumber: 2
 --- !u!65 &1050670307
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2393,6 +2456,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.44515455, y: 0.23923251, z: 0.66823673}
   m_Center: {x: -0.9981495, y: 0.0028599987, z: -0.0057199304}
+--- !u!114 &1050670308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037945320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262541f5e41e8cc4989f6e9f8b7b9590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuse: {fileID: 2082465588}
+  fuseBoxNumber: 2
 --- !u!1 &1062630966
 GameObject:
   m_ObjectHideFlags: 0
@@ -2408,7 +2485,7 @@ GameObject:
   - component: {fileID: 1062630967}
   m_Layer: 0
   m_Name: Flashlight Light
-  m_TagString: Untagged
+  m_TagString: Flashlight Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2563,6 +2640,7 @@ GameObject:
   - component: {fileID: 1940850026}
   - component: {fileID: 1940850028}
   - component: {fileID: 1940850027}
+  - component: {fileID: 1940850029}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -2679,8 +2757,9 @@ GameObject:
   m_Component:
   - component: {fileID: 190612266}
   - component: {fileID: 1195727989}
-  - component: {fileID: 1195727988}
   - component: {fileID: 1195727987}
+  - component: {fileID: 1195727988}
+  - component: {fileID: 1195727990}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -2721,8 +2800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd2f9a2a7eb4f3d4d8f578928b79b74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  electricalBoxNumber: 3
-  animator: {fileID: 1195727987}
+  electricalBoxNumber: 4
 --- !u!65 &1195727989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2744,6 +2822,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.4023372, y: 0.6321497, z: 2.6151206}
   m_Center: {x: -0.022991726, y: 0.2471529, z: -0.014369148}
+--- !u!114 &1195727990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195727986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a80d88cba1c8e944af31a91d8c39682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricalBoxNumber: 4
 --- !u!1 &1217214276
 GameObject:
   m_ObjectHideFlags: 0
@@ -2995,8 +3086,9 @@ GameObject:
   m_Component:
   - component: {fileID: 298762174}
   - component: {fileID: 1348335115}
-  - component: {fileID: 1348335114}
   - component: {fileID: 1348335113}
+  - component: {fileID: 1348335114}
+  - component: {fileID: 1348335116}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -3037,8 +3129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd2f9a2a7eb4f3d4d8f578928b79b74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  electricalBoxNumber: 0
-  animator: {fileID: 1348335113}
+  electricalBoxNumber: 1
 --- !u!65 &1348335115
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3060,6 +3151,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.4023372, y: 0.6321497, z: 2.6151206}
   m_Center: {x: -0.022991726, y: 0.2471529, z: -0.014369148}
+--- !u!114 &1348335116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348335112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a80d88cba1c8e944af31a91d8c39682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricalBoxNumber: 1
 --- !u!1 &1351434754
 GameObject:
   m_ObjectHideFlags: 0
@@ -3785,8 +3889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd2f9a2a7eb4f3d4d8f578928b79b74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  electricalBoxNumber: 2
-  animator: {fileID: 1496644587}
+  electricalBoxNumber: 3
 --- !u!65 &1496644589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3808,6 +3911,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.4023372, y: 0.6321497, z: 2.6151206}
   m_Center: {x: -0.022991726, y: 0.2471529, z: -0.014369148}
+--- !u!114 &1496644590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273677328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a80d88cba1c8e944af31a91d8c39682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricalBoxNumber: 3
 --- !u!1 &1503598439
 GameObject:
   m_ObjectHideFlags: 0
@@ -4310,7 +4426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1711401310
 Transform:
   m_ObjectHideFlags: 0
@@ -4431,12 +4547,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -629719859055844128, guid: e5b1fdcd954e8514da135dcd9c2b3024, type: 3}
---- !u!1 &1782756762 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1041070628071923488, guid: 6e6f75439a850a547ab54fd0a4fd0a22,
-    type: 3}
-  m_PrefabInstance: {fileID: 3152768788429661757}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1812027610
 GameObject:
   m_ObjectHideFlags: 0
@@ -4613,8 +4723,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1286362041}
   - component: {fileID: 1864844539}
-  - component: {fileID: 1864844538}
   - component: {fileID: 1864844537}
+  - component: {fileID: 1864844538}
+  - component: {fileID: 1864844540}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -4655,8 +4766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd2f9a2a7eb4f3d4d8f578928b79b74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  electricalBoxNumber: 1
-  animator: {fileID: 1864844537}
+  electricalBoxNumber: 2
 --- !u!65 &1864844539
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4678,6 +4788,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.4023372, y: 0.6321497, z: 2.6151206}
   m_Center: {x: -0.022991726, y: 0.2471529, z: -0.014369148}
+--- !u!114 &1864844540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864844536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a80d88cba1c8e944af31a91d8c39682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  electricalBoxNumber: 2
 --- !u!1 &1885736690
 GameObject:
   m_ObjectHideFlags: 0
@@ -4688,6 +4811,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1885736692}
   - component: {fileID: 1885736693}
+  - component: {fileID: 1885736694}
   m_Layer: 0
   m_Name: Objective Manager
   m_TagString: Untagged
@@ -4722,9 +4846,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa448253ff671c543bc1357ef5b8ea7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fusesCount: 4
-  lights: {fileID: 1711401309}
-  monster: {fileID: 1782756762}
+  fuseCount: 4
+--- !u!114 &1885736694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885736690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f04680890cc813e48a7e8d7674b8abec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileName: ObjectiveSave
 --- !u!1 &1926669225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4788,6 +4923,7 @@ GameObject:
   - component: {fileID: 5412954479971801109}
   - component: {fileID: 5412954479971801111}
   - component: {fileID: 5412954479971801110}
+  - component: {fileID: 5412954479971801112}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -4827,7 +4963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuse: {fileID: 899146489}
-  fuseBoxNumber: 2
+  fuseBoxNumber: 3
 --- !u!65 &1940850028
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4849,6 +4985,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.44515455, y: 0.23923251, z: 0.66823673}
   m_Center: {x: -0.9981495, y: 0.0028599987, z: -0.0057199304}
+--- !u!114 &1940850029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079900327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262541f5e41e8cc4989f6e9f8b7b9590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuse: {fileID: 899146489}
+  fuseBoxNumber: 3
 --- !u!1 &1944342101
 GameObject:
   m_ObjectHideFlags: 0
@@ -5702,6 +5852,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster
       objectReference: {fileID: 0}
+    - target: {fileID: 1041070628071923488, guid: 6e6f75439a850a547ab54fd0a4fd0a22,
+        type: 3}
+      propertyPath: m_TagString
+      value: Monster
+      objectReference: {fileID: 0}
     - target: {fileID: 4659524507752696572, guid: 6e6f75439a850a547ab54fd0a4fd0a22,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5886,7 +6041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuse: {fileID: 1112600049}
-  fuseBoxNumber: 0
+  fuseBoxNumber: 1
 --- !u!65 &5412954479971801111
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5908,6 +6063,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.44515455, y: 0.23923251, z: 0.66823673}
   m_Center: {x: -0.9981495, y: 0.0028599987, z: -0.0057199304}
+--- !u!114 &5412954479971801112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935158243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 262541f5e41e8cc4989f6e9f8b7b9590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuse: {fileID: 1112600049}
+  fuseBoxNumber: 1
 --- !u!23 &5638874407057694140
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6113,6 +6282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f895de1966a4d5d41a15d7d2f1d041b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fuseNumber: 1
 --- !u!136 &7288159386480922383
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6187,6 +6357,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231214653}
   m_Mesh: {fileID: 6255687079079774844, guid: 3ebb8a48c3ad1b648927a598965976e8, type: 3}
+--- !u!114 &7288159386480922386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 231214653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328412fc7c1eed6479a7bbdf12810e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuseNumber: 1
 --- !u!33 &8168969871962548252
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -22,7 +22,7 @@ public class MonsterStateMachine : MonoBehaviour
 
     private void Start()
     {
-        Player = GameObject.Find("Player").transform;
+        Player = GameObject.FindWithTag("Player").transform;
         NavMeshAgent = GetComponent<NavMeshAgent>();
         ChaseState.ResetCurrentTimeUntilChase();
         SwitchState(PatrolState);

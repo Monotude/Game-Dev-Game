@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager Instance { get; private set; }
     [SerializeField] private Sound[] musicSounds, sFXSounds;
     [SerializeField] private AudioSource musicSource, sFXSource;
+
+    public static AudioManager Instance { get; private set; }
 
     public void PlayMusic(string name)
     {

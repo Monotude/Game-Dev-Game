@@ -3,20 +3,18 @@ using UnityEngine;
 public class ObjectiveManager : MonoBehaviour
 {
     private bool isPowerOn;
-    [SerializeField] private int fusesCount;
-    [SerializeField] private GameObject lights;
-    [SerializeField] private GameObject monster;
+    [SerializeField] private int fuseCount;
 
     public static ObjectiveManager Instance { get; private set; }
-    public int FuseCollectedCount { get; set; }
-    public bool[] IsFuseBoxPowered { get; set; }
-    public bool[] IsElectricalBoxOn { get; set; }
+    public Objective Objective { get; set; }
+    public int FuseCount { get => this.fuseCount; set => this.fuseCount = value; }
 
     private void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
+            GetComponent<ObjectiveSave>().LoadObjective();
             DontDestroyOnLoad(this);
         }
 
@@ -26,28 +24,23 @@ public class ObjectiveManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        IsFuseBoxPowered = new bool[fusesCount];
-        IsElectricalBoxOn = new bool[fusesCount];
-    }
-
     private void Update()
     {
-        foreach (bool isOn in IsElectricalBoxOn)
+        if (isPowerOn)
         {
-            if (!isOn)
+            return;
+        }
+
+        for (int i = 1; i <= fuseCount; ++i)
+        {
+            if (!Objective.IsElectricalBoxOn(i))
             {
                 return;
             }
         }
 
-        if (!isPowerOn)
-        {
-            isPowerOn = true;
-            RenderSettings.ambientLight = new Color32(150, 150, 150, 0);
-            lights.SetActive(true);
-            Destroy(monster);
-        }
+        isPowerOn = true;
+        RenderSettings.ambientLight = new Color32(100, 100, 100, 0);
+        Destroy(GameObject.FindWithTag("Monster"));
     }
 }

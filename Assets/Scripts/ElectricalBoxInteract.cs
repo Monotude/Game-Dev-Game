@@ -2,25 +2,19 @@ using UnityEngine;
 
 public class ElectricalBoxInteract : MonoBehaviour, IInteractable
 {
+    private Animator animator;
     [SerializeField] private int electricalBoxNumber;
-    [SerializeField] private Animator animator;
-
-    private bool IsElectricalBoxOn()
-    {
-        return ObjectiveManager.Instance.IsElectricalBoxOn[electricalBoxNumber];
-    }
-
-    private bool IsAssociatedFuseBoxPowered()
-    {
-        return ObjectiveManager.Instance.IsFuseBoxPowered[electricalBoxNumber];
-    }
 
     public void Interact()
     {
-        if (!IsElectricalBoxOn() && IsAssociatedFuseBoxPowered())
+        if (ObjectiveManager.Instance.Objective.TurnElectricalBoxOn(electricalBoxNumber))
         {
             animator.Play("LeverDown");
-            ObjectiveManager.Instance.IsElectricalBoxOn[electricalBoxNumber] = true;
         }
+    }
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
     }
 }

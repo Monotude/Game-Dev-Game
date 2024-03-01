@@ -13,7 +13,7 @@ public class UVLightChargeBarUI : MonoBehaviour
 
     private void Start()
     {
-        playerUVLight = GameObject.Find("UV Light").GetComponent<PlayerUVLight>();
+        playerUVLight = GameObject.FindWithTag("UV Light").GetComponent<PlayerUVLight>();
     }
 
     private void Update()
