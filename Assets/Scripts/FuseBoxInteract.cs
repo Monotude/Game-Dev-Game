@@ -2,14 +2,30 @@ using UnityEngine;
 
 public class FuseBoxInteract : MonoBehaviour, IInteractable
 {
+    private ProgressManager progressManager;
     [SerializeField] private GameObject fuse;
     [SerializeField] private int fuseBoxNumber;
 
+    private void PowerFuseBox()
+    {
+        fuse.SetActive(true);
+    }
+
     public void Interact()
     {
-        if (ObjectiveManager.Instance.Objective.PowerFuseBox(fuseBoxNumber))
+        if (progressManager.Progress.PowerFuseBox(fuseBoxNumber))
         {
-            fuse.SetActive(true);
+            PowerFuseBox();
+        }
+    }
+
+    private void Start()
+    {
+        progressManager = GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
+
+        if (progressManager.Progress.IsFuseBoxPowered(fuseBoxNumber))
+        {
+            PowerFuseBox();
         }
     }
 }

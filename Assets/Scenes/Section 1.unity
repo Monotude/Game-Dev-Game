@@ -2484,8 +2484,8 @@ GameObject:
   - component: {fileID: 1062630968}
   - component: {fileID: 1062630967}
   m_Layer: 0
-  m_Name: Flashlight Light
-  m_TagString: Flashlight Light
+  m_Name: Flashlight
+  m_TagString: Flashlight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2732,6 +2732,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112600049}
   m_Mesh: {fileID: 6255687079079774844, guid: 3ebb8a48c3ad1b648927a598965976e8, type: 3}
+--- !u!1 &1124922264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1124922266}
+  - component: {fileID: 1124922265}
+  m_Layer: 0
+  m_Name: Save Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1124922265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124922264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2820830495271044a3d9f17b5c45d24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressFileName: ProgressSave
+--- !u!4 &1124922266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124922264}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24.94268, y: -4.639371, z: -7.205273}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1193064719
 Transform:
   m_ObjectHideFlags: 0
@@ -2834,6 +2879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a80d88cba1c8e944af31a91d8c39682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   electricalBoxNumber: 4
 --- !u!1 &1217214276
 GameObject:
@@ -3163,6 +3209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a80d88cba1c8e944af31a91d8c39682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   electricalBoxNumber: 1
 --- !u!1 &1351434754
 GameObject:
@@ -3923,6 +3970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a80d88cba1c8e944af31a91d8c39682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   electricalBoxNumber: 3
 --- !u!1 &1503598439
 GameObject:
@@ -4426,7 +4474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1711401310
 Transform:
   m_ObjectHideFlags: 0
@@ -4800,6 +4848,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a80d88cba1c8e944af31a91d8c39682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   electricalBoxNumber: 2
 --- !u!1 &1885736690
 GameObject:
@@ -4811,10 +4860,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1885736692}
   - component: {fileID: 1885736693}
-  - component: {fileID: 1885736694}
   m_Layer: 0
-  m_Name: Objective Manager
-  m_TagString: Untagged
+  m_Name: Progress Manager
+  m_TagString: Progress Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4843,23 +4891,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1885736690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa448253ff671c543bc1357ef5b8ea7f, type: 3}
+  m_Script: {fileID: 11500000, guid: daa8f60b3147c8e42bdf2ea0f680ac20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fuseCount: 4
---- !u!114 &1885736694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885736690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f04680890cc813e48a7e8d7674b8abec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fileName: ObjectiveSave
 --- !u!1 &1926669225
 GameObject:
   m_ObjectHideFlags: 0
@@ -5919,6 +5954,11 @@ PrefabInstance:
       objectReference: {fileID: 1964213570}
     - target: {fileID: 7273778045386380206, guid: 6e6f75439a850a547ab54fd0a4fd0a22,
         type: 3}
+      propertyPath: chaseState.uVLightLight
+      value: 
+      objectReference: {fileID: 1964213570}
+    - target: {fileID: 7273778045386380206, guid: 6e6f75439a850a547ab54fd0a4fd0a22,
+        type: 3}
       propertyPath: chaseState.playerUVLight
       value: 
       objectReference: {fileID: 1964213568}
@@ -6445,6 +6485,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1814053471}
   - {fileID: 369409665}
+  - {fileID: 1124922266}
   - {fileID: 1885736692}
   - {fileID: 553634208}
   - {fileID: 112255122}

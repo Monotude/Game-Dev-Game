@@ -12,7 +12,7 @@ public class MonsterStateMachine : MonoBehaviour
     public PatrolState PatrolState { get => this.patrolState; set => this.patrolState = value; }
     public IdleState IdleState { get => this.idleState; set => this.idleState = value; }
     public ChaseState ChaseState { get => this.chaseState; set => this.chaseState = value; }
-    public MonsterState CurrentMonsterState { get; set; }
+    public MonsterState CurrentMonsterState { get; private set; }
 
     public void SwitchState(MonsterState monsterState)
     {

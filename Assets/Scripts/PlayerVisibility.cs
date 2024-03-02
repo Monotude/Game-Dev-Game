@@ -8,7 +8,7 @@ public class PlayerVisibility : MonoBehaviour
 
     private void Start()
     {
-        playerFlashlight = GameObject.FindWithTag("Flashlight Light").GetComponent<PlayerFlashlight>();
+        playerFlashlight = GameObject.FindWithTag("Flashlight").GetComponent<PlayerFlashlight>();
         playerUVLight = GameObject.FindWithTag("UV Light").GetComponent<PlayerUVLight>();
         playerVisibilityLight = GetComponent<Light>();
     }

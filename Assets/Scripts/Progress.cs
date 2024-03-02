@@ -2,14 +2,14 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public class Objective
+public class Progress
 {
     [SerializeField] private int fuseCollectedCount;
     [SerializeField] private bool[] isFuseCollected;
     [SerializeField] private bool[] isFuseBoxPowered;
     [SerializeField] private bool[] isElectricalBoxOn;
 
-    public Objective(int fuseCount)
+    public Progress(int fuseCount)
     {
         isFuseCollected = new bool[fuseCount];
         isFuseBoxPowered = new bool[fuseCount];

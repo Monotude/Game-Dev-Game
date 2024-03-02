@@ -5,8 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Monster
-  - Flashlight Light
+  - Flashlight
   - UV Light
+  - Progress Manager
   layers:
   - Default
   - TransparentFX

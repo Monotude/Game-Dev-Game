@@ -4,8 +4,7 @@ using UnityEngine;
 [Serializable]
 public class ChaseState : MonsterState
 {
-    [SerializeField] private Transform player;
-    [SerializeField] private Light uVLight;
+    [SerializeField] private Light uVLightLight;
     [SerializeField] private PlayerUVLight playerUVLight;
     [SerializeField] private float chaseSpeed;
     [SerializeField] private float timeUntilChase;
@@ -43,9 +42,11 @@ public class ChaseState : MonsterState
             return false;
         }
 
+        Transform player = monsterStateMachine.Player;
+
         Vector3 playerToMonster = monster.position - player.position;
         Ray ray = new Ray(player.position, playerToMonster);
-        Physics.Raycast(ray, out RaycastHit hit, uVLight.range);
+        Physics.Raycast(ray, out RaycastHit hit, uVLightLight.range);
 
         return hit.transform == monster;
     }
@@ -54,12 +55,12 @@ public class ChaseState : MonsterState
     {
         ResetCurrentTimeUntilChase();
         monsterStateMachine.NavMeshAgent.speed = chaseSpeed;
-        monsterStateMachine.NavMeshAgent.destination = player.position;
+        monsterStateMachine.NavMeshAgent.destination = monsterStateMachine.Player.position;
     }
 
     public override void Action(MonsterStateMachine monsterStateMachine)
     {
-        monsterStateMachine.NavMeshAgent.destination = player.position;
+        monsterStateMachine.NavMeshAgent.destination = monsterStateMachine.Player.position;
 
         if (IsStunned(monsterStateMachine))
         {

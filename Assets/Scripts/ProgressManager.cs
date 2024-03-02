@@ -1,27 +1,16 @@
 using UnityEngine;
 
-public class ObjectiveManager : MonoBehaviour
+public class ProgressManager : MonoBehaviour
 {
     private bool isPowerOn;
     [SerializeField] private int fuseCount;
 
-    public static ObjectiveManager Instance { get; private set; }
-    public Objective Objective { get; set; }
     public int FuseCount { get => this.fuseCount; set => this.fuseCount = value; }
+    public Progress Progress { get; set; }
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            GetComponent<ObjectiveSave>().LoadObjective();
-            DontDestroyOnLoad(this);
-        }
-
-        else
-        {
-            Destroy(gameObject);
-        }
+        SaveManager.Instance.LoadProgress(this);
     }
 
     private void Update()
@@ -33,14 +22,14 @@ public class ObjectiveManager : MonoBehaviour
 
         for (int i = 1; i <= fuseCount; ++i)
         {
-            if (!Objective.IsElectricalBoxOn(i))
+            if (!Progress.IsElectricalBoxOn(i))
             {
                 return;
             }
         }
 
         isPowerOn = true;
-        RenderSettings.ambientLight = new Color32(100, 100, 100, 0);
+        RenderSettings.ambientLight = new Color32(60, 60, 60, 0);
         Destroy(GameObject.FindWithTag("Monster"));
     }
 }

@@ -30,7 +30,7 @@ public class PlayerUVLight : MonoBehaviour
 
     private void Start()
     {
-        playerFlashlight = GameObject.FindWithTag("Flashlight Light").GetComponent<PlayerFlashlight>();
+        playerFlashlight = GameObject.FindWithTag("Flashlight").GetComponent<PlayerFlashlight>();
         uVLight = GameObject.FindWithTag("UV Light").GetComponent<Light>();
         remainingUVLightDuration = uVLightDuration;
         CurrentCharges = MaxCharges;

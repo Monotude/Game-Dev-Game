@@ -2,19 +2,31 @@ using UnityEngine;
 
 public class ElectricalBoxInteract : MonoBehaviour, IInteractable
 {
+    private ProgressManager progressManager;
     private Animator animator;
     [SerializeField] private int electricalBoxNumber;
 
+    private void ElectricalBoxOn()
+    {
+        animator.Play("LeverDown");
+    }
+
     public void Interact()
     {
-        if (ObjectiveManager.Instance.Objective.TurnElectricalBoxOn(electricalBoxNumber))
+        if (progressManager.Progress.TurnElectricalBoxOn(electricalBoxNumber))
         {
-            animator.Play("LeverDown");
+            ElectricalBoxOn();
         }
     }
 
     private void Start()
     {
+        progressManager = GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
         animator = GetComponent<Animator>();
+
+        if (progressManager.Progress.IsElectricalBoxOn(electricalBoxNumber))
+        {
+            ElectricalBoxOn();
+        }
     }
 }
