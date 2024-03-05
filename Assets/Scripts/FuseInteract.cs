@@ -16,13 +16,17 @@ public class FuseInteract : MonoBehaviour, IInteractable
         CollectFuse();
     }
 
-    private void Start()
+    private void LoadFuseProgress()
     {
-        progressManager = GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
-
         if (progressManager.Progress.IsFuseCollected(fuseNumber))
         {
             CollectFuse();
         }
+    }
+
+    private void Awake()
+    {
+        progressManager = GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
+        progressManager.LoadGame += LoadFuseProgress;
     }
 }

@@ -8,8 +8,9 @@ public class PatrolState : MonsterState
     private Vector3 patrolDestination;
     [SerializeField] private float patrolSpeed;
     [SerializeField] private Transform[] destinations;
+    [Range(0f, 360f)]
+    [SerializeField] private float monsterFieldOfView;
     [SerializeField] private float monsterVisionRange;
-    [SerializeField] private float chaseCooldownTime;
 
     private Vector3 GetPatrolDestination()
     {
@@ -29,14 +30,14 @@ public class PatrolState : MonsterState
         return patrolDestination.x == monsterPosition.x && patrolDestination.z == monsterPosition.z;
     }
 
-    public bool IsPlayerSeen(MonsterStateMachine monsterStateMachine)
+    private bool IsPlayerSeen(MonsterStateMachine monsterStateMachine)
     {
         Transform monster = monsterStateMachine.gameObject.transform;
         Transform player = monsterStateMachine.Player;
 
         Vector3 monsterToPlayer = player.position - monster.position;
         float angle = Vector3.Dot(monster.forward, monsterToPlayer);
-        bool lookingAtPlayerDirection = 0.6f < angle;
+        bool lookingAtPlayerDirection = Mathf.Cos(Mathf.Deg2Rad * monsterFieldOfView / 2) <= angle;
 
         if (!lookingAtPlayerDirection)
         {
@@ -49,11 +50,6 @@ public class PatrolState : MonsterState
         return hit.transform == player;
     }
 
-    public bool IsChaseCooldownOver(MonsterStateMachine monsterStateMachine)
-    {
-        return chaseCooldownTime <= monsterStateMachine.ChaseState.TimeUntilChase - monsterStateMachine.ChaseState.CurrentTimeUntilChase;
-    }
-
     public override void EnterState(MonsterStateMachine monsterStateMachine)
     {
         patrolDestination = GetPatrolDestination();
@@ -63,7 +59,7 @@ public class PatrolState : MonsterState
 
     public override void Action(MonsterStateMachine monsterStateMachine)
     {
-        if ((monsterStateMachine.ChaseState.IsTimeToChase() || IsPlayerSeen(monsterStateMachine)) && IsChaseCooldownOver(monsterStateMachine))
+        if (monsterStateMachine.ChaseState.IsTimeToChase() || IsPlayerSeen(monsterStateMachine))
         {
             monsterStateMachine.SwitchState(monsterStateMachine.ChaseState);
         }

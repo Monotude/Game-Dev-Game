@@ -19,14 +19,18 @@ public class ElectricalBoxInteract : MonoBehaviour, IInteractable
         }
     }
 
-    private void Start()
+    private void LoadElectricalBoxProgress()
     {
-        progressManager = GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
-        animator = GetComponent<Animator>();
-
         if (progressManager.Progress.IsElectricalBoxOn(electricalBoxNumber))
         {
             ElectricalBoxOn();
         }
+    }
+
+    private void Awake()
+    {
+        progressManager = GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
+        progressManager.LoadGame += LoadElectricalBoxProgress;
+        animator = GetComponent<Animator>();
     }
 }

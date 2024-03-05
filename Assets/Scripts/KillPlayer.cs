@@ -15,7 +15,7 @@ public class KillPlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             SaveManager.Instance.SaveProgress(progressManager);
-            SceneManager.LoadScene("Section 1");
+            SceneManager.LoadScene("Game");
         }
     }
 }

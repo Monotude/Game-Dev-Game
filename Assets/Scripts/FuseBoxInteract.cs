@@ -19,13 +19,17 @@ public class FuseBoxInteract : MonoBehaviour, IInteractable
         }
     }
 
-    private void Start()
+    private void LoadFuseBoxProgress()
     {
-        progressManager = GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
-
         if (progressManager.Progress.IsFuseBoxPowered(fuseBoxNumber))
         {
             PowerFuseBox();
         }
+    }
+
+    private void Awake()
+    {
+        progressManager = GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
+        progressManager.LoadGame += LoadFuseBoxProgress;
     }
 }

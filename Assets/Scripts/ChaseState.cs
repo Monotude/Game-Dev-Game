@@ -12,7 +12,7 @@ public class ChaseState : MonsterState
     public float CurrentTimeUntilChase { get; private set; }
     public float TimeUntilChase { get => this.timeUntilChase; set => this.timeUntilChase = value; }
 
-    public void ResetCurrentTimeUntilChase()
+    private void ResetCurrentTimeUntilChase()
     {
         CurrentTimeUntilChase = TimeUntilChase;
     }
@@ -64,7 +64,7 @@ public class ChaseState : MonsterState
 
         if (IsStunned(monsterStateMachine))
         {
-            monsterStateMachine.SwitchState(monsterStateMachine.PatrolState);
+            monsterStateMachine.SwitchState(monsterStateMachine.FleeState);
         }
     }
 }

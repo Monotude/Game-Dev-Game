@@ -6,16 +6,18 @@ public class IdleState : MonsterState
 {
     private float currentIdleTime;
     [SerializeField] private float idleTime;
+    [Range(0f, 360f)]
+    [SerializeField] private float monsterFieldOfView;
     [SerializeField] private float monsterVisionRange;
 
-    public bool IsPlayerSeen(MonsterStateMachine monsterStateMachine)
+    private bool IsPlayerSeen(MonsterStateMachine monsterStateMachine)
     {
         Transform monster = monsterStateMachine.gameObject.transform;
         Transform player = monsterStateMachine.Player;
 
         Vector3 monsterToPlayer = player.position - monster.position;
         float angle = Vector3.Dot(monster.forward, monsterToPlayer);
-        bool lookingAtPlayerDirection = 0.35f < angle;
+        bool lookingAtPlayerDirection = Mathf.Cos(Mathf.Deg2Rad * monsterFieldOfView / 2) <= angle;
 
         if (!lookingAtPlayerDirection)
         {
@@ -30,7 +32,7 @@ public class IdleState : MonsterState
 
     public override void EnterState(MonsterStateMachine monsterStateMachine)
     {
-        currentIdleTime = idleTime;
+        currentIdleTime = 0f;
     }
 
     public override void Action(MonsterStateMachine monsterStateMachine)
@@ -40,9 +42,9 @@ public class IdleState : MonsterState
             monsterStateMachine.SwitchState(monsterStateMachine.ChaseState);
         }
 
-        currentIdleTime -= Time.deltaTime;
+        currentIdleTime += Time.deltaTime;
 
-        if (currentIdleTime <= 0)
+        if (currentIdleTime >= idleTime)
         {
             monsterStateMachine.SwitchState(monsterStateMachine.PatrolState);
         }

@@ -15,6 +15,11 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
+    public void StopMusic()
+    {
+        musicSource.Stop();
+    }
+
     public void PlaySFX(string name)
     {
         Sound sound = Array.Find(sFXSounds, sound => sound.Name == name);
@@ -33,11 +38,6 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    private void Start()
-    {
-        PlayMusic("Section 1 Horror");
     }
 }
 
