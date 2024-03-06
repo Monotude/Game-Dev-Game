@@ -15,7 +15,7 @@ public class IdleState : MonsterState
         Transform monster = monsterStateMachine.gameObject.transform;
         Transform player = monsterStateMachine.Player;
 
-        Vector3 monsterToPlayer = player.position - monster.position;
+        Vector3 monsterToPlayer = (player.position - monster.position).normalized;
         float angle = Vector3.Dot(monster.forward, monsterToPlayer);
         bool lookingAtPlayerDirection = Mathf.Cos(Mathf.Deg2Rad * monsterFieldOfView / 2) <= angle;
 

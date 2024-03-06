@@ -11,6 +11,7 @@ public class PatrolState : MonsterState
     [Range(0f, 360f)]
     [SerializeField] private float monsterFieldOfView;
     [SerializeField] private float monsterVisionRange;
+    [SerializeField] private float chaseCooldownTime;
 
     private Vector3 GetPatrolDestination()
     {
@@ -35,7 +36,7 @@ public class PatrolState : MonsterState
         Transform monster = monsterStateMachine.gameObject.transform;
         Transform player = monsterStateMachine.Player;
 
-        Vector3 monsterToPlayer = player.position - monster.position;
+        Vector3 monsterToPlayer = (player.position - monster.position).normalized;
         float angle = Vector3.Dot(monster.forward, monsterToPlayer);
         bool lookingAtPlayerDirection = Mathf.Cos(Mathf.Deg2Rad * monsterFieldOfView / 2) <= angle;
 
@@ -50,6 +51,11 @@ public class PatrolState : MonsterState
         return hit.transform == player;
     }
 
+    private bool IsChaseCooldownOver(MonsterStateMachine monsterStateMachine)
+    {
+        return chaseCooldownTime <= monsterStateMachine.ChaseState.TimeUntilChase - monsterStateMachine.ChaseState.CurrentTimeUntilChase;
+    }
+
     public override void EnterState(MonsterStateMachine monsterStateMachine)
     {
         patrolDestination = GetPatrolDestination();
@@ -59,7 +65,7 @@ public class PatrolState : MonsterState
 
     public override void Action(MonsterStateMachine monsterStateMachine)
     {
-        if (monsterStateMachine.ChaseState.IsTimeToChase() || IsPlayerSeen(monsterStateMachine))
+        if ((monsterStateMachine.ChaseState.IsTimeToChase() || IsPlayerSeen(monsterStateMachine)) && IsChaseCooldownOver(monsterStateMachine))
         {
             monsterStateMachine.SwitchState(monsterStateMachine.ChaseState);
         }

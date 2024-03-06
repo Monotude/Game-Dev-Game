@@ -3265,7 +3265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2338831504448196075}
   standingOffset: {x: 0, y: 0.5, z: 0}
-  crouchingOffset: {x: 0, y: -0.25, z: 0}
+  crouchingOffset: {x: 0, y: 0, z: 0}
   standingUpdateSpeed: 8
   crouchingUpdateSpeed: 3.5
 --- !u!114 &1362697486
@@ -5828,6 +5828,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6465922213281393974, guid: 6e6f75439a850a547ab54fd0a4fd0a22,
         type: 3}
+      propertyPath: m_Radius
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465922213281393974, guid: 6e6f75439a850a547ab54fd0a4fd0a22,
+        type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 13400000, guid: 3d13003537672634a81f4f5606a82a9b,
@@ -5844,18 +5849,23 @@ PrefabInstance:
       objectReference: {fileID: 1964213570}
     - target: {fileID: 7273778045386380206, guid: 6e6f75439a850a547ab54fd0a4fd0a22,
         type: 3}
+      propertyPath: idleState.idleTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7273778045386380206, guid: 6e6f75439a850a547ab54fd0a4fd0a22,
+        type: 3}
       propertyPath: fleeState.fleeSpeed
-      value: 6
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7273778045386380206, guid: 6e6f75439a850a547ab54fd0a4fd0a22,
         type: 3}
       propertyPath: chaseState.chaseSpeed
-      value: 4.6
+      value: 4.4
       objectReference: {fileID: 0}
     - target: {fileID: 7273778045386380206, guid: 6e6f75439a850a547ab54fd0a4fd0a22,
         type: 3}
       propertyPath: fleeState.fleeDuration
-      value: 6
+      value: 4.25
       objectReference: {fileID: 0}
     - target: {fileID: 7273778045386380206, guid: 6e6f75439a850a547ab54fd0a4fd0a22,
         type: 3}
@@ -5876,6 +5886,11 @@ PrefabInstance:
         type: 3}
       propertyPath: idleState.monsterFieldOfView
       value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 7273778045386380206, guid: 6e6f75439a850a547ab54fd0a4fd0a22,
+        type: 3}
+      propertyPath: patrolState.chaseCooldownTime
+      value: 0.92
       objectReference: {fileID: 0}
     - target: {fileID: 7273778045386380206, guid: 6e6f75439a850a547ab54fd0a4fd0a22,
         type: 3}
@@ -5924,13 +5939,18 @@ PrefabInstance:
       objectReference: {fileID: 324776258}
     - target: {fileID: 7964852222190123905, guid: 6e6f75439a850a547ab54fd0a4fd0a22,
         type: 3}
+      propertyPath: m_Radius
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964852222190123905, guid: 6e6f75439a850a547ab54fd0a4fd0a22,
+        type: 3}
       propertyPath: m_Acceleration
-      value: 20
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7964852222190123905, guid: 6e6f75439a850a547ab54fd0a4fd0a22,
         type: 3}
       propertyPath: m_AngularSpeed
-      value: 240
+      value: 360
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6090,6 +6110,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 87114629067484402, guid: 9780b6d42c129c94eacd82a332ba36ae,
+        type: 3}
+      propertyPath: walkingSpeed
+      value: 2.68
+      objectReference: {fileID: 0}
     - target: {fileID: 7451867751845831662, guid: 9780b6d42c129c94eacd82a332ba36ae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6144,6 +6169,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8292945629406199216, guid: 9780b6d42c129c94eacd82a332ba36ae,
+        type: 3}
+      propertyPath: sprintSpeed
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8292945629406199216, guid: 9780b6d42c129c94eacd82a332ba36ae,
+        type: 3}
+      propertyPath: maximumStamina
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8292945629406199216, guid: 9780b6d42c129c94eacd82a332ba36ae,
+        type: 3}
+      propertyPath: staminaRegenerationPerSecond
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
