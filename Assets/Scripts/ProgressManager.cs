@@ -42,7 +42,7 @@ public class ProgressManager : MonoBehaviour
         }
 
         isPowerOn = true;
-        RenderSettings.ambientLight = new Color32(60, 60, 60, 0);
+        RenderSettings.ambientLight = new Color32(55, 55, 55, 0);
         Destroy(monster);
         AudioManager.Instance.StopMusic();
     }
