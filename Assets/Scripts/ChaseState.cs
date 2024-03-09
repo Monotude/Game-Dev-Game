@@ -12,7 +12,7 @@ public class ChaseState : MonsterState
     public float CurrentTimeUntilChase { get; private set; }
     public float TimeUntilChase { get => this.timeUntilChase; set => this.timeUntilChase = value; }
 
-    private void ResetCurrentTimeUntilChase()
+    public void ResetCurrentTimeUntilChase()
     {
         CurrentTimeUntilChase = TimeUntilChase;
     }

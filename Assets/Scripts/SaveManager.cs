@@ -21,16 +21,17 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    public void SaveProgress(ProgressManager progressManager)
+    public void SaveProgress()
     {
         string path = Application.persistentDataPath + "/" + progressFileName + ".json";
-        string json = JsonUtility.ToJson(progressManager.Progress);
+        string json = JsonUtility.ToJson(GetProgressManager().Progress);
         File.WriteAllText(path, json);
     }
 
-    public void LoadProgress(ProgressManager progressManager)
+    public void LoadProgress()
     {
         string path = Application.persistentDataPath + "/" + progressFileName + ".json";
+        ProgressManager progressManager = GetProgressManager();
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);
@@ -58,6 +59,6 @@ public class SaveManager : MonoBehaviour
 
     private void OnApplicationQuit()
     {
-        SaveProgress(GetProgressManager());
+        SaveProgress();
     }
 }

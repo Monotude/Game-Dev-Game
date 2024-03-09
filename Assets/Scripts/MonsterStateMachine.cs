@@ -29,7 +29,8 @@ public class MonsterStateMachine : MonoBehaviour
     {
         Player = GameObject.FindWithTag("Player").transform;
         NavMeshAgent = GetComponent<NavMeshAgent>();
-        SwitchState(ChaseState);
+        ChaseState.ResetCurrentTimeUntilChase();
+        SwitchState(PatrolState);
     }
 
     private void Update()

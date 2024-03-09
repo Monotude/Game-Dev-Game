@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class ElectricalBoxInteract : MonoBehaviour, IInteractable
@@ -5,6 +6,8 @@ public class ElectricalBoxInteract : MonoBehaviour, IInteractable
     private ProgressManager progressManager;
     private Animator animator;
     [SerializeField] private int electricalBoxNumber;
+
+    public event Action ElectricalBoxOnEvent;
 
     private void ElectricalBoxOn()
     {
@@ -15,6 +18,7 @@ public class ElectricalBoxInteract : MonoBehaviour, IInteractable
     {
         if (progressManager.Progress.TurnElectricalBoxOn(electricalBoxNumber))
         {
+            ElectricalBoxOnEvent?.Invoke();
             ElectricalBoxOn();
         }
     }
@@ -31,6 +35,7 @@ public class ElectricalBoxInteract : MonoBehaviour, IInteractable
     {
         progressManager = GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
         progressManager.LoadGame += LoadElectricalBoxProgress;
+        ElectricalBoxOnEvent += progressManager.CheckTurnLightsOn;
         animator = GetComponent<Animator>();
     }
 }

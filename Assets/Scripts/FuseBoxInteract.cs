@@ -5,10 +5,12 @@ public class FuseBoxInteract : MonoBehaviour, IInteractable
     private ProgressManager progressManager;
     [SerializeField] private GameObject fuse;
     [SerializeField] private int fuseBoxNumber;
+    [SerializeField] private GameObject wire;
 
     private void PowerFuseBox()
     {
         fuse.SetActive(true);
+        wire.GetComponent<Renderer>().material.color = Color.green;
     }
 
     public void Interact()
