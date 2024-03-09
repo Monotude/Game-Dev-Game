@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e5b1fdcd954e8514da135dcd9c2b3024
+guid: 1b4f5aabd16fb6043bab3e7c75a5797d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,38 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
+      name: HallwayWall2
+    second: {fileID: 2800000, guid: 84126a4ea36d4874f90c2032568d1360, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
       name: T_Tile01_C
-    second: {fileID: 2800000, guid: 196d89eddcec0bf4396b9612f987d817, type: 3}
+    second: {fileID: 2800000, guid: e6153b0d33f9cbe4c835bae141fcf4a9, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: beton107
-    second: {fileID: 2800000, guid: 75e5d27ad55b506459ca9ce412105dbd, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: concrete_10
-    second: {fileID: 2800000, guid: 842e615c2c122dd42bb1f99b2086d23b, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: metal_pipe_01
-    second: {fileID: 2800000, guid: 33d79e6be4514a24ba93e48c9f4f876f, type: 3}
+    second: {fileID: 2800000, guid: 8183f9b4b9d12d34a8883cafb22d687a, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: tiles_ceiling_02
-    second: {fileID: 2800000, guid: f1bd973568692724cb89718556e6d5b9, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: wall_halfconcrete_06
-    second: {fileID: 2800000, guid: 5d170367a5d5bcd40a41cc5f4927687b, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: wall_halfconcrete_64b
-    second: {fileID: 2800000, guid: 50bcf110e69ead1448505d7d904203c2, type: 3}
+    second: {fileID: 2800000, guid: 25a090d4df51ff14fa1be7bf8bc9e769, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
