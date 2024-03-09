@@ -28,6 +28,7 @@ public class PlayerFlashlight : MonoBehaviour
     {
         if (!playerUVLight.IsUVLightOn && InputManager.Instance.FlashlightButtonDown)
         {
+            AudioManager.Instance.PlaySFX("Flashlight Click");
             IsFlashlightOn = !flashlightLight.enabled;
         }
     }

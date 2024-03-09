@@ -9,10 +9,6 @@ public class MonsterAnimationController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         monsterStateMachine = GetComponent<MonsterStateMachine>();
-    }
-
-    private void Start()
-    {
         monsterStateMachine.ChangeMonsterState += AnimationChange;
     }
 

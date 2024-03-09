@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 
 public class FuseInteract : MonoBehaviour, IInteractable
 {
     private ProgressManager progressManager;
     [SerializeField] private int fuseNumber;
+
+    public event Action CollectFuseEvent;
 
     private void CollectFuse()
     {
@@ -13,6 +16,7 @@ public class FuseInteract : MonoBehaviour, IInteractable
     public void Interact()
     {
         progressManager.Progress.CollectFuse(fuseNumber);
+        CollectFuseEvent?.Invoke();
         CollectFuse();
     }
 
@@ -28,5 +32,6 @@ public class FuseInteract : MonoBehaviour, IInteractable
     {
         progressManager = GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
         progressManager.LoadGame += LoadFuseProgress;
+        CollectFuseEvent += progressManager.CheckSpawnMonster;
     }
 }

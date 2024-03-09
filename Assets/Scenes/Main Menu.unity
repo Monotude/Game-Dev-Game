@@ -422,7 +422,13 @@ MonoBehaviour:
   musicSounds:
   - name: Section 1 Horror
     audioClip: {fileID: 8300000, guid: d53d6acc1efce1e4296fdd63d421a1a1, type: 3}
-  sFXSounds: []
+  - name: Section 1 Chase
+    audioClip: {fileID: 8300000, guid: f6484c51c16b38446a085c10e544e7a7, type: 3}
+  sFXSounds:
+  - name: Flashlight Click
+    audioClip: {fileID: 8300000, guid: 134270739ef78024c8dfacb683c47322, type: 3}
+  - name: Monster Scream
+    audioClip: {fileID: 8300000, guid: 0198991f749df6040865fa950d46248a, type: 3}
   musicSource: {fileID: 1428004060}
   sFXSource: {fileID: 336921692}
 --- !u!4 &260686508
@@ -626,6 +632,7 @@ GameObject:
   - component: {fileID: 967679223}
   - component: {fileID: 967679222}
   - component: {fileID: 967679221}
+  - component: {fileID: 967679224}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -707,6 +714,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &967679224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967679220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &1303866183
 GameObject:
   m_ObjectHideFlags: 0
