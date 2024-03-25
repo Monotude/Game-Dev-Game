@@ -7755,6 +7755,8 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 134270739ef78024c8dfacb683c47322, type: 3}
   - name: Monster Scream
     audioClip: {fileID: 8300000, guid: 0198991f749df6040865fa950d46248a, type: 3}
+  - name: UV LIGHT
+    audioClip: {fileID: 8300000, guid: c8de705378a70f54087fb00bf7512c7e, type: 3}
   musicSource: {fileID: 382129250}
   sFXSource: {fileID: 617445510}
 --- !u!4 &1926669227

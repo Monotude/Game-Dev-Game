@@ -42,6 +42,7 @@ public class PlayerUVLight : MonoBehaviour
 
         if (canUseUVLight && InputManager.Instance.UVLightButtonDown)
         {
+            AudioManager.Instance.PlaySFX("UV LIGHT");
             playerFlashlight.IsFlashlightOn = false;
             IsUVLightOn = true;
         }
@@ -51,6 +52,8 @@ public class PlayerUVLight : MonoBehaviour
             remainingUVLightDuration -= Time.deltaTime;
             if (remainingUVLightDuration <= 0)
             {
+                AudioManager.Instance.StopSFX();
+
                 IsUVLightOn = false;
                 playerFlashlight.IsFlashlightOn = true;
                 CurrentCharges -= 1f;
