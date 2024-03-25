@@ -8,8 +8,8 @@ Urban Nightmares NYC inspired Texture Pack - https://thegasstation.itch.io/urban
 
 
 Anthony Bonus: 
-1.	Flash light SFX - https://youtu.be/-38q978nFnc
-2.	Skin Walker SFX for monster 2 - https://youtu.be/cpk5UyA2mSE?t=7
-3.	Monster Sceam https://youtu.be/BaVIxQPheak?t=25
+1.	Flashlight SFX - https://youtu.be/-38q978nFnc
+2.	Skin Walker SFX for monster 1 - https://youtu.be/cpk5UyA2mSE?t=7
+3.	Monster Scream https://youtu.be/BaVIxQPheak?t=25
 4.	UV Light SFX - https://youtu.be/h30DtkXMBwI?t=2
-5.	Monster Model and Animations - https://www.mixamo.com
+5.	Monster 1 Model and Animations - https://www.mixamo.com
