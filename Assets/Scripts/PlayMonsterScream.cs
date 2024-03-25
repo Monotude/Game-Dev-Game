@@ -1,21 +1,17 @@
 using UnityEngine;
 
-public class MonsterScream : MonoBehaviour
+public class PlayMonsterScream : MonoBehaviour
 {
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] screams;
-    
 
-    public void PlayMonsterScream()
+    public void PlayScream()
     {
-        audioSource.PlayOneShot(GetMonsterScream());
+        audioSource.PlayOneShot(GetScream());
     }
 
-    
-    private AudioClip GetMonsterScream()
+    private AudioClip GetScream()
     {
         return screams[Random.Range(0, screams.Length)];
     }
-
-    
 }

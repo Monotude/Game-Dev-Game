@@ -20,15 +20,15 @@ public class AudioManager : MonoBehaviour
         musicSource.Stop();
     }
 
-    public void StopSFX()
-    {
-        sFXSource.Stop();
-    }
-
     public void PlaySFX(string name)
     {
         Sound sound = Array.Find(sFXSounds, sound => sound.Name == name);
         sFXSource.PlayOneShot(sound.AudioClip);
+    }
+
+    public void StopSFX()
+    {
+        sFXSource.Stop();
     }
 
     private void Awake()

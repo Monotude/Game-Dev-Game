@@ -916,6 +916,7 @@ GameObject:
   - component: {fileID: 214465189}
   - component: {fileID: 214465191}
   - component: {fileID: 214465190}
+  - component: {fileID: 214465199}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Monster
@@ -1167,6 +1168,28 @@ Transform:
   - {fileID: 349444910}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &214465199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214465169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9866f85be42feb46b48853c0b6fd0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1758533013}
+  screams:
+  - {fileID: 8300000, guid: 847e468a29a8a2643b0bd19c9955cbe8, type: 3}
+  - {fileID: 8300000, guid: 28b84b946f9818a418e08d9368dedd81, type: 3}
+  - {fileID: 8300000, guid: 2888d2af51ef6e149b6fcf62ee36c9b1, type: 3}
+  - {fileID: 8300000, guid: 9c98218ac0dbd6d42b1a541ca4ee19d1, type: 3}
+  - {fileID: 8300000, guid: 9c316dac6f6210d4f92b8ad6391d3392, type: 3}
+  - {fileID: 8300000, guid: 746c4d90b33e8634396d0f053db1cb68, type: 3}
+  - {fileID: 8300000, guid: d2079c46eaa2ea9418d90a5a70628f41, type: 3}
+  - {fileID: 8300000, guid: 0bab588d8a5aef646902e9a2d7ea3d12, type: 3}
 --- !u!1 &228547902
 GameObject:
   m_ObjectHideFlags: 0
@@ -7755,7 +7778,7 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 134270739ef78024c8dfacb683c47322, type: 3}
   - name: Monster Scream
     audioClip: {fileID: 8300000, guid: 0198991f749df6040865fa950d46248a, type: 3}
-  - name: UV LIGHT
+  - name: Uv Light
     audioClip: {fileID: 8300000, guid: c8de705378a70f54087fb00bf7512c7e, type: 3}
   musicSource: {fileID: 382129250}
   sFXSource: {fileID: 617445510}
