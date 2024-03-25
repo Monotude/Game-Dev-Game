@@ -53,7 +53,6 @@ public class PlayerUVLight : MonoBehaviour
             if (remainingUVLightDuration <= 0)
             {
                 AudioManager.Instance.StopSFX();
-
                 IsUVLightOn = false;
                 playerFlashlight.IsFlashlightOn = true;
                 CurrentCharges -= 1f;
