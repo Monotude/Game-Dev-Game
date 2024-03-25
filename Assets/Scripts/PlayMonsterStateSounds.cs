@@ -3,10 +3,12 @@ using UnityEngine;
 public class PlayMonsterStateSounds : MonoBehaviour
 {
     private MonsterStateMachine monsterStateMachine;
+    private PlayMonsterScream monsterScream;
 
     private void Awake()
     {
         monsterStateMachine = GetComponent<MonsterStateMachine>();
+        monsterScream = GetComponent<PlayMonsterScream>();
         monsterStateMachine.ChangeMonsterState += PlayStateSound;
     }
 
@@ -14,7 +16,7 @@ public class PlayMonsterStateSounds : MonoBehaviour
     {
         if (monsterState is ChaseState)
         {
-            AudioManager.Instance.PlaySFX("Monster Scream");
+            monsterScream.PlayScream();
             AudioManager.Instance.PlayMusic("Section 1 Chase");
         }
 

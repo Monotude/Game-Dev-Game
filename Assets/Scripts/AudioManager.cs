@@ -26,6 +26,11 @@ public class AudioManager : MonoBehaviour
         sFXSource.PlayOneShot(sound.AudioClip);
     }
 
+    public void StopSFX()
+    {
+        sFXSource.Stop();
+    }
+
     private void Awake()
     {
         if (Instance == null)
