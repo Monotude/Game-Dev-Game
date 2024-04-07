@@ -23,7 +23,7 @@ public class FleeState : MonsterState
     public override void EnterState(MonsterStateMachine monsterStateMachine)
     {
         currentFleeDuration = 0f;
-        monsterStateMachine.NavMeshAgent.velocity = monsterStateMachine.NavMeshAgent.velocity * .66f;
+        monsterStateMachine.NavMeshAgent.velocity = monsterStateMachine.NavMeshAgent.velocity * .5f;
         monsterStateMachine.NavMeshAgent.speed = fleeSpeed;
         monsterStateMachine.transform.GetComponent<LookAtConstraint>().constraintActive = true;
         SetFleeDestination(monsterStateMachine);

@@ -1,11 +1,15 @@
+using System;
 using UnityEngine;
 
 public class FuseBoxInteract : MonoBehaviour, IInteractable
 {
     private ProgressManager progressManager;
+    private PlayerInventoryUI playerInventoryUI;
     [SerializeField] private GameObject fuse;
     [SerializeField] private int fuseBoxNumber;
     [SerializeField] private GameObject wire;
+
+    public Action PowerFuseBoxEvent;
 
     private void PowerFuseBox()
     {
@@ -17,6 +21,7 @@ public class FuseBoxInteract : MonoBehaviour, IInteractable
     {
         if (progressManager.Progress.PowerFuseBox(fuseBoxNumber))
         {
+            PowerFuseBoxEvent?.Invoke();
             PowerFuseBox();
         }
     }
@@ -32,6 +37,8 @@ public class FuseBoxInteract : MonoBehaviour, IInteractable
     private void Awake()
     {
         progressManager = GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
+        playerInventoryUI = GameObject.FindWithTag("UI Controller").GetComponent<PlayerInventoryUI>();
         progressManager.LoadGame += LoadFuseBoxProgress;
+        PowerFuseBoxEvent += playerInventoryUI.UpdateFuseUI;
     }
 }

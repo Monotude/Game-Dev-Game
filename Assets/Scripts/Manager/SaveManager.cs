@@ -9,7 +9,7 @@ public class SaveManager : MonoBehaviour
 
     public ProgressManager GetProgressManager()
     {
-        return GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
+        return GameObject.FindWithTag("Progress Manager")?.GetComponent<ProgressManager>();
     }
 
     public void DeleteProgress()

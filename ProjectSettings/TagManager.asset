@@ -8,6 +8,7 @@ TagManager:
   - Flashlight
   - UV Light
   - Progress Manager
+  - UI Controller
   layers:
   - Default
   - TransparentFX

@@ -4,6 +4,7 @@ using UnityEngine;
 public class FuseInteract : MonoBehaviour, IInteractable
 {
     private ProgressManager progressManager;
+    private PlayerInventoryUI playerInventoryUI;
     [SerializeField] private int fuseNumber;
 
     public event Action CollectFuseEvent;
@@ -31,7 +32,9 @@ public class FuseInteract : MonoBehaviour, IInteractable
     private void Awake()
     {
         progressManager = GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
+        playerInventoryUI = GameObject.FindWithTag("UI Controller").GetComponent<PlayerInventoryUI>();
         progressManager.LoadGame += LoadFuseProgress;
         CollectFuseEvent += progressManager.CheckSpawnMonster;
+        CollectFuseEvent += playerInventoryUI.UpdateFuseUI;
     }
 }

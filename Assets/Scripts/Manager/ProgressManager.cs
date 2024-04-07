@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class ProgressManager : MonoBehaviour
 {
-    private bool isPowerOn;
     [SerializeField] private int fuseCount;
     [SerializeField] private GameObject monster;
 
@@ -13,16 +12,17 @@ public class ProgressManager : MonoBehaviour
 
     public void CheckSpawnMonster()
     {
-        int fuseCollected = 0;
-        for (int i = 1; i <= fuseCount; ++i)
+        bool isAFuseBoxOn = false;
+        for (int i = 0; i < FuseCount; ++i)
         {
-            if (Progress.IsFuseCollected(i))
+            if (Progress.IsFuseBoxPowered(i + 1))
             {
-                ++fuseCollected;
+                isAFuseBoxOn = true;
+                break;
             }
         }
 
-        if (fuseCollected == 1)
+        if (Progress.GetFuseCount() == 1 && !isAFuseBoxOn)
         {
             monster.SetActive(true);
             MonsterStateMachine monsterStateMachine = monster.GetComponent<MonsterStateMachine>();
@@ -40,7 +40,6 @@ public class ProgressManager : MonoBehaviour
             }
         }
 
-        isPowerOn = true;
         RenderSettings.ambientLight = new Color32(55, 55, 55, 0);
         Destroy(monster);
         AudioManager.Instance.StopMusic();
