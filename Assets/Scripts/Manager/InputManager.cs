@@ -12,7 +12,7 @@ public class InputManager : MonoBehaviour
     public bool CrouchButtonDown { get; set; }
     public bool CrouchButtonUp { get; set; }
     public bool FlashlightButtonDown { get; set; }
-    public bool UVLightButtonDown { get; set; }
+    public bool UVLightButton { get; set; }
     public bool InteractButtonDown { get; set; }
 
     private void GetPlayerInput()
@@ -26,7 +26,7 @@ public class InputManager : MonoBehaviour
         CrouchButtonDown = Input.GetKeyDown(KeyCode.LeftControl);
         CrouchButtonUp = Input.GetKeyUp(KeyCode.LeftControl);
         FlashlightButtonDown = Input.GetKeyDown(KeyCode.Mouse0);
-        UVLightButtonDown = Input.GetKeyDown(KeyCode.Mouse1);
+        UVLightButton = Input.GetKey(KeyCode.Mouse1);
         InteractButtonDown = Input.GetKeyDown(KeyCode.F);
     }
 
