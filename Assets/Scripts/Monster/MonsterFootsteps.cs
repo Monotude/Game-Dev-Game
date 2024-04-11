@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayMonsterFootsteps : MonoBehaviour
+public class MonsterFootsteps : MonoBehaviour
 {
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] patrolFootsteps;

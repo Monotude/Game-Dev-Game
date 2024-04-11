@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayMonsterScream : MonoBehaviour
+public class MonsterScream : MonoBehaviour
 {
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] screams;

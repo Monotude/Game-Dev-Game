@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class PlayMonsterStateSounds : MonoBehaviour
+public class MonsterStateSounds : MonoBehaviour
 {
     private MonsterStateMachine monsterStateMachine;
-    private PlayMonsterScream monsterScream;
+    private MonsterScream monsterScream;
 
     private void Awake()
     {
         monsterStateMachine = GetComponent<MonsterStateMachine>();
-        monsterScream = GetComponent<PlayMonsterScream>();
+        monsterScream = GetComponent<MonsterScream>();
         monsterStateMachine.ChangeMonsterState += PlayStateSound;
     }
 
