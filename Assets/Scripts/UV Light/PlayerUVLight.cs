@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerUVLight : MonoBehaviour
 {
+    private PlayerSound playerSound;
     private PlayerFlashlight playerFlashlight;
     private Light uVLight;
     private bool isFlashlightOn;
@@ -11,6 +12,7 @@ public class PlayerUVLight : MonoBehaviour
     [SerializeField] private float uVLightMaxCharge;
     [SerializeField] private float chargeRegenerationPerSecond;
     [SerializeField] private float chargeDecayPerSecond;
+    [SerializeField] private float uVLightSoundLoudness;
 
     public bool IsUVLightOn
     {
@@ -53,6 +55,7 @@ public class PlayerUVLight : MonoBehaviour
 
     private void Start()
     {
+        playerSound = GameObject.FindWithTag("Player").GetComponent<PlayerSound>();
         playerFlashlight = GameObject.FindWithTag("Flashlight").GetComponent<PlayerFlashlight>();
         uVLight = GameObject.FindWithTag("UV Light").GetComponent<Light>();
         AudioManager.Instance.StopSFX();
@@ -62,6 +65,7 @@ public class PlayerUVLight : MonoBehaviour
     {
         if (IsUVLightOn)
         {
+            playerSound.MakeSoundEvent?.Invoke(uVLightSoundLoudness, transform.position);
             DecreaseCharges();
             if (CurrentCharges <= 0f)
             {

@@ -1582,6 +1582,7 @@ GameObject:
   - component: {fileID: 2338831504448196078}
   - component: {fileID: 2338831504448196077}
   - component: {fileID: 2338831504448196076}
+  - component: {fileID: 2338831504448196085}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -8187,6 +8188,7 @@ MonoBehaviour:
   uVLightMaxCharge: 3
   chargeRegenerationPerSecond: 1.15
   chargeDecayPerSecond: 1
+  uVLightSoundLoudness: 5
 --- !u!108 &1964213570
 Light:
   m_ObjectHideFlags: 0
@@ -9188,6 +9190,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315443032}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2338831504448196085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315443032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d424ca418dea348be82c0a809ef73b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5412954479971801109
 Transform:
   m_ObjectHideFlags: 0

@@ -1,70 +1,65 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerFootSteps : MonoBehaviour
 {
-    
+    [SerializeField] private AudioClip[] playerFootsteps;
+    [SerializeField] private float walkingFootstepInterval;
+    [SerializeField] private float walkingFootstepLoudness;
+    [SerializeField] private float sprintFootstepInterval;
+    [SerializeField] private float sprintFootstepLoudness;
     private Rigidbody rigidBody;
     private PlayerSprint playerSprint;
     private PlayerCrouch playerCrouch;
-    [SerializeField] private GameObject player;
-
-    public AudioSource AudioSource;
-    public AudioClip ground;
-
-    public float sprintFootstepInterval = 0.4f;
-    public float defaultFootstepInterval = 0.8f; // Interval between footstep sounds in seconds
-
+    private PlayerSound playerSound;
+    private AudioSource audioSource;
     private float footstepInterval;
-    private float lastFootstepTime; // Time when the last footstep sound was played
-
+    private float lastFootstepTime;
 
     private void Start()
     {
-        rigidBody = player.GetComponent<Rigidbody>();
-        playerSprint = player.GetComponent<PlayerSprint>(); 
-        playerCrouch = player.GetComponent<PlayerCrouch>();
+        rigidBody = GetComponent<Rigidbody>();
+        playerSprint = GetComponent<PlayerSprint>();
+        playerCrouch = GetComponent<PlayerCrouch>();
+        playerSound = GetComponent<PlayerSound>();
+        audioSource = GetComponent<AudioSource>();
     }
 
-
-    void Update()
+    private void Update()
     {
         Vector3 velocity = rigidBody.velocity;
 
-        if (playerCrouch.IsCrouching )
+        if (playerCrouch.IsCrouching)
         {
             return;
         }
-        
+
 
         if (velocity.magnitude > 0.1f)
         {
-            footstepInterval = playerSprint.IsSprinting ? sprintFootstepInterval : defaultFootstepInterval;
-
-            Footstep();
+            footstepInterval = playerSprint.IsSprinting ? sprintFootstepInterval : walkingFootstepInterval;
+            float loudness = playerSprint.IsSprinting ? sprintFootstepLoudness : walkingFootstepLoudness;
+            Footstep(loudness);
         }
-
     }
 
-    public void Footstep()
+    public void Footstep(float loudness)
     {
         // Check if enough time has elapsed since the last footstep sound
         if (Time.time - lastFootstepTime >= footstepInterval)
         {
-            
-            // Play footstep sound
-            PlayFootStepSoundL(ground);
+            playerSound.MakeSoundEvent?.Invoke(loudness, transform.position);
+
+     
 
             // Update the last footstep time
             lastFootstepTime = Time.time;
-           
+
         }
     }
 
-    void PlayFootStepSoundL(AudioClip audio)
+    private void PlayFootstepSound(AudioClip audio)
     {
-        AudioSource.pitch = Random.Range(0.8f, 1f);
-        AudioSource.PlayOneShot(audio);
+        audioSource.pitch = Random.Range(0.9f, 1.2f);
+        audioSource.PlayOneShot(audio);
     }
 }
