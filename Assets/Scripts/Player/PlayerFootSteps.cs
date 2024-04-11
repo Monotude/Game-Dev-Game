@@ -2,26 +2,25 @@ using UnityEngine;
 
 public class PlayerFootSteps : MonoBehaviour
 {
+    private Rigidbody rigidBody;
+    private PlayerSprint playerSprint;
+    private PlayerCrouch playerCrouch;
+    private AudioSource audioSource;
+    private PlayerSound playerSound;
+    private float timeUntilFootstep;
     [SerializeField] private AudioClip[] playerFootsteps;
     [SerializeField] private float walkingFootstepInterval;
     [SerializeField] private float walkingFootstepLoudness;
     [SerializeField] private float sprintFootstepInterval;
     [SerializeField] private float sprintFootstepLoudness;
-    private Rigidbody rigidBody;
-    private PlayerSprint playerSprint;
-    private PlayerCrouch playerCrouch;
-    private PlayerSound playerSound;
-    private AudioSource audioSource;
-    private float footstepInterval;
-    private float lastFootstepTime;
 
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
         playerSprint = GetComponent<PlayerSprint>();
         playerCrouch = GetComponent<PlayerCrouch>();
-        playerSound = GetComponent<PlayerSound>();
         audioSource = GetComponent<AudioSource>();
+        playerSound = GetComponent<PlayerSound>();
     }
 
     private void Update()
@@ -36,30 +35,33 @@ public class PlayerFootSteps : MonoBehaviour
 
         if (velocity.magnitude > 0.1f)
         {
-            footstepInterval = playerSprint.IsSprinting ? sprintFootstepInterval : walkingFootstepInterval;
+            float interval = playerSprint.IsSprinting ? sprintFootstepInterval : walkingFootstepInterval;
             float loudness = playerSprint.IsSprinting ? sprintFootstepLoudness : walkingFootstepLoudness;
-            Footstep(loudness);
+            Footstep(interval, loudness);
         }
-    }
 
-    public void Footstep(float loudness)
-    {
-        // Check if enough time has elapsed since the last footstep sound
-        if (Time.time - lastFootstepTime >= footstepInterval)
+        else
         {
-            playerSound.MakeSoundEvent?.Invoke(loudness, transform.position);
-
-     
-
-            // Update the last footstep time
-            lastFootstepTime = Time.time;
-
+            timeUntilFootstep = 0f;
         }
     }
 
-    private void PlayFootstepSound(AudioClip audio)
+    public void Footstep(float interval, float loudness)
     {
+        timeUntilFootstep += Time.deltaTime;
+
+        if (timeUntilFootstep >= interval)
+        {
+            timeUntilFootstep = 0;
+            playerSound.MakeSoundEvent?.Invoke(loudness, transform.position);
+            PlayFootstepSound();
+        }
+    }
+
+    private void PlayFootstepSound()
+    {
+        int randomSound = Random.Range(0, playerFootsteps.Length);
         audioSource.pitch = Random.Range(0.9f, 1.2f);
-        audioSource.PlayOneShot(audio);
+        audioSource.PlayOneShot(playerFootsteps[randomSound]);
     }
 }
