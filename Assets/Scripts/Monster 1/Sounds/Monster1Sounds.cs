@@ -5,7 +5,7 @@ public class Monster1Sounds : MonoBehaviour
     private StateMachine stateMachine;
     [SerializeField] private SoundEffect monsterScreams;
 
-    private void Start()
+    private void Awake()
     {
         stateMachine = GetComponent<Monster1Behaviour>().StateMachine;
         stateMachine.ChangeStateEvent += PlayStateSound;

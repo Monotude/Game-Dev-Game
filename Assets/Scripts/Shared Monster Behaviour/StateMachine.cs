@@ -10,7 +10,11 @@ public class StateMachine
     public State CurrentState { get; private set; }
     public event Action<State> ChangeStateEvent;
 
-    public StateMachine(Transform player, NavMeshAgent navMeshAgent, State[] allStates, State currentState)
+    public StateMachine()
+    {
+    }
+
+    public void Initialize(Transform player, NavMeshAgent navMeshAgent, State[] allStates, State currentState)
     {
         Player = player;
         NavMeshAgent = navMeshAgent;
