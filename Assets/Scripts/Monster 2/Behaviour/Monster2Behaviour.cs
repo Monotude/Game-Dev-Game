@@ -12,12 +12,12 @@ public class Monster2Behaviour : MonoBehaviour
     [SerializeField] private AggroState aggroState;
     private PlayerSound playerSound;
 
-    public StateMachine StateMachine = new StateMachine();
+    public StateMachine StateMachine { get; private set; }
     public RoamState RoamState { get => this.roamState; set => this.roamState = value; }
     public InvestigateState InvestigateState { get => this.investigateState; set => this.investigateState = value; }
     public AggroState AggroState { get => this.aggroState; set => this.aggroState = value; }
 
-    private void InitializeStateMachine()
+    private StateMachine InitializeStateMachine()
     {
         Transform player = GameObject.FindWithTag("Player").transform;
         NavMeshAgent navMeshAgent = GetComponent<NavMeshAgent>();
@@ -25,7 +25,7 @@ public class Monster2Behaviour : MonoBehaviour
         allStates[0] = RoamState;
         allStates[1] = InvestigateState;
         allStates[2] = AggroState;
-        StateMachine.Initialize(player, navMeshAgent, allStates, RoamState);
+        return new StateMachine(player, navMeshAgent, allStates, RoamState);
     }
 
     private void MonsterHearing(float soundLoudness, Vector3 position)
@@ -45,7 +45,7 @@ public class Monster2Behaviour : MonoBehaviour
 
     private void Awake()
     {
-        InitializeStateMachine();
+        StateMachine = InitializeStateMachine();
         playerSound = GameObject.FindWithTag("Player").GetComponent<PlayerSound>();
         playerSound.MakeSoundEvent += MonsterHearing;
     }

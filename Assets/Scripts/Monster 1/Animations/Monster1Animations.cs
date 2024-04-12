@@ -5,7 +5,7 @@ public class Monster1Animations : MonoBehaviour
     private Animator animator;
     private StateMachine stateMachine;
 
-    private void Awake()
+    private void Start()
     {
         animator = GetComponent<Animator>();
         stateMachine = GetComponent<Monster1Behaviour>().StateMachine;

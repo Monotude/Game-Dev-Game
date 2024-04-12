@@ -51,9 +51,11 @@ public class ProgressManager : MonoBehaviour
         {
             if (Progress.IsFuseCollected(i))
             {
-                monster.SetActive(true);
+                return;
             }
         }
+
+        monster.SetActive(false);
     }
 
     private void Start()

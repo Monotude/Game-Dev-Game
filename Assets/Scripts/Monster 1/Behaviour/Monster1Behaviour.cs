@@ -8,13 +8,13 @@ public class Monster1Behaviour : MonoBehaviour
     [SerializeField] private PatrolState patrolState;
     [SerializeField] private IdleState idleState;
 
-    public StateMachine StateMachine = new StateMachine();
+    public StateMachine StateMachine { get; private set; }
     public ChaseState ChaseState { get => this.chaseState; set => this.chaseState = value; }
     public FleeState FleeState { get => this.fleeState; set => this.fleeState = value; }
     public PatrolState PatrolState { get => this.patrolState; set => this.patrolState = value; }
     public IdleState IdleState { get => this.idleState; set => this.idleState = value; }
 
-    private void InitializeStateMachine()
+    private StateMachine InitializeStateMachine()
     {
         Transform player = GameObject.FindWithTag("Player").transform;
         NavMeshAgent navMeshAgent = GetComponent<NavMeshAgent>();
@@ -24,12 +24,12 @@ public class Monster1Behaviour : MonoBehaviour
         allStates[1] = FleeState;
         allStates[2] = PatrolState;
         allStates[3] = IdleState;
-        StateMachine.Initialize(player, navMeshAgent, allStates, PatrolState);
+        return new StateMachine(player, navMeshAgent, allStates, PatrolState);
     }
 
     private void Awake()
     {
-        InitializeStateMachine();
+        StateMachine = InitializeStateMachine();
     }
 
     private void Update()
