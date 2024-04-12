@@ -4,82 +4,67 @@ using UnityEngine;
 [Serializable]
 public class InvestigateState : State
 {
-
-
-    //relative to the waypoints
-    [SerializeField] private Transform[][] destinations;
-    private Transform closestDestination;
+    [SerializeField] private float investigateSpeed;
+    [SerializeField] private Cluster[] clusters;
     [Range(2f, 5f)]
     [SerializeField] private float destinationAccuracy;
-    [SerializeField] private float investigateSpeed;
-    private Vector3 monsterPosition;
-    private Vector3 destinationGoal;
-    private float shortestDistance;
-    private float distance;
-    private int destinationNumber;
-    private int clusterNumber;
-    private int closestDestinationNumber;
-    private int closestClusterNumber;
-    private int destinationsToTraverse;
-    private int currentDestinationTraversing = 0;
+    private int currentCluster;
+    private int currentDestination;
 
     public override void Action(StateMachine stateMachine)
     {
-        //Use cluster value to roam through each destination in that cluste
-        Vector3 distanceVector = stateMachine.NavMeshAgent.transform.position - destinations[clusterNumber][currentDestinationTraversing].position;
-        
-        //if close enough to destination
-        if (distanceVector.magnitude <= destinationAccuracy)
+        float distance = GetDistance(clusters[currentCluster].Destinations[currentDestination], stateMachine);
+
+        if (distance <= destinationAccuracy)
         {
-            currentDestinationTraversing++;
-            if (currentDestinationTraversing > destinationsToTraverse)
-                        {
-                            //go roaming state
-                            currentDestinationTraversing = 0;
-                            stateMachine.SwitchState(stateMachine.AllStates[(int)Monster2States.RoamState]);
-                        }
+            ++currentDestination;
+            if (currentDestination >= clusters[currentCluster].Destinations.Length)
+            {
+                currentDestination = 0;
+                stateMachine.SwitchState(stateMachine.AllStates[(int)Monster2States.RoamState]);
+                return;
+            }
 
-            stateMachine.NavMeshAgent.SetDestination(destinations[clusterNumber][currentDestinationTraversing].position);
-         }
-          
-
+            stateMachine.NavMeshAgent.destination = clusters[currentCluster].Destinations[currentDestination].position;
+        }
     }
 
     public override void EnterState(StateMachine stateMachine)
     {
         stateMachine.NavMeshAgent.speed = investigateSpeed;
-        monsterPosition = stateMachine.NavMeshAgent.transform.position;
-
-        //find nearestDestination
-        calculateClosestDestinationIndex();
-        stateMachine.NavMeshAgent.SetDestination(destinations[closestClusterNumber][currentDestinationTraversing].position);
+        currentCluster = GetClosestClusterIndex(stateMachine);
+        stateMachine.NavMeshAgent.destination = clusters[currentCluster].Destinations[0].position;
     }
 
-    void calculateClosestDestinationIndex()
+    private int GetClosestClusterIndex(StateMachine stateMachine)
     {
-        
-        for (clusterNumber = 0; clusterNumber < destinations.Length ; clusterNumber++)
+        float minDistance = GetDistance(clusters[0].Destinations[0], stateMachine);
+        int minCluster = 0;
+        for (int i = 0; i < clusters.Length; ++i)
         {
-            for (int destinationTracker = 0; destinationTracker < destinations[clusterNumber].Length; destinationTracker++)
+            for (int j = 0; j < clusters[i].Destinations.Length; ++j)
             {
-                //grab position of current destination
+                float distance = GetDistance(clusters[i].Destinations[j], stateMachine);
 
-                Vector3 destinationPosition = destinations[clusterNumber][destinationTracker].position;
-
-
-                //calculate distance between 2 vectors
-                distance = Vector3.Distance(destinationPosition, monsterPosition);
-
-                //assign the shortestDistance
-                if (distance < shortestDistance)
+                if (distance < minDistance)
                 {
-                    destinationGoal = destinations[clusterNumber][destinationTracker].position;
-                    shortestDistance = distance;
-                    closestDestination = destinations[clusterNumber][destinationTracker];
-                    closestDestinationNumber = destinationTracker;
-                    closestClusterNumber = clusterNumber;
+                    minDistance = distance;
+                    minCluster = i;
                 }
-            } 
-        } 
+            }
+        }
+
+        return minCluster;
     }
+
+    private float GetDistance(Transform destination, StateMachine stateMachine)
+    {
+        return (destination.position - stateMachine.NavMeshAgent.transform.position).magnitude;
+    }
+}
+
+[Serializable]
+internal class Cluster
+{
+    [SerializeField] public Transform[] Destinations;
 }
