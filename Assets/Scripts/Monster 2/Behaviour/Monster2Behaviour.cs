@@ -3,6 +3,10 @@ using UnityEngine.AI;
 
 public class Monster2Behaviour : MonoBehaviour
 {
+    [Range(0.75f, 0.25f)]
+    [SerializeField] private float investigationRange;
+    [Range(2f, 0.75f)]
+    [SerializeField] private float aggroRange;
     [SerializeField] private RoamState roamState;
     [SerializeField] private InvestigateState investigateState;
     [SerializeField] private AggroState aggroState;
@@ -28,14 +32,13 @@ public class Monster2Behaviour : MonoBehaviour
     {
         float distanceFromSource = (StateMachine.NavMeshAgent.transform.position - position).magnitude;
 
-        if (soundLoudness / distanceFromSource > 1f)
+        if (soundLoudness / distanceFromSource >= aggroRange)
         {
             StateMachine.SwitchState(StateMachine.AllStates[(int)Monster2States.AggroState]);
         }
 
-        else if (soundLoudness / distanceFromSource > 0.5f)
+        else if (soundLoudness / distanceFromSource >= investigationRange)
         {
-            StateMachine.NavMeshAgent.destination = position;
             StateMachine.SwitchState(StateMachine.AllStates[(int)Monster2States.InvestigateState]);
         }
     }

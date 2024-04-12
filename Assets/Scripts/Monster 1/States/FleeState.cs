@@ -8,8 +8,8 @@ public class FleeState : State
     private float currentStunBuffer;
     [SerializeField] private Light uVLightLight;
     [SerializeField] private PlayerUVLight playerUVLight;
-    [Range(0f, 1f)]
-    [SerializeField] private float stoppingSpeed; // 0 stops fast, 1 stops slow
+    [Range(1f, 0f)]
+    [SerializeField] private float stoppingSpeed;
     [SerializeField] private float stunBufferSeconds;
     [SerializeField] private float fleeSpeed;
 
