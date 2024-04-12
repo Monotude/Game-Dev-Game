@@ -28,12 +28,16 @@ public class Monster2Behaviour : MonoBehaviour
     {
         float distanceFromSource = (StateMachine.NavMeshAgent.transform.position - position).magnitude;
 
-        if (soundLoudness / distanceFromSource > 19f)
+        if (soundLoudness / distanceFromSource > 1f)
         {
             StateMachine.SwitchState(StateMachine.AllStates[(int)Monster2States.AggroState]);
         }
 
-        Debug.Log(soundLoudness / distanceFromSource);
+        else if (soundLoudness / distanceFromSource > 0.5f)
+        {
+            StateMachine.NavMeshAgent.destination = position;
+            StateMachine.SwitchState(StateMachine.AllStates[(int)Monster2States.InvestigateState]);
+        }
     }
 
     private void Awake()
