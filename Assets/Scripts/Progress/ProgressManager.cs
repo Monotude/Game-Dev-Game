@@ -25,8 +25,8 @@ public class ProgressManager : MonoBehaviour
         if (Progress.GetFuseCount() == 1 && !isAFuseBoxOn)
         {
             monster.SetActive(true);
-            MonsterStateMachine monsterStateMachine = monster.GetComponent<MonsterStateMachine>();
-            monsterStateMachine.SwitchState(monsterStateMachine.ChaseState);
+            StateMachine monsterStateMachine = monster.GetComponent<StateMachine>();
+            monsterStateMachine.SwitchState(monsterStateMachine.AllStates[(int)Monster1States.ChaseState]);
         }
     }
 
@@ -40,7 +40,7 @@ public class ProgressManager : MonoBehaviour
             }
         }
 
-        RenderSettings.ambientLight = new Color32(55, 55, 55, 0);
+        RenderSettings.ambientLight = new Color32(53, 53, 53, 0);
         Destroy(monster);
         AudioManager.Instance.StopMusic();
     }

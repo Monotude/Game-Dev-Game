@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public class IdleState : MonsterState
+public class IdleState : State
 {
     private float currentIdleTime;
     [SerializeField] private float idleTime;
@@ -10,10 +10,10 @@ public class IdleState : MonsterState
     [SerializeField] private float monsterFieldOfView;
     [SerializeField] private float monsterVisionRange;
 
-    private bool IsPlayerSeen(MonsterStateMachine monsterStateMachine)
+    private bool IsPlayerSeen(StateMachine stateMachine)
     {
-        Transform monster = monsterStateMachine.gameObject.transform;
-        Transform player = monsterStateMachine.Player;
+        Transform monster = stateMachine.NavMeshAgent.transform;
+        Transform player = stateMachine.Player;
 
         Vector3 monsterToPlayer = (player.position - monster.position).normalized;
         float angle = Vector3.Dot(monster.forward, monsterToPlayer);
@@ -30,23 +30,25 @@ public class IdleState : MonsterState
         return hit.transform == player;
     }
 
-    public override void EnterState(MonsterStateMachine monsterStateMachine)
+    public override void EnterState(StateMachine stateMachine)
     {
         currentIdleTime = 0f;
     }
 
-    public override void Action(MonsterStateMachine monsterStateMachine)
+    public override void Action(StateMachine stateMachine)
     {
-        if (monsterStateMachine.ChaseState.IsTimeToChase() || IsPlayerSeen(monsterStateMachine))
+        ChaseState chaseState = (ChaseState)stateMachine.AllStates[(int)Monster1States.ChaseState];
+
+        if (chaseState.IsTimeToChase() || IsPlayerSeen(stateMachine))
         {
-            monsterStateMachine.SwitchState(monsterStateMachine.ChaseState);
+            stateMachine.SwitchState(chaseState);
         }
 
         currentIdleTime += Time.deltaTime;
 
         if (currentIdleTime >= idleTime)
         {
-            monsterStateMachine.SwitchState(monsterStateMachine.PatrolState);
+            stateMachine.SwitchState(stateMachine.AllStates[(int)Monster1States.PatrolState]);
         }
     }
 }

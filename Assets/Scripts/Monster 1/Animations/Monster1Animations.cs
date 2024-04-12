@@ -1,41 +1,41 @@
 using UnityEngine;
 
-public class MonsterAnimationController : MonoBehaviour
+public class Monster1Animations : MonoBehaviour
 {
     private Animator animator;
-    private MonsterStateMachine monsterStateMachine;
+    private StateMachine stateMachine;
 
-    private void Awake()
+    private void Start()
     {
         animator = GetComponent<Animator>();
-        monsterStateMachine = GetComponent<MonsterStateMachine>();
-        monsterStateMachine.ChangeMonsterState += AnimationChange;
+        stateMachine = GetComponent<Monster1Behaviour>().StateMachine;
+        stateMachine.ChangeStateEvent += AnimationChange;
     }
 
-    private void AnimationChange(MonsterState monsterState)
+    private void AnimationChange(State state)
     {
-        if (monsterStateMachine.CurrentMonsterState is ChaseState)
+        if (state is ChaseState)
         {
             animator.SetBool("isChasing", true);
             animator.SetBool("isIdle", false);
             animator.SetBool("isFleeing", false);
         }
 
-        else if (monsterStateMachine.CurrentMonsterState is FleeState)
+        else if (state is FleeState)
         {
             animator.SetBool("isChasing", false);
             animator.SetBool("isIdle", false);
             animator.SetBool("isFleeing", true);
         }
 
-        else if (monsterStateMachine.CurrentMonsterState is PatrolState)
+        else if (state is PatrolState)
         {
             animator.SetBool("isChasing", false);
             animator.SetBool("isIdle", false);
             animator.SetBool("isFleeing", false);
         }
 
-        else if (monsterStateMachine.CurrentMonsterState is IdleState)
+        else if (state is IdleState)
         {
             animator.SetBool("isChasing", false);
             animator.SetBool("isIdle", true);

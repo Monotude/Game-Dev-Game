@@ -11,7 +11,6 @@ public class PlayerInventoryUI : MonoBehaviour
     private void Awake()
     {
         progressManager = GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
-        progressManager.LoadGame += UpdateFuseUI;
     }
 
     public void UpdateFuseUI()

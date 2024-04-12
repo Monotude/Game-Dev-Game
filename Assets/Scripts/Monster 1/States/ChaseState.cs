@@ -2,14 +2,14 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public class ChaseState : MonsterState
+public class ChaseState : State
 {
     [SerializeField] private Light uVLightLight;
     [SerializeField] private PlayerUVLight playerUVLight;
     [SerializeField] private float chaseSpeed;
     [SerializeField] private int minTimeUntilChase;
     [SerializeField] private int maxTimeUntilChase;
-    [SerializeField] private float timeUntilChase;
+    private float timeUntilChase;
 
     public float CurrentTimeUntilChase { get; private set; }
     public float TimeUntilChase { get => this.timeUntilChase; set => this.timeUntilChase = value; }
@@ -25,7 +25,7 @@ public class ChaseState : MonsterState
         return CurrentTimeUntilChase <= 0;
     }
 
-    private bool IsStunned(MonsterStateMachine monsterStateMachine)
+    private bool IsStunned(StateMachine stateMachine)
     {
         if (!playerUVLight.IsUVLightOn)
         {
@@ -33,7 +33,7 @@ public class ChaseState : MonsterState
         }
 
         Transform camera = Camera.main.transform;
-        Transform monster = monsterStateMachine.gameObject.transform;
+        Transform monster = stateMachine.NavMeshAgent.transform;
 
         Vector3 cameraToMonster = monster.position - camera.position;
         float angle = Vector3.Dot(camera.forward, cameraToMonster);
@@ -44,7 +44,7 @@ public class ChaseState : MonsterState
             return false;
         }
 
-        Transform player = monsterStateMachine.Player;
+        Transform player = stateMachine.Player;
 
         Vector3 playerToMonster = monster.position - player.position;
         Ray ray = new Ray(player.position, playerToMonster);
@@ -53,20 +53,20 @@ public class ChaseState : MonsterState
         return hit.transform == monster;
     }
 
-    public override void EnterState(MonsterStateMachine monsterStateMachine)
+    public override void EnterState(StateMachine stateMachine)
     {
         ResetCurrentTimeUntilChase();
-        monsterStateMachine.NavMeshAgent.speed = chaseSpeed;
-        monsterStateMachine.NavMeshAgent.destination = monsterStateMachine.Player.position;
+        stateMachine.NavMeshAgent.speed = chaseSpeed;
+        stateMachine.NavMeshAgent.destination = stateMachine.Player.position;
     }
 
-    public override void Action(MonsterStateMachine monsterStateMachine)
+    public override void Action(StateMachine stateMachine)
     {
-        monsterStateMachine.NavMeshAgent.destination = monsterStateMachine.Player.position;
+        stateMachine.NavMeshAgent.destination = stateMachine.Player.position;
 
-        if (IsStunned(monsterStateMachine))
+        if (IsStunned(stateMachine))
         {
-            monsterStateMachine.SwitchState(monsterStateMachine.FleeState);
+            stateMachine.SwitchState(stateMachine.AllStates[(int)Monster1States.FleeState]);
         }
     }
 }

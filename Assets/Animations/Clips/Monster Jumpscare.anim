@@ -58332,9 +58332,10 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.083333336
-    functionName: PlayScream
+    functionName: PlayMonsterScream
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 11500000, guid: b5f388147bda4bf47af24721f51d4f2f,
+      type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

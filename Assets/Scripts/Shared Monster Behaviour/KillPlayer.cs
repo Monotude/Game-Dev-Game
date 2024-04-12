@@ -7,7 +7,6 @@ public class KillPlayer : MonoBehaviour
 {
     private Animator animator;
     private NavMeshAgent navMeshAgent;
-    private MonsterStateMachine monsterStateMachine;
     private GameObject mainCamera;
     private GameObject player;
     private GameObject flashLight;
@@ -18,8 +17,11 @@ public class KillPlayer : MonoBehaviour
 
     private void StopMonster()
     {
-        navMeshAgent.isStopped = true;
-        navMeshAgent.velocity = new Vector3();
+        if (navMeshAgent != null)
+        {
+            navMeshAgent.isStopped = true;
+            navMeshAgent.velocity = new Vector3();
+        }
     }
 
     private void DisablePlayer()
@@ -32,7 +34,6 @@ public class KillPlayer : MonoBehaviour
 
     private void ReadyAnimation()
     {
-        monsterStateMachine.enabled = false;
         jumpscareCamera.SetActive(true);
         jumpscareLight.SetActive(true);
         animator.SetTrigger("jumpscare");
@@ -41,7 +42,6 @@ public class KillPlayer : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        monsterStateMachine = GetComponent<MonsterStateMachine>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         mainCamera = GameObject.FindWithTag("MainCamera");
         player = GameObject.FindWithTag("Player");

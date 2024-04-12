@@ -3,7 +3,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 [Serializable]
-public class PatrolState : MonsterState
+public class PatrolState : State
 {
     private Vector3 patrolDestination;
     [SerializeField] private float patrolSpeed;
@@ -25,16 +25,16 @@ public class PatrolState : MonsterState
         return newPatrolDestination;
     }
 
-    private bool AtDestination(MonsterStateMachine monsterStateMachine)
+    private bool AtDestination(StateMachine stateMachine)
     {
-        Vector3 monsterPosition = monsterStateMachine.gameObject.transform.position;
+        Vector3 monsterPosition = stateMachine.NavMeshAgent.transform.position;
         return patrolDestination.x == monsterPosition.x && patrolDestination.z == monsterPosition.z;
     }
 
-    private bool IsPlayerSeen(MonsterStateMachine monsterStateMachine)
+    private bool IsPlayerSeen(StateMachine stateMachine)
     {
-        Transform monster = monsterStateMachine.gameObject.transform;
-        Transform player = monsterStateMachine.Player;
+        Transform monster = stateMachine.NavMeshAgent.gameObject.transform;
+        Transform player = stateMachine.Player;
 
         Vector3 monsterToPlayer = (player.position - monster.position).normalized;
         float angle = Vector3.Dot(monster.forward, monsterToPlayer);
@@ -51,28 +51,31 @@ public class PatrolState : MonsterState
         return hit.transform == player;
     }
 
-    private bool IsChaseCooldownOver(MonsterStateMachine monsterStateMachine)
+    private bool IsChaseCooldownOver(StateMachine stateMachine)
     {
-        return chaseCooldownTime <= monsterStateMachine.ChaseState.TimeUntilChase - monsterStateMachine.ChaseState.CurrentTimeUntilChase;
+        ChaseState chaseState = (ChaseState)stateMachine.AllStates[(int)Monster1States.ChaseState];
+        return chaseCooldownTime <= chaseState.TimeUntilChase - chaseState.CurrentTimeUntilChase;
     }
 
-    public override void EnterState(MonsterStateMachine monsterStateMachine)
+    public override void EnterState(StateMachine stateMachine)
     {
         patrolDestination = GetPatrolDestination();
-        monsterStateMachine.NavMeshAgent.destination = patrolDestination;
-        monsterStateMachine.NavMeshAgent.speed = patrolSpeed;
+        stateMachine.NavMeshAgent.destination = patrolDestination;
+        stateMachine.NavMeshAgent.speed = patrolSpeed;
     }
 
-    public override void Action(MonsterStateMachine monsterStateMachine)
+    public override void Action(StateMachine stateMachine)
     {
-        if ((monsterStateMachine.ChaseState.IsTimeToChase() || IsPlayerSeen(monsterStateMachine)) && IsChaseCooldownOver(monsterStateMachine))
+        ChaseState chaseState = (ChaseState)stateMachine.AllStates[(int)Monster1States.ChaseState];
+
+        if ((chaseState.IsTimeToChase() || IsPlayerSeen(stateMachine)) && IsChaseCooldownOver(stateMachine))
         {
-            monsterStateMachine.SwitchState(monsterStateMachine.ChaseState);
+            stateMachine.SwitchState(chaseState);
         }
 
-        if (AtDestination(monsterStateMachine))
+        else if (AtDestination(stateMachine))
         {
-            monsterStateMachine.SwitchState(monsterStateMachine.IdleState);
+            stateMachine.SwitchState(stateMachine.AllStates[(int)Monster1States.IdleState]);
         }
     }
 }

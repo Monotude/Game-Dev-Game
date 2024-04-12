@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Animations;
 
 [Serializable]
-public class FleeState : MonsterState
+public class FleeState : State
 {
     private float currentStunBuffer;
     [SerializeField] private Light uVLightLight;
@@ -19,12 +19,12 @@ public class FleeState : MonsterState
         return hit.point;
     }
 
-    private void SetFleeDestination(MonsterStateMachine monsterStateMachine)
+    private void SetFleeDestination(StateMachine monsterStateMachine)
     {
-        monsterStateMachine.NavMeshAgent.destination = GetFleeDestination(monsterStateMachine.transform);
+        monsterStateMachine.NavMeshAgent.destination = GetFleeDestination(monsterStateMachine.NavMeshAgent.transform);
     }
 
-    private void IsRestunned(MonsterStateMachine monsterStateMachine)
+    private void IsRestunned(StateMachine monsterStateMachine)
     {
         if (IsStunned(monsterStateMachine))
         {
@@ -32,7 +32,7 @@ public class FleeState : MonsterState
         }
     }
 
-    private bool IsStunned(MonsterStateMachine monsterStateMachine)
+    private bool IsStunned(StateMachine monsterStateMachine)
     {
         if (!playerUVLight.IsUVLightOn)
         {
@@ -40,7 +40,7 @@ public class FleeState : MonsterState
         }
 
         Transform camera = Camera.main.transform;
-        Transform monster = monsterStateMachine.gameObject.transform;
+        Transform monster = monsterStateMachine.NavMeshAgent.transform;
 
         Vector3 cameraToMonster = monster.position - camera.position;
         float angle = Vector3.Dot(camera.forward, cameraToMonster);
@@ -60,29 +60,29 @@ public class FleeState : MonsterState
         return hit.transform == monster;
     }
 
-    public override void EnterState(MonsterStateMachine monsterStateMachine)
+    public override void EnterState(StateMachine monsterStateMachine)
     {
         currentStunBuffer = 0f;
         monsterStateMachine.NavMeshAgent.velocity = monsterStateMachine.NavMeshAgent.velocity * stoppingSpeed;
         monsterStateMachine.NavMeshAgent.speed = fleeSpeed;
-        monsterStateMachine.transform.GetComponent<LookAtConstraint>().constraintActive = true;
+        monsterStateMachine.NavMeshAgent.gameObject.GetComponent<LookAtConstraint>().constraintActive = true;
         SetFleeDestination(monsterStateMachine);
     }
 
-    public override void Action(MonsterStateMachine monsterStateMachine)
+    public override void Action(StateMachine stateMachine)
     {
         currentStunBuffer += Time.deltaTime;
 
         if (currentStunBuffer >= stunBufferSeconds)
         {
-            monsterStateMachine.transform.GetComponent<LookAtConstraint>().constraintActive = false;
-            monsterStateMachine.SwitchState(monsterStateMachine.PatrolState);
+            stateMachine.NavMeshAgent.gameObject.GetComponent<LookAtConstraint>().constraintActive = false;
+            stateMachine.SwitchState(stateMachine.AllStates[(int)Monster1States.PatrolState]);
         }
 
         else
         {
-            SetFleeDestination(monsterStateMachine);
-            IsRestunned(monsterStateMachine);
+            SetFleeDestination(stateMachine);
+            IsRestunned(stateMachine);
         }
     }
 }
