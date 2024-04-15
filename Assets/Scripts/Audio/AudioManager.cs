@@ -15,6 +15,16 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
+    public void PauseMusic()
+    {
+        musicSource.Pause();
+    }
+
+    public void ResumeMusic()
+    {
+        musicSource.Play();
+    }
+
     public void StopMusic()
     {
         musicSource.Stop();

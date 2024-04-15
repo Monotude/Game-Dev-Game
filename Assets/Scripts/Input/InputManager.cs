@@ -3,6 +3,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     public static InputManager Instance { get; private set; }
+    public bool IsPaused { get; set; }
     public float ForwardMovement { get; set; }
     public float RightMovement { get; set; }
     public float VerticalMouseMovement { get; set; }
@@ -14,8 +15,19 @@ public class InputManager : MonoBehaviour
     public bool FlashlightButtonDown { get; set; }
     public bool UVLightButton { get; set; }
     public bool InteractButtonDown { get; set; }
+    public bool PauseMenuButtonDown { get; set; }
 
     private void GetPlayerInput()
+    {
+        if (!IsPaused)
+        {
+            HandleGameplayInput();
+        }
+
+        PauseMenuButtonDown = Input.GetKeyDown(KeyCode.Escape);
+    }
+
+    private void HandleGameplayInput()
     {
         ForwardMovement = Input.GetAxisRaw("Vertical");
         RightMovement = Input.GetAxisRaw("Horizontal");
