@@ -24,7 +24,7 @@ public class SaveManager : MonoBehaviour
     public void SaveProgress()
     {
         string path = Application.persistentDataPath + "/" + progressFileName + ".json";
-        string json = JsonUtility.ToJson(GetProgressManager().Progress);
+        string json = JsonUtility.ToJson(GetProgressManager()?.Progress);
         File.WriteAllText(path, json);
     }
 
