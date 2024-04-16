@@ -10,9 +10,9 @@ public class KeyPadUI : MonoBehaviour
     [SerializeField] private string passcode;
     [SerializeField] private TextMeshPro keyPadText;
     [SerializeField] private TextMeshProUGUI keyPadTexUI;
-    [SerializeField] private GameObject loreDoor;
-    private string inputCode = "";
-    private Animator loreDoorAnimator;
+    [SerializeField] private GameObject Door;
+    [SerializeField] private string inputCode = "";
+    private Animator DoorAnimator;
 
 
     public void InputCode0()
@@ -87,15 +87,17 @@ public class KeyPadUI : MonoBehaviour
 
     public void ClearInputCode() {
         inputCode = "";
+        keyPadText.text = inputCode;
+        keyPadTexUI.text = inputCode;
     }
 
     public void EnterInputCode() {
         if(inputCode.Equals(passcode)) {
-            Debug.Log("Correct");
+            //Debug.Log("Correct");
             keyPad.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
-            loreDoorAnimator.Play("DoorOpening");
-            Destroy(loreDoor.GetComponent<Collider>());
+            DoorAnimator.Play("DoorOpening");
+            Destroy(Door.GetComponent<Collider>());
         }
         else {
             ClearInputCode();
@@ -105,7 +107,7 @@ public class KeyPadUI : MonoBehaviour
     private void Start()
     {
         keyPad.SetActive(false);
-        loreDoorAnimator = loreDoor.GetComponent<Animator>();
+        DoorAnimator = Door.GetComponent<Animator>();
     }
 
 }
