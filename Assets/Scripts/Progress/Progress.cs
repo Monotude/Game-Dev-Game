@@ -9,6 +9,9 @@ public class Progress
     [SerializeField] private bool[] isFuseCollected;
     [SerializeField] private bool[] isFuseBoxPowered;
     [SerializeField] private bool[] isElectricalBoxOn;
+    [SerializeField] private bool isSection2Started;
+    [SerializeField] private bool isSection2Cleared;
+    [SerializeField] private bool isLoreRoomOpen;
 
     public Progress(int fuseCount)
     {
@@ -16,6 +19,9 @@ public class Progress
         isFuseCollected = new bool[fuseCount];
         isFuseBoxPowered = new bool[fuseCount];
         isElectricalBoxOn = new bool[fuseCount];
+        isSection2Started = false;
+        isSection2Cleared = false;
+        isLoreRoomOpen = false;
     }
 
     public int GetFuseCount()
@@ -75,5 +81,35 @@ public class Progress
         }
 
         return false;
+    }
+
+    public bool GetIsSection2Started()
+    {
+        return isSection2Started;
+    }
+
+    public void StartSection2()
+    {
+        isSection2Started = true;
+    }
+
+    public bool GetIsSection2Cleared()
+    {
+        return isSection2Cleared;
+    }
+
+    public void ClearSection2()
+    {
+        isSection2Cleared = true;
+    }
+
+    public bool GetIsLoreRoomOpen()
+    {
+        return isLoreRoomOpen;
+    }
+
+    public void OpenLoreRoom()
+    {
+        isLoreRoomOpen = true;
     }
 }

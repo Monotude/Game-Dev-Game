@@ -1,16 +1,21 @@
 using System;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class ProgressManager : MonoBehaviour
 {
     [SerializeField] private int fuseCount;
-    [SerializeField] private GameObject monster;
+    [SerializeField] private Transform player;
+    [SerializeField] private Transform mainCamera;
+    [SerializeField] private GameObject monster1;
+    [SerializeField] private GameObject monster2;
 
     public int FuseCount { get => this.fuseCount; set => this.fuseCount = value; }
     public Progress Progress { get; set; }
-    public event Action LoadGame;
+    public event Action LoadGameEvent;
+    public event Action PowerOnEvent;
 
-    public void CheckSpawnMonster()
+    public void CheckSpawnMonster1()
     {
         bool isAFuseBoxOn = false;
         for (int i = 0; i < FuseCount; ++i)
@@ -24,13 +29,13 @@ public class ProgressManager : MonoBehaviour
 
         if (Progress.GetFuseCount() == 1 && !isAFuseBoxOn)
         {
-            monster.SetActive(true);
-            StateMachine stateMachine = monster.GetComponent<Monster1Behaviour>().StateMachine;
+            monster1.SetActive(true);
+            StateMachine stateMachine = monster1.GetComponent<Monster1Behaviour>().StateMachine;
             stateMachine.SwitchState(stateMachine.AllStates[(int)Monster1States.ChaseState]);
         }
     }
 
-    public void CheckTurnLightsOn()
+    public void CheckClearSection1()
     {
         for (int i = 1; i <= fuseCount; ++i)
         {
@@ -41,11 +46,12 @@ public class ProgressManager : MonoBehaviour
         }
 
         RenderSettings.ambientLight = new Color32(53, 53, 53, 0);
-        Destroy(monster);
+        PowerOnEvent?.Invoke();
+        Destroy(monster1);
         AudioManager.Instance.StopMusic();
     }
 
-    private void LoadMonster()
+    private void LoadMonster1()
     {
         for (int i = 1; i <= fuseCount; ++i)
         {
@@ -55,15 +61,54 @@ public class ProgressManager : MonoBehaviour
             }
         }
 
-        monster.SetActive(false);
+        monster1.SetActive(false);
+    }
+
+    public void StartSection2()
+    {
+        monster2.SetActive(true);
+    }
+
+    private void CheckClearSection2()
+    {
+        if (Progress.GetIsSection2Cleared())
+        {
+            RenderSettings.ambientLight = new Color32(53, 53, 53, 0);
+            Destroy(monster2);
+            AudioManager.Instance.StopMusic();
+        }
+    }
+
+    private void LoadPlayerStart()
+    {
+        Vector3 startPosition = new Vector3(4.12f, 1f, 59.16f);
+
+        if (Progress.GetIsLoreRoomOpen())
+        {
+            startPosition = new Vector3(71f, -2f, 67f);
+        }
+
+        if (Progress.GetIsSection2Started())
+        {
+            startPosition = new Vector3(84f, 1f, 58f);
+        }
+
+        TeleportPlayer(startPosition);
+    }
+
+    private void TeleportPlayer(Vector3 position)
+    {
+        player.GetComponent<Rigidbody>().MovePosition(position);
+        mainCamera.position = position + new Vector3(0, 0.5f, 0);
     }
 
     private void Start()
     {
         AudioManager.Instance.PlayMusic("Section 1 Horror");
         SaveManager.Instance.LoadProgress();
-        LoadGame += LoadMonster;
-        LoadGame += CheckTurnLightsOn;
-        LoadGame?.Invoke();
+        LoadGameEvent += LoadPlayerStart;
+        LoadGameEvent += LoadMonster1;
+        LoadGameEvent += CheckClearSection1;
+        LoadGameEvent?.Invoke();
     }
 }

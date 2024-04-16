@@ -22,7 +22,7 @@ public class AudioManager : MonoBehaviour
 
     public void ResumeMusic()
     {
-        musicSource.Play();
+        musicSource.UnPause();
     }
 
     public void StopMusic()

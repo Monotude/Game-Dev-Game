@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    public static InputManager Instance { get; private set; }
+    public static InputManager Instance { get; set; }
     public bool IsPaused { get; set; }
     public float ForwardMovement { get; set; }
     public float RightMovement { get; set; }
@@ -16,6 +16,22 @@ public class InputManager : MonoBehaviour
     public bool UVLightButton { get; set; }
     public bool InteractButtonDown { get; set; }
     public bool PauseMenuButtonDown { get; set; }
+
+    public void StopGameplayInput()
+    {
+        IsPaused = true;
+        ForwardMovement = 0f;
+        RightMovement = 0f;
+        VerticalMouseMovement = 0f;
+        HorizontalMouseMovement = 0f;
+        SprintButtonDown = false;
+        SprintButtonUp = false;
+        CrouchButtonDown = false;
+        CrouchButtonUp = false;
+        FlashlightButtonDown = false;
+        UVLightButton = false;
+        InteractButtonDown = false;
+    }
 
     private void GetPlayerInput()
     {
