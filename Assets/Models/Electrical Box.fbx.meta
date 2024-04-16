@@ -8,22 +8,22 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: color_gold
-    second: {fileID: 2800000, guid: 85a1ebce1e5c82f49aa4c5c112ea2e0f, type: 3}
+    second: {fileID: 2800000, guid: 793bf4be8b962b1468982c302b9dd2ea, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: everytexture.com-stock-plastic-texture-00020
-    second: {fileID: 2800000, guid: bf90934ee1577d748bc08d86b79b01e4, type: 3}
+    second: {fileID: 2800000, guid: b20f1ee10186bad408bb61c6f9f2ee7c, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: panel_electric
-    second: {fileID: 2800000, guid: b8bcf02040d4b4448abd5a839320fdeb, type: 3}
+    second: {fileID: 2800000, guid: ca46c675642699e42a91ccebab178f40, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: panel_electric2
-    second: {fileID: 2800000, guid: ae337ba51e0d3fe49808f2c33ec98945, type: 3}
+    second: {fileID: 2800000, guid: 4b860288a7a3e9a45ad3363717cdb20b, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

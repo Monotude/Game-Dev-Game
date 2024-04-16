@@ -34,8 +34,8 @@ public class ElectricalBoxInteract : MonoBehaviour, IInteractable
     private void Awake()
     {
         progressManager = GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
-        progressManager.LoadGame += LoadElectricalBoxProgress;
-        ElectricalBoxOnEvent += progressManager.CheckTurnLightsOn;
+        progressManager.LoadGameEvent += LoadElectricalBoxProgress;
+        ElectricalBoxOnEvent += progressManager.CheckClearSection1;
         animator = GetComponent<Animator>();
     }
 }

@@ -33,8 +33,8 @@ public class FuseInteract : MonoBehaviour, IInteractable
     {
         progressManager = GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
         playerInventoryUI = GameObject.FindWithTag("UI Controller").GetComponent<PlayerInventoryUI>();
-        progressManager.LoadGame += LoadFuseProgress;
-        CollectFuseEvent += progressManager.CheckSpawnMonster;
+        progressManager.LoadGameEvent += LoadFuseProgress;
+        CollectFuseEvent += progressManager.CheckSpawnMonster1;
         CollectFuseEvent += playerInventoryUI.UpdateFuseUI;
     }
 }

@@ -38,7 +38,7 @@ public class FuseBoxInteract : MonoBehaviour, IInteractable
     {
         progressManager = GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
         playerInventoryUI = GameObject.FindWithTag("UI Controller").GetComponent<PlayerInventoryUI>();
-        progressManager.LoadGame += LoadFuseBoxProgress;
+        progressManager.LoadGameEvent += LoadFuseBoxProgress;
         PowerFuseBoxEvent += playerInventoryUI.UpdateFuseUI;
     }
 }
