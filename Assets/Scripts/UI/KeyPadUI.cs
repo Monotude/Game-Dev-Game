@@ -30,12 +30,8 @@ public class KeypadUI : MonoBehaviour
             CorrectCodeEvent?.Invoke();
         }
 
-        else
-        {
-            ClearInputCode();
-        }
-
-        PauseMenu.ResumeGame();
         keypadUI.SetActive(false);
+        ClearInputCode();
+        PauseMenu.ResumeGame();
     }
 }

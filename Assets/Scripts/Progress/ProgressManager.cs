@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Animations;
 
 public class ProgressManager : MonoBehaviour
 {
@@ -69,14 +68,11 @@ public class ProgressManager : MonoBehaviour
         monster2.SetActive(true);
     }
 
-    private void CheckClearSection2()
+    public void ClearSection2()
     {
-        if (Progress.GetIsSection2Cleared())
-        {
-            RenderSettings.ambientLight = new Color32(53, 53, 53, 0);
-            Destroy(monster2);
-            AudioManager.Instance.StopMusic();
-        }
+        RenderSettings.ambientLight = new Color32(53, 53, 53, 0);
+        Destroy(monster2);
+        AudioManager.Instance.StopMusic();
     }
 
     private void LoadPlayerStart()
@@ -88,7 +84,7 @@ public class ProgressManager : MonoBehaviour
             startPosition = new Vector3(71f, -2f, 67f);
         }
 
-        if (Progress.GetIsSection2Started())
+        else if (Progress.GetIsSection2Started())
         {
             startPosition = new Vector3(84f, 1f, 58f);
         }

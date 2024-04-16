@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DoorPowered : MonoBehaviour
+public class Section1DoorPowered : MonoBehaviour
 {
     [SerializeField] private Animator leftDoor;
     [SerializeField] private Animator rightDoor;

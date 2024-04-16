@@ -590,6 +590,77 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 25315117}
   m_Mesh: {fileID: -6198525040401489066, guid: 801e2268f32f1844fb0f1b5d283f94e9, type: 3}
+--- !u!1 &28104745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 28104746}
+  - component: {fileID: 28104748}
+  - component: {fileID: 28104747}
+  m_Layer: 0
+  m_Name: BloodDecal (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &28104746
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28104745}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -8.96, y: 56.979, z: -96.043}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &28104747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28104745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+--- !u!114 &28104748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28104745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.31773257, y: 0.08807654}
+  m_UVBias: {x: 0.28328568, y: 0.88572043}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: -2.897731, y: 3.1477122, z: 0.5}
+  m_Size: {x: 5.908546, y: 0.48598504, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &31247381
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,6 +852,77 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41285108}
   m_Mesh: {fileID: -629719859055844128, guid: 1b4f5aabd16fb6043bab3e7c75a5797d, type: 3}
+--- !u!1 &43071936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 43071937}
+  - component: {fileID: 43071939}
+  - component: {fileID: 43071938}
+  m_Layer: 0
+  m_Name: InvisibleInkDecal (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &43071937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43071936}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.02462374, y: -0.7066779, z: 0.024623735, w: 0.7066779}
+  m_LocalPosition: {x: -8.79, y: 56.78, z: -94.35}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 3.991}
+--- !u!114 &43071938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43071936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
+--- !u!114 &43071939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43071936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.30260202, y: 0.1128507}
+  m_UVBias: {x: -0.00024879916, y: 0.74544764}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: -5.060932, y: 2.7015927, z: 0.5}
+  m_Size: {x: 4.424878, y: 0.9973893, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &45180322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1976,77 +2118,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &119225461
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 119225462}
-  - component: {fileID: 119225464}
-  - component: {fileID: 119225465}
-  m_Layer: 0
-  m_Name: InvisibleInkDecal (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &119225462
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119225461}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 2.74, y: 60.043, z: -93.446}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 180}
---- !u!114 &119225464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119225461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.28145194, y: 0.21895006}
-  m_UVBias: {x: 0.31035104, y: 0.3572257}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: -1.9214461, y: 1.2467469, z: 0.5}
-  m_Size: {x: 4.0569453, y: 1.1449099, z: 1}
-  m_FadeFactor: 1
---- !u!114 &119225465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119225461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!1 &127230940
 GameObject:
   m_ObjectHideFlags: 0
@@ -3324,6 +3395,77 @@ Transform:
   - {fileID: 363858552}
   m_Father: {fileID: 826392308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &206968973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 206968974}
+  - component: {fileID: 206968976}
+  - component: {fileID: 206968975}
+  m_Layer: 0
+  m_Name: PuzzleDecal (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &206968974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206968973}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: 92.843, y: 58.985, z: -109.761}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 180}
+--- !u!114 &206968975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206968973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 36103f07f0427d84f864cbe7b5bdf941, type: 2}
+--- !u!114 &206968976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206968973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 36103f07f0427d84f864cbe7b5bdf941, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.2531848, y: 0.25410688}
+  m_UVBias: {x: 0.21390104, y: 0.38067725}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: -1.1165466, y: 0.054115653, z: 0.5}
+  m_Size: {x: 1.7722931, y: 1.7787488, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &211244578
 GameObject:
   m_ObjectHideFlags: 0
@@ -3578,12 +3720,12 @@ MonoBehaviour:
     playerUVLight: {fileID: 1964213568}
     chaseSpeed: 5.1
     minTimeUntilChase: 25
-    maxTimeUntilChase: 38
+    maxTimeUntilChase: 35
   fleeState:
     uVLightLight: {fileID: 1964213570}
     playerUVLight: {fileID: 1964213568}
     stoppingSpeed: 0
-    stunBufferSeconds: 1.2
+    stunBufferSeconds: 0.5
     fleeSpeed: 3.75
   patrolState:
     patrolSpeed: 1.6
@@ -3741,133 +3883,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &235004987
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 235004988}
-  - component: {fileID: 235004990}
-  - component: {fileID: 235004991}
-  m_Layer: 0
-  m_Name: InvisibleInkDecal (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &235004988
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235004987}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.05714325, w: 0.998366}
-  m_LocalPosition: {x: 32.12, y: 57.115, z: -74.89}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.552}
---- !u!114 &235004990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235004987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.52234405, y: 0.14477709}
-  m_UVBias: {x: 0.38936535, y: 0.58468384}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: 0.5645275, y: 2.0639672, z: 0.5}
-  m_Size: {x: 6.2895966, y: 0.77513766, z: 1}
-  m_FadeFactor: 1
---- !u!114 &235004991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 235004987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
---- !u!1 &238892273
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 238892274}
-  m_Layer: 0
-  m_Name: Decals
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &238892274
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238892273}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.241203, y: -57.373604, z: 158.40729}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1980234276}
-  - {fileID: 1815829620}
-  - {fileID: 1766291463}
-  - {fileID: 1750209025}
-  - {fileID: 2085408075}
-  - {fileID: 1748875406}
-  - {fileID: 2102365056}
-  - {fileID: 1150947866}
-  - {fileID: 1271657950}
-  - {fileID: 1874811649}
-  - {fileID: 402926873}
-  - {fileID: 1562007694}
-  - {fileID: 1971989322}
-  - {fileID: 2126586290}
-  - {fileID: 2083995028}
-  - {fileID: 579949857}
-  - {fileID: 1957686758}
-  - {fileID: 1963917124}
-  - {fileID: 119225462}
-  - {fileID: 320388639}
-  - {fileID: 235004988}
-  - {fileID: 1929395426}
-  - {fileID: 1810886432}
-  - {fileID: 1904058155}
-  - {fileID: 413972993}
-  m_Father: {fileID: 1560309464}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &240528218
 GameObject:
   m_ObjectHideFlags: 0
@@ -4115,6 +4130,77 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &275426635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 275426636}
+  - component: {fileID: 275426638}
+  - component: {fileID: 275426637}
+  m_Layer: 0
+  m_Name: PuzzleDecal (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &275426636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275426635}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 82.69, y: 56.39, z: -106.21}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 180, y: 180, z: 180}
+--- !u!114 &275426637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275426635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 36103f07f0427d84f864cbe7b5bdf941, type: 2}
+--- !u!114 &275426638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275426635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 36103f07f0427d84f864cbe7b5bdf941, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.19342366, y: 0.20757064}
+  m_UVBias: {x: 0.68768215, y: 0.7431123}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: 1.990757, y: 2.4282846, z: 0.5}
+  m_Size: {x: 1.3539658, y: 1.4529943, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &276802474
 GameObject:
   m_ObjectHideFlags: 0
@@ -4312,6 +4398,77 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1355451406}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &282275267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 282275268}
+  - component: {fileID: 282275270}
+  - component: {fileID: 282275269}
+  m_Layer: 0
+  m_Name: BloodDecal (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &282275268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282275267}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -2.672, y: 57.47, z: -98.29}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &282275269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282275267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+--- !u!114 &282275270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282275267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.1894613, y: 0.2613754}
+  m_UVBias: {x: 0.033562407, y: 0.29159424}
+  m_DecalLayerMask: 2
+  m_ScaleMode: 0
+  m_Offset: {x: -4.1275487, y: -0.85672516, z: 0.5}
+  m_Size: {x: 2.4991198, y: 2.3724093, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &282307578
 GameObject:
   m_ObjectHideFlags: 0
@@ -4395,6 +4552,77 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282307578}
   m_Mesh: {fileID: -5869794951829583769, guid: ce17d0ab27356a244b8153ebe34490a0, type: 3}
+--- !u!1 &292686046
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 292686047}
+  - component: {fileID: 292686049}
+  - component: {fileID: 292686048}
+  m_Layer: 0
+  m_Name: PuzzleDecal (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &292686047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292686046}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: 94.55, y: 58.985, z: -81.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 180}
+--- !u!114 &292686048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292686046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 36103f07f0427d84f864cbe7b5bdf941, type: 2}
+--- !u!114 &292686049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292686046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 36103f07f0427d84f864cbe7b5bdf941, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.20268358, y: 0.25410688}
+  m_UVBias: {x: 0.46242097, y: 0.38067725}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: 0.44633865, y: 0.054115653, z: 0.5}
+  m_Size: {x: 1.4187851, y: 1.7787488, z: 1}
+  m_FadeFactor: 1
 --- !u!4 &298762174
 Transform:
   m_ObjectHideFlags: 0
@@ -4590,77 +4818,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &320388638
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 320388639}
-  - component: {fileID: 320388641}
-  - component: {fileID: 320388642}
-  m_Layer: 0
-  m_Name: InvisibleInkDecal (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &320388639
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320388638}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.017271928, y: 0.7068958, z: 0.017271925, w: 0.7068958}
-  m_LocalPosition: {x: 2.74, y: 56.01, z: -90.57}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 2.799}
---- !u!114 &320388641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320388638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.46443236, y: 0.12534015}
-  m_UVBias: {x: 0.013340428, y: 0.8646738}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: -5.7829504, y: 3.4421115, z: 0.5}
-  m_Size: {x: 5.021389, y: 0.91229343, z: 1}
-  m_FadeFactor: 1
---- !u!114 &320388642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320388638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!4 &320450915
 Transform:
   m_ObjectHideFlags: 0
@@ -5167,6 +5324,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftDoor: {fileID: 1292525358}
   rightDoor: {fileID: 821987798}
+--- !u!1 &397672898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 397672899}
+  - component: {fileID: 397672901}
+  - component: {fileID: 397672900}
+  m_Layer: 0
+  m_Name: InvisibleInkDecal (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &397672899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397672898}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.05714325, w: 0.998366}
+  m_LocalPosition: {x: 32.12, y: 57.115, z: -74.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.552}
+--- !u!114 &397672900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397672898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
+--- !u!114 &397672901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397672898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.52234405, y: 0.14477709}
+  m_UVBias: {x: 0.38936535, y: 0.58468384}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: 0.5645275, y: 2.0639672, z: 0.5}
+  m_Size: {x: 6.2895966, y: 0.77513766, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &398454300
 GameObject:
   m_ObjectHideFlags: 0
@@ -5367,77 +5595,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 402493932}
   m_Mesh: {fileID: 3811352892780999137, guid: 3ebb8a48c3ad1b648927a598965976e8, type: 3}
---- !u!1 &402926872
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 402926873}
-  - component: {fileID: 402926875}
-  - component: {fileID: 402926876}
-  m_Layer: 0
-  m_Name: BloodDecal (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &402926873
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402926872}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -9.357, y: 56.979, z: -101.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &402926875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402926872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.31773257, y: 0.14472541}
-  m_UVBias: {x: 0.28328568, y: 0.8290716}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: -2.3031232, y: 2.8988395, z: 0.5}
-  m_Size: {x: 4.7193303, y: 0.9837301, z: 1}
-  m_FadeFactor: 1
---- !u!114 &402926876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402926872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!114 &404622299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5468,6 +5625,77 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &405121188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 405121189}
+  - component: {fileID: 405121191}
+  - component: {fileID: 405121190}
+  m_Layer: 0
+  m_Name: BloodDecal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &405121189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405121188}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.63740516, y: -0.30612862, z: 0.30612853, w: 0.6374052}
+  m_LocalPosition: {x: -2.172, y: 58.15, z: -98.653}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 51.307}
+--- !u!114 &405121190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405121188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+--- !u!114 &405121191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405121188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.18430738, y: 0.31076676}
+  m_UVBias: {x: 0.25043657, y: 0.24411826}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: -0.7555506, y: -0.48206663, z: 0.5}
+  m_Size: {x: 2.4861598, y: 2.0956647, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &405321062
 GameObject:
   m_ObjectHideFlags: 0
@@ -5532,7 +5760,7 @@ Transform:
   - {fileID: 1700787476}
   m_Father: {fileID: 709734155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &413972992
+--- !u!1 &412411332
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5540,69 +5768,69 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 413972993}
-  - component: {fileID: 413972995}
-  - component: {fileID: 413972996}
+  - component: {fileID: 412411333}
+  - component: {fileID: 412411335}
+  - component: {fileID: 412411334}
   m_Layer: 0
-  m_Name: BloodyFootprint Decal (1)
+  m_Name: PuzzleDecal (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &413972993
+--- !u!4 &412411333
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413972992}
+  m_GameObject: {fileID: 412411332}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 30.02, y: 57.74, z: -76.4}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: 93.044, y: 58.985, z: -134.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
---- !u!114 &413972995
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 180}
+--- !u!114 &412411334
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413972992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: adca3d95ccc9e324387d5d58cd5b908f, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.913
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 1, y: 9.921929}
-  m_UVBias: {x: 0, y: 0.00000012772423}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: 0.18944448, y: 6.2453413, z: 0.5}
-  m_Size: {x: 1.4, y: 13.890682, z: 1}
-  m_FadeFactor: 1
---- !u!114 &413972996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413972992}
+  m_GameObject: {fileID: 412411332}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
+  material: {fileID: 2100000, guid: 36103f07f0427d84f864cbe7b5bdf941, type: 2}
+--- !u!114 &412411335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412411332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 36103f07f0427d84f864cbe7b5bdf941, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.24620162, y: 0.25410688}
+  m_UVBias: {x: -0.009919304, y: 0.38067725}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: -2.7077293, y: 0.054115623, z: 0.5}
+  m_Size: {x: 1.7234116, y: 1.7787488, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &421596227
 GameObject:
   m_ObjectHideFlags: 0
@@ -5635,6 +5863,77 @@ Transform:
   - {fileID: 1927070037}
   m_Father: {fileID: 631208116}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &421604080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 421604081}
+  - component: {fileID: 421604083}
+  - component: {fileID: 421604082}
+  m_Layer: 0
+  m_Name: PuzzleDecal (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &421604081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421604080}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 98, y: 56.54, z: -102.57}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 180, y: 90, z: 180}
+--- !u!114 &421604082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421604080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 36103f07f0427d84f864cbe7b5bdf941, type: 2}
+--- !u!114 &421604083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421604080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 36103f07f0427d84f864cbe7b5bdf941, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.21425083, y: 0.26698074}
+  m_UVBias: {x: 0.22792977, y: 0.69090873}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: -1.1546137, y: 2.2707925, z: 0.5}
+  m_Size: {x: 1.4997556, y: 1.8688649, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &422035309
 GameObject:
   m_ObjectHideFlags: 0
@@ -6016,6 +6315,77 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446229160}
   m_Mesh: {fileID: 8121072357735573733, guid: c8ea312bc35cf2748983efe9d6ef8329, type: 3}
+--- !u!1 &449092357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 449092358}
+  - component: {fileID: 449092360}
+  - component: {fileID: 449092359}
+  m_Layer: 0
+  m_Name: BloodDecal (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &449092358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449092357}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -4.94, y: 56.979, z: -101.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &449092359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449092357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+--- !u!114 &449092360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449092357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.31058356, y: 0.14472541}
+  m_UVBias: {x: 0.2904347, y: 0.8290716}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: -2.2331533, y: 3.071898, z: 0.5}
+  m_Size: {x: 4.5793905, y: 0.6376133, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &450115648
 GameObject:
   m_ObjectHideFlags: 0
@@ -7413,6 +7783,77 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530342604}
   m_Mesh: {fileID: -5495902117074765545, guid: e1111045aeaf9b742a62a1cfdc3fcf4d, type: 3}
+--- !u!1 &532498537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 532498538}
+  - component: {fileID: 532498540}
+  - component: {fileID: 532498539}
+  m_Layer: 0
+  m_Name: BloodDecal (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &532498538
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532498537}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -8.96, y: 56.224, z: -96.185}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &532498539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532498537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+--- !u!114 &532498540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532498537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.1412869, y: 0.23924182}
+  m_UVBias: {x: 0.34620887, y: 0.5710277}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: -4.4929132, y: 2.2276945, z: 0.5}
+  m_Size: {x: 0.37794876, y: 0.5214082, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &541162608
 GameObject:
   m_ObjectHideFlags: 0
@@ -7449,6 +7890,77 @@ Transform:
   - {fileID: 169614169}
   m_Father: {fileID: 2050670248}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &545977864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 545977865}
+  - component: {fileID: 545977867}
+  - component: {fileID: 545977866}
+  m_Layer: 0
+  m_Name: InvisibleInkDecal (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &545977865
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545977864}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.017271928, y: 0.7068958, z: 0.017271925, w: 0.7068958}
+  m_LocalPosition: {x: 2.74, y: 56.01, z: -90.57}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 2.799}
+--- !u!114 &545977866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545977864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
+--- !u!114 &545977867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545977864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.46443236, y: 0.12534015}
+  m_UVBias: {x: 0.013340428, y: 0.8646738}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: -5.7829504, y: 3.4421115, z: 0.5}
+  m_Size: {x: 5.021389, y: 0.91229343, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &546911377
 GameObject:
   m_ObjectHideFlags: 0
@@ -7555,13 +8067,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362697484}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 4.12, y: 1.5, z: 59.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &569166003
 GameObject:
   m_ObjectHideFlags: 0
@@ -7792,7 +8304,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575821018}
   m_Mesh: {fileID: 6255687079079774844, guid: 3ebb8a48c3ad1b648927a598965976e8, type: 3}
---- !u!1 &579949856
+--- !u!1 &578782275
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7800,38 +8312,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 579949857}
-  - component: {fileID: 579949859}
-  - component: {fileID: 579949860}
+  - component: {fileID: 578782276}
+  - component: {fileID: 578782278}
+  - component: {fileID: 578782277}
   m_Layer: 0
-  m_Name: BloodDecal (12)
+  m_Name: BloodDecal (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &579949857
+--- !u!4 &578782276
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579949856}
+  m_GameObject: {fileID: 578782275}
   serializedVersion: 2
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 4.76, y: 57.39, z: -117.32}
+  m_LocalPosition: {x: 6.92, y: 57.47, z: -113.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 238892274}
+  m_Father: {fileID: 2063890343}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
---- !u!114 &579949859
+--- !u!114 &578782277
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579949856}
+  m_GameObject: {fileID: 578782275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+--- !u!114 &578782278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578782275}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
@@ -7842,27 +8368,13 @@ MonoBehaviour:
   m_FadeScale: 0.9
   m_StartAngleFade: 180
   m_EndAngleFade: 180
-  m_UVScale: {x: 0.1668559, y: 0.17713912}
-  m_UVBias: {x: 0.49690053, y: 0.37574202}
+  m_UVScale: {x: 0.17632234, y: 0.2618924}
+  m_UVBias: {x: 0.539066, y: 0.55186003}
   m_DecalLayerMask: 2
   m_ScaleMode: 0
-  m_Offset: {x: 7.378418, y: 1.0796008, z: 0.5}
-  m_Size: {x: 4.8375244, y: 3.7386732, z: 1}
+  m_Offset: {x: 8.39064, y: 3.412397, z: 0.5}
+  m_Size: {x: 4.2303925, y: 3.3115892, z: 1}
   m_FadeFactor: 1
---- !u!114 &579949860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579949856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!1 &584182458
 GameObject:
   m_ObjectHideFlags: 0
@@ -9855,6 +10367,77 @@ Transform:
   - {fileID: 401384207}
   m_Father: {fileID: 1145934140}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &690747125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 690747126}
+  - component: {fileID: 690747128}
+  - component: {fileID: 690747127}
+  m_Layer: 0
+  m_Name: BloodDecal (15)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &690747126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690747125}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 24.22, y: 57.47, z: -116.73}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
+--- !u!114 &690747127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690747125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+--- !u!114 &690747128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690747125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.19680186, y: 0.33952844}
+  m_UVBias: {x: 0.7994711, y: 0.17533876}
+  m_DecalLayerMask: 2
+  m_ScaleMode: 0
+  m_Offset: {x: 14.884026, y: -0.85780716, z: 0.5}
+  m_Size: {x: 4.7217407, y: 4.293289, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &694679385
 GameObject:
   m_ObjectHideFlags: 0
@@ -11590,6 +12173,77 @@ Transform:
   - {fileID: 202047261}
   m_Father: {fileID: 21690113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &827990687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 827990688}
+  - component: {fileID: 827990690}
+  - component: {fileID: 827990689}
+  m_Layer: 0
+  m_Name: InvisibleInkDecal (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &827990688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827990687}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 2.74, y: 60.043, z: -93.446}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 180}
+--- !u!114 &827990689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827990687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
+--- !u!114 &827990690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827990687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.28145194, y: 0.21895006}
+  m_UVBias: {x: 0.31035104, y: 0.3572257}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: -1.9214461, y: 1.2467469, z: 0.5}
+  m_Size: {x: 4.0569453, y: 1.1449099, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &833647940
 GameObject:
   m_ObjectHideFlags: 0
@@ -11689,6 +12343,77 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1653795370}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &850236337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 850236338}
+  - component: {fileID: 850236340}
+  - component: {fileID: 850236339}
+  m_Layer: 0
+  m_Name: BloodDecal (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &850236338
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850236337}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 10.69, y: 57.47, z: -97.09}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &850236339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850236337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+--- !u!114 &850236340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850236337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.26497835, y: 0.3108409}
+  m_UVBias: {x: -0.003669498, y: -0.014243428}
+  m_DecalLayerMask: 2
+  m_ScaleMode: 0
+  m_Offset: {x: -3.5673428, y: -3.4364235, z: 0.5}
+  m_Size: {x: 6.357456, y: 3.930534, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &851206940
 GameObject:
   m_ObjectHideFlags: 0
@@ -12305,6 +13030,77 @@ Transform:
   - {fileID: 1798252639}
   m_Father: {fileID: 2145671785}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &873524497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 873524498}
+  - component: {fileID: 873524500}
+  - component: {fileID: 873524499}
+  m_Layer: 0
+  m_Name: InvisibleInkDecal (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &873524498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873524497}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.9423814, w: 0.3345406}
+  m_LocalPosition: {x: -1.66, y: 63.28, z: -82.159}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 140.911}
+--- !u!114 &873524499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873524497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
+--- !u!114 &873524500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873524497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.25159836, y: 0.21987285}
+  m_UVBias: {x: 0.0037539704, y: 0.3245697}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: -6.1967936, y: 1.4174232, z: 0.5}
+  m_Size: {x: 0.9754772, y: 0.4716878, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &883950641
 GameObject:
   m_ObjectHideFlags: 0
@@ -12410,6 +13206,77 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883950641}
   m_Mesh: {fileID: -6072044538983993093, guid: 587f4d02ca881cc40b5db35da76dd5da, type: 3}
+--- !u!1 &891060801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 891060802}
+  - component: {fileID: 891060804}
+  - component: {fileID: 891060803}
+  m_Layer: 0
+  m_Name: InvisibleInkDecal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &891060802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891060801}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.535, y: 55.899, z: -95.975}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &891060803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891060801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
+--- !u!114 &891060804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891060801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.46302098, y: 0.20966007}
+  m_UVBias: {x: 0.53277695, y: 0.8358989}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: 1.6826844, y: 3.2450185, z: 0.5}
+  m_Size: {x: 5.264657, y: 0.9236946, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &891615003
 GameObject:
   m_ObjectHideFlags: 0
@@ -13585,6 +14452,77 @@ RectTransform:
   m_AnchoredPosition: {x: 37.5, y: 20}
   m_SizeDelta: {x: 430, y: 40}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &992397334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 992397335}
+  - component: {fileID: 992397337}
+  - component: {fileID: 992397336}
+  m_Layer: 0
+  m_Name: BloodDecal (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &992397335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992397334}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5453038, y: -0.45015973, z: 0.4501596, w: 0.54530394}
+  m_LocalPosition: {x: 36.316, y: 58.15, z: -75.012}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 79.081}
+--- !u!114 &992397336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992397334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+--- !u!114 &992397337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992397334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.18430738, y: 0.31076676}
+  m_UVBias: {x: 0.25043657, y: 0.24411826}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: -0.7555506, y: -0.48206663, z: 0.5}
+  m_Size: {x: 2.4861598, y: 2.0956647, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &997139913
 GameObject:
   m_ObjectHideFlags: 0
@@ -14166,6 +15104,77 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.44515455, y: 0.23923251, z: 0.66823673}
   m_Center: {x: -0.9981495, y: 0.0028599987, z: -0.0057199304}
+--- !u!1 &1057908650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1057908651}
+  - component: {fileID: 1057908653}
+  - component: {fileID: 1057908652}
+  m_Layer: 0
+  m_Name: BloodDecal (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1057908651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057908650}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.43, y: 56.979, z: -95.975}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1057908652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057908650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+--- !u!114 &1057908653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057908650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.31773257, y: 0.14472541}
+  m_UVBias: {x: 0.28328568, y: 0.8290716}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: -2.2858574, y: 3.071898, z: 0.5}
+  m_Size: {x: 4.6847987, y: 0.6376133, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &1062630966
 GameObject:
   m_ObjectHideFlags: 0
@@ -14318,7 +15327,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062630966}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 4.12, y: 1.5, z: 59.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14456,6 +15465,77 @@ Transform:
   - {fileID: 127230941}
   m_Father: {fileID: 1530615299}
   m_LocalEulerAnglesHint: {x: 9.665, y: -0.746, z: 174.135}
+--- !u!1 &1069904505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1069904506}
+  - component: {fileID: 1069904508}
+  - component: {fileID: 1069904507}
+  m_Layer: 0
+  m_Name: PuzzleDecal (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1069904506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069904505}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 84.336, y: 56.512, z: -93.05}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 180, y: 180, z: 180}
+--- !u!114 &1069904507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069904505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 36103f07f0427d84f864cbe7b5bdf941, type: 2}
+--- !u!114 &1069904508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069904505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 36103f07f0427d84f864cbe7b5bdf941, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.20268358, y: 0.20757063}
+  m_UVBias: {x: 0.46242097, y: 0.7431123}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: 0.44633865, y: 2.4282846, z: 0.5}
+  m_Size: {x: 1.4187851, y: 1.4529942, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &1079900327
 GameObject:
   m_ObjectHideFlags: 0
@@ -14779,6 +15859,77 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103520821}
   m_Mesh: {fileID: -5869794951829583769, guid: ce17d0ab27356a244b8153ebe34490a0, type: 3}
+--- !u!1 &1104378873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1104378874}
+  - component: {fileID: 1104378876}
+  - component: {fileID: 1104378875}
+  m_Layer: 0
+  m_Name: BloodDecal (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1104378874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104378873}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 35.02, y: 56.224, z: -74.269}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1104378875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104378873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+--- !u!114 &1104378876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104378873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.15211934, y: 0.23924176}
+  m_UVBias: {x: 0.19102241, y: 0.5710277}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: -4.893555, y: 2.2276945, z: 0.34810257}
+  m_Size: {x: 0.40692616, y: 0.5214081, z: 0.69620514}
+  m_FadeFactor: 1
 --- !u!1 &1112600049
 GameObject:
   m_ObjectHideFlags: 0
@@ -15031,6 +16182,77 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119557228}
   m_Mesh: {fileID: 8506785024672775157, guid: ce17d0ab27356a244b8153ebe34490a0, type: 3}
+--- !u!1 &1120999516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1120999517}
+  - component: {fileID: 1120999519}
+  - component: {fileID: 1120999518}
+  m_Layer: 0
+  m_Name: BloodDecal (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1120999517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120999516}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 4.76, y: 57.39, z: -117.32}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
+--- !u!114 &1120999518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120999516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+--- !u!114 &1120999519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120999516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.1668559, y: 0.17713912}
+  m_UVBias: {x: 0.49690053, y: 0.37574202}
+  m_DecalLayerMask: 2
+  m_ScaleMode: 0
+  m_Offset: {x: 7.378418, y: 1.0796008, z: 0.5}
+  m_Size: {x: 4.8375244, y: 3.7386732, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &1121528355
 GameObject:
   m_ObjectHideFlags: 0
@@ -15450,77 +16672,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1147463421}
   m_Mesh: {fileID: -8645697035111483952, guid: 1b4f5aabd16fb6043bab3e7c75a5797d, type: 3}
---- !u!1 &1150947865
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1150947866}
-  - component: {fileID: 1150947868}
-  - component: {fileID: 1150947869}
-  m_Layer: 0
-  m_Name: BloodDecal (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1150947866
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1150947865}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -8.96, y: 56.224, z: -96.185}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &1150947868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1150947865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.1412869, y: 0.23924182}
-  m_UVBias: {x: 0.34620887, y: 0.5710277}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: -4.4929132, y: 2.2276945, z: 0.5}
-  m_Size: {x: 0.37794876, y: 0.5214082, z: 1}
-  m_FadeFactor: 1
---- !u!114 &1150947869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1150947865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!1 &1151481300
 GameObject:
   m_ObjectHideFlags: 0
@@ -16782,6 +17933,77 @@ Transform:
   - {fileID: 243090221}
   m_Father: {fileID: 127230941}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1226044433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1226044434}
+  - component: {fileID: 1226044436}
+  - component: {fileID: 1226044435}
+  m_Layer: 0
+  m_Name: PuzzleDecal (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1226044434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226044433}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
+  m_LocalPosition: {x: 87.02, y: 60.43, z: -138.57}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 180}
+--- !u!114 &1226044435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226044433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 36103f07f0427d84f864cbe7b5bdf941, type: 2}
+--- !u!114 &1226044436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226044433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 36103f07f0427d84f864cbe7b5bdf941, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.21163405, y: 0.2817376}
+  m_UVBias: {x: 0.0041830847, y: 0.71895486}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: -2.7299995, y: 2.518765, z: 0.5}
+  m_Size: {x: 1.4814377, y: 1.9721632, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &1227048780
 GameObject:
   m_ObjectHideFlags: 0
@@ -17449,77 +18671,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269016873}
   m_Mesh: {fileID: 8121072357735573733, guid: c8ea312bc35cf2748983efe9d6ef8329, type: 3}
---- !u!1 &1271657949
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1271657950}
-  - component: {fileID: 1271657952}
-  - component: {fileID: 1271657953}
-  m_Layer: 0
-  m_Name: BloodDecal (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1271657950
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271657949}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.02, y: 56.224, z: -74.269}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1271657952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271657949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.15211934, y: 0.23924176}
-  m_UVBias: {x: 0.19102241, y: 0.5710277}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: -4.893555, y: 2.2276945, z: 0.34810257}
-  m_Size: {x: 0.40692616, y: 0.5214081, z: 0.69620514}
-  m_FadeFactor: 1
---- !u!114 &1271657953
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271657949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!1 &1272871949
 GameObject:
   m_ObjectHideFlags: 0
@@ -17617,6 +18768,77 @@ Transform:
   - {fileID: 1746137652}
   m_Father: {fileID: 1066633442}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1282370768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1282370769}
+  - component: {fileID: 1282370771}
+  - component: {fileID: 1282370770}
+  m_Layer: 0
+  m_Name: BloodyFootprint Decal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1282370769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282370768}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 36.605, y: 57.74, z: -75.594}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
+--- !u!114 &1282370770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282370768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: adca3d95ccc9e324387d5d58cd5b908f, type: 2}
+--- !u!114 &1282370771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282370768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: adca3d95ccc9e324387d5d58cd5b908f, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.913
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 4.6385136}
+  m_UVBias: {x: 0, y: 0.00000012772423}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: 0.18944448, y: 2.5469556, z: 0.5}
+  m_Size: {x: 1.4, y: 6.493911, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &1282724146
 GameObject:
   m_ObjectHideFlags: 0
@@ -18163,6 +19385,77 @@ Transform:
   - {fileID: 527949865}
   m_Father: {fileID: 1560309464}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1338308281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1338308282}
+  - component: {fileID: 1338308284}
+  - component: {fileID: 1338308283}
+  m_Layer: 0
+  m_Name: PuzzleDecal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1338308282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338308281}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 88.35, y: 64.71, z: -125.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 180, y: 90, z: 180}
+--- !u!114 &1338308283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338308281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 36103f07f0427d84f864cbe7b5bdf941, type: 2}
+--- !u!114 &1338308284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338308281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 36103f07f0427d84f864cbe7b5bdf941, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 0.32396746}
+  m_UVBias: {x: 0, y: 0.07675028}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: -1.8288622, z: 0.5}
+  m_Size: {x: 7, y: 2.2677724, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &1344469783
 GameObject:
   m_ObjectHideFlags: 0
@@ -20448,12 +21741,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533779194}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.241203, y: 57.373604, z: -158.40729}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2063890343}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1548034828
 GameObject:
@@ -20538,6 +21831,77 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548034828}
   m_Mesh: {fileID: -6514945659500235045, guid: 3ebb8a48c3ad1b648927a598965976e8, type: 3}
+--- !u!1 &1552529671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1552529672}
+  - component: {fileID: 1552529674}
+  - component: {fileID: 1552529673}
+  m_Layer: 0
+  m_Name: InvisibleInkDecal (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1552529672
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552529671}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.017271928, y: 0.7068958, z: 0.017271925, w: 0.7068958}
+  m_LocalPosition: {x: 76.86, y: 56.686, z: -108.142}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 2.799}
+--- !u!114 &1552529673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552529671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
+--- !u!114 &1552529674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552529671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.60798734, y: 0.127317}
+  m_UVBias: {x: 0.32560936, y: 0.7125486}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: -1.6306833, y: 2.3420534, z: 0.5}
+  m_Size: {x: 6.573489, y: 0.9266825, z: 1}
+  m_FadeFactor: 1
 --- !u!114 &1554846883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20863,7 +22227,6 @@ Transform:
   - {fileID: 588895444}
   - {fileID: 1778838867}
   - {fileID: 1558772345}
-  - {fileID: 238892274}
   - {fileID: 1337649595}
   - {fileID: 381651740}
   - {fileID: 1316966125}
@@ -20877,77 +22240,6 @@ Transform:
   - {fileID: 2050670248}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1562007693
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1562007694}
-  - component: {fileID: 1562007696}
-  - component: {fileID: 1562007697}
-  m_Layer: 0
-  m_Name: BloodDecal (9)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1562007694
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562007693}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10.69, y: 57.47, z: -97.09}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1562007696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562007693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.26497835, y: 0.3108409}
-  m_UVBias: {x: -0.003669498, y: -0.014243428}
-  m_DecalLayerMask: 2
-  m_ScaleMode: 0
-  m_Offset: {x: -3.5673428, y: -3.4364235, z: 0.5}
-  m_Size: {x: 6.357456, y: 3.930534, z: 1}
-  m_FadeFactor: 1
---- !u!114 &1562007697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562007693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!1 &1571760474
 GameObject:
   m_ObjectHideFlags: 0
@@ -22108,6 +23400,77 @@ Transform:
   - {fileID: 1145934140}
   m_Father: {fileID: 1766553413}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1700323073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1700323074}
+  - component: {fileID: 1700323076}
+  - component: {fileID: 1700323075}
+  m_Layer: 0
+  m_Name: BloodDecal (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1700323074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700323073}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.847, y: 56.979, z: -95.975}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1700323075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700323073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+--- !u!114 &1700323076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700323073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.31773257, y: 0.14472541}
+  m_UVBias: {x: 0.28328568, y: 0.8290716}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: -2.3031232, y: 2.8988395, z: 0.5}
+  m_Size: {x: 4.7193303, y: 0.9837301, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &1700787475
 GameObject:
   m_ObjectHideFlags: 0
@@ -23035,77 +24398,6 @@ Transform:
   - {fileID: 176567507}
   m_Father: {fileID: 1280500627}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1748875405
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1748875406}
-  - component: {fileID: 1748875408}
-  - component: {fileID: 1748875409}
-  m_Layer: 0
-  m_Name: BloodDecal (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1748875406
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1748875405}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.43, y: 56.979, z: -95.975}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1748875408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1748875405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.31773257, y: 0.14472541}
-  m_UVBias: {x: 0.28328568, y: 0.8290716}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: -2.2858574, y: 3.071898, z: 0.5}
-  m_Size: {x: 4.6847987, y: 0.6376133, z: 1}
-  m_FadeFactor: 1
---- !u!114 &1748875409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1748875405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!1 &1749765306
 GameObject:
   m_ObjectHideFlags: 0
@@ -23211,77 +24503,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749765306}
   m_Mesh: {fileID: -2432090755550338912, guid: 16df43d59cd764a458b3a4503ec88230, type: 3}
---- !u!1 &1750209024
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1750209025}
-  - component: {fileID: 1750209027}
-  - component: {fileID: 1750209028}
-  m_Layer: 0
-  m_Name: BloodDecal (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1750209025
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750209024}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -2.672, y: 57.47, z: -98.29}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1750209027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750209024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.1894613, y: 0.2613754}
-  m_UVBias: {x: 0.033562407, y: 0.29159424}
-  m_DecalLayerMask: 2
-  m_ScaleMode: 0
-  m_Offset: {x: -4.1275487, y: -0.85672516, z: 0.5}
-  m_Size: {x: 2.4991198, y: 2.3724093, z: 1}
-  m_FadeFactor: 1
---- !u!114 &1750209028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1750209024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!1 &1750633873
 GameObject:
   m_ObjectHideFlags: 0
@@ -23660,77 +24881,6 @@ Transform:
   - {fileID: 997139914}
   m_Father: {fileID: 1045789234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1766291462
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1766291463}
-  - component: {fileID: 1766291465}
-  - component: {fileID: 1766291466}
-  m_Layer: 0
-  m_Name: BloodDecal (14)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1766291463
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766291462}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.18426938, y: -0.68267477, z: 0.6826747, w: 0.18426964}
-  m_LocalPosition: {x: 30.237, y: 58.15, z: -75.478}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 149.789}
---- !u!114 &1766291465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766291462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.18430738, y: 0.31076676}
-  m_UVBias: {x: 0.25043657, y: 0.24411826}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: 0.021877617, y: 0.071998954, z: 0.5}
-  m_Size: {x: 1.2141547, y: 1.240099, z: 1}
-  m_FadeFactor: 1
---- !u!114 &1766291466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766291462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!1 &1766553412
 GameObject:
   m_ObjectHideFlags: 0
@@ -24410,77 +25560,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807735854}
   m_Mesh: {fileID: -5053925668127403250, guid: 0af329e027784f74dba25d57d1cdd29c, type: 3}
---- !u!1 &1810886431
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1810886432}
-  - component: {fileID: 1810886434}
-  - component: {fileID: 1810886435}
-  m_Layer: 0
-  m_Name: InvisibleInkDecal (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1810886432
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810886431}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.017271928, y: 0.7068958, z: 0.017271925, w: 0.7068958}
-  m_LocalPosition: {x: 76.86, y: 56.686, z: -108.142}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 2.799}
---- !u!114 &1810886434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810886431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.60798734, y: 0.127317}
-  m_UVBias: {x: 0.32560936, y: 0.7125486}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: -1.6306833, y: 2.3420534, z: 0.5}
-  m_Size: {x: 6.573489, y: 0.9266825, z: 1}
-  m_FadeFactor: 1
---- !u!114 &1810886435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1810886431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!1 &1812027610
 GameObject:
   m_ObjectHideFlags: 0
@@ -24767,7 +25846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   passcode: 1234
   keypad: {fileID: 5461867245350975514}
---- !u!1 &1815829619
+--- !u!1 &1823364155
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24775,38 +25854,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1815829620}
-  - component: {fileID: 1815829622}
-  - component: {fileID: 1815829623}
+  - component: {fileID: 1823364156}
+  - component: {fileID: 1823364158}
+  - component: {fileID: 1823364157}
   m_Layer: 0
-  m_Name: BloodDecal (13)
+  m_Name: BloodDecal (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1815829620
+--- !u!4 &1823364156
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815829619}
+  m_GameObject: {fileID: 1823364155}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5453038, y: -0.45015973, z: 0.4501596, w: 0.54530394}
-  m_LocalPosition: {x: 36.316, y: 58.15, z: -75.012}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -9.357, y: 56.979, z: -101.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 79.081}
---- !u!114 &1815829622
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1823364157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815829619}
+  m_GameObject: {fileID: 1823364155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+--- !u!114 &1823364158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1823364155}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
@@ -24817,27 +25910,13 @@ MonoBehaviour:
   m_FadeScale: 0.9
   m_StartAngleFade: 180
   m_EndAngleFade: 180
-  m_UVScale: {x: 0.18430738, y: 0.31076676}
-  m_UVBias: {x: 0.25043657, y: 0.24411826}
+  m_UVScale: {x: 0.31773257, y: 0.14472541}
+  m_UVBias: {x: 0.28328568, y: 0.8290716}
   m_DecalLayerMask: 1
   m_ScaleMode: 0
-  m_Offset: {x: -0.7555506, y: -0.48206663, z: 0.5}
-  m_Size: {x: 2.4861598, y: 2.0956647, z: 1}
+  m_Offset: {x: -2.3031232, y: 2.8988395, z: 0.5}
+  m_Size: {x: 4.7193303, y: 0.9837301, z: 1}
   m_FadeFactor: 1
---- !u!114 &1815829623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815829619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!1 &1830275584
 GameObject:
   m_ObjectHideFlags: 0
@@ -25842,77 +26921,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873217061}
   m_Mesh: {fileID: -3235286807966887514, guid: 1b4f5aabd16fb6043bab3e7c75a5797d, type: 3}
---- !u!1 &1874811648
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1874811649}
-  - component: {fileID: 1874811651}
-  - component: {fileID: 1874811652}
-  m_Layer: 0
-  m_Name: BloodDecal (8)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1874811649
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1874811648}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -4.94, y: 56.979, z: -101.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1874811651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1874811648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.31058356, y: 0.14472541}
-  m_UVBias: {x: 0.2904347, y: 0.8290716}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: -2.2331533, y: 3.071898, z: 0.5}
-  m_Size: {x: 4.5793905, y: 0.6376133, z: 1}
-  m_FadeFactor: 1
---- !u!114 &1874811652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1874811648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!1 &1885736690
 GameObject:
   m_ObjectHideFlags: 0
@@ -26057,77 +27065,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1611149269}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1904058154
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1904058155}
-  - component: {fileID: 1904058157}
-  - component: {fileID: 1904058158}
-  m_Layer: 0
-  m_Name: BloodyFootprint Decal
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1904058155
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1904058154}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 36.605, y: 57.74, z: -75.594}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
---- !u!114 &1904058157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1904058154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: adca3d95ccc9e324387d5d58cd5b908f, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.913
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 1, y: 4.6385136}
-  m_UVBias: {x: 0, y: 0.00000012772423}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: 0.18944448, y: 2.5469556, z: 0.5}
-  m_Size: {x: 1.4, y: 6.493911, z: 1}
-  m_FadeFactor: 1
---- !u!114 &1904058158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1904058154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!1 &1907335801
 GameObject:
   m_ObjectHideFlags: 0
@@ -26306,77 +27243,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 421596228}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1929395425
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1929395426}
-  - component: {fileID: 1929395428}
-  - component: {fileID: 1929395429}
-  m_Layer: 0
-  m_Name: InvisibleInkDecal (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1929395426
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929395425}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.9423814, w: 0.3345406}
-  m_LocalPosition: {x: -1.66, y: 63.28, z: -82.159}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 140.911}
---- !u!114 &1929395428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929395425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.25159836, y: 0.21987285}
-  m_UVBias: {x: 0.0037539704, y: 0.3245697}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: -6.1967936, y: 1.4174232, z: 0.5}
-  m_Size: {x: 0.9754772, y: 0.4716878, z: 1}
-  m_FadeFactor: 1
---- !u!114 &1929395429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929395425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!1 &1935158243
 GameObject:
   m_ObjectHideFlags: 0
@@ -26516,6 +27382,77 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935771957}
   m_CullTransparentMesh: 1
+--- !u!1 &1936330172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1936330173}
+  - component: {fileID: 1936330175}
+  - component: {fileID: 1936330174}
+  m_Layer: 0
+  m_Name: BloodyFootprint Decal (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1936330173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936330172}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 30.02, y: 57.74, z: -76.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
+--- !u!114 &1936330174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936330172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: adca3d95ccc9e324387d5d58cd5b908f, type: 2}
+--- !u!114 &1936330175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936330172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: adca3d95ccc9e324387d5d58cd5b908f, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.913
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 9.921929}
+  m_UVBias: {x: 0, y: 0.00000012772423}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: 0.18944448, y: 6.2453413, z: 0.5}
+  m_Size: {x: 1.4, y: 13.890682, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &1939566036
 GameObject:
   m_ObjectHideFlags: 0
@@ -26871,77 +27808,6 @@ Transform:
   - {fileID: 1326516482}
   m_Father: {fileID: 67072606}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1957686757
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1957686758}
-  - component: {fileID: 1957686760}
-  - component: {fileID: 1957686761}
-  m_Layer: 0
-  m_Name: InvisibleInkDecal
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1957686758
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1957686757}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.535, y: 55.899, z: -95.975}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1957686760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1957686757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.46302098, y: 0.20966007}
-  m_UVBias: {x: 0.53277695, y: 0.8358989}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: 1.6826844, y: 3.2450185, z: 0.5}
-  m_Size: {x: 5.264657, y: 0.9236946, z: 1}
-  m_FadeFactor: 1
---- !u!114 &1957686761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1957686757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!1 &1961857183
 GameObject:
   m_ObjectHideFlags: 0
@@ -27115,77 +27981,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 667338198}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1963917123
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1963917124}
-  - component: {fileID: 1963917126}
-  - component: {fileID: 1963917127}
-  m_Layer: 0
-  m_Name: InvisibleInkDecal (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1963917124
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963917123}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.02462374, y: -0.7066779, z: 0.024623735, w: 0.7066779}
-  m_LocalPosition: {x: -8.79, y: 56.78, z: -94.35}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 3.991}
---- !u!114 &1963917126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963917123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.30260202, y: 0.1128507}
-  m_UVBias: {x: -0.00024879916, y: 0.74544764}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: -5.060932, y: 2.7015927, z: 0.5}
-  m_Size: {x: 4.424878, y: 0.9973893, z: 1}
-  m_FadeFactor: 1
---- !u!114 &1963917127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963917123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!114 &1964213568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27323,7 +28118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 694679385}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 4.12, y: 1.5, z: 59.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -27444,77 +28239,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970952911}
   m_Mesh: {fileID: 8506785024672775157, guid: ce17d0ab27356a244b8153ebe34490a0, type: 3}
---- !u!1 &1971989321
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1971989322}
-  - component: {fileID: 1971989324}
-  - component: {fileID: 1971989325}
-  m_Layer: 0
-  m_Name: BloodDecal (10)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1971989322
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1971989321}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 15.53, y: 57.47, z: -99.38}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
---- !u!114 &1971989324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1971989321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.20753299, y: 0.2618924}
-  m_UVBias: {x: 0.539066, y: 0.55186003}
-  m_DecalLayerMask: 2
-  m_ScaleMode: 0
-  m_Offset: {x: 8.765049, y: 3.412397, z: 0.5}
-  m_Size: {x: 4.97921, y: 3.3115892, z: 1}
-  m_FadeFactor: 1
---- !u!114 &1971989325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1971989321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!1 &1974431339
 GameObject:
   m_ObjectHideFlags: 0
@@ -27818,77 +28542,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 13392294}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1980234275
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1980234276}
-  - component: {fileID: 1980234279}
-  - component: {fileID: 1980234278}
-  m_Layer: 0
-  m_Name: BloodDecal
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1980234276
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980234275}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.63740516, y: -0.30612862, z: 0.30612853, w: 0.6374052}
-  m_LocalPosition: {x: -2.172, y: 58.15, z: -98.653}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 51.307}
---- !u!114 &1980234278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980234275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.18430738, y: 0.31076676}
-  m_UVBias: {x: 0.25043657, y: 0.24411826}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: -0.7555506, y: -0.48206663, z: 0.5}
-  m_Size: {x: 2.4861598, y: 2.0956647, z: 1}
-  m_FadeFactor: 1
---- !u!114 &1980234279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980234275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
 --- !u!1 &1986921447
 GameObject:
   m_ObjectHideFlags: 0
@@ -28069,6 +28722,77 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000916378}
   m_Mesh: {fileID: -1501624878150026706, guid: dca7eb5abbabdb44d9117f18b789050d, type: 3}
+--- !u!1 &2002375264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2002375265}
+  - component: {fileID: 2002375267}
+  - component: {fileID: 2002375266}
+  m_Layer: 0
+  m_Name: BloodDecal (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2002375265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002375264}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.18426938, y: -0.68267477, z: 0.6826747, w: 0.18426964}
+  m_LocalPosition: {x: 30.237, y: 58.15, z: -75.478}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 149.789}
+--- !u!114 &2002375266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002375264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+--- !u!114 &2002375267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002375264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.18430738, y: 0.31076676}
+  m_UVBias: {x: 0.25043657, y: 0.24411826}
+  m_DecalLayerMask: 1
+  m_ScaleMode: 0
+  m_Offset: {x: 0.021877617, y: 0.071998954, z: 0.5}
+  m_Size: {x: 1.2141547, y: 1.240099, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &2008736665
 GameObject:
   m_ObjectHideFlags: 0
@@ -28283,6 +29007,77 @@ Transform:
   - {fileID: 2011044200}
   m_Father: {fileID: 441538436}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2020894491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2020894492}
+  - component: {fileID: 2020894494}
+  - component: {fileID: 2020894493}
+  m_Layer: 0
+  m_Name: BloodDecal (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2020894492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020894491}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 15.53, y: 57.47, z: -99.38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2063890343}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
+--- !u!114 &2020894493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020894491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerUVLight: {fileID: 1964213568}
+  material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+--- !u!114 &2020894494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020894491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 0.20753299, y: 0.2618924}
+  m_UVBias: {x: 0.539066, y: 0.55186003}
+  m_DecalLayerMask: 2
+  m_ScaleMode: 0
+  m_Offset: {x: 8.765049, y: 3.412397, z: 0.5}
+  m_Size: {x: 4.97921, y: 3.3115892, z: 1}
+  m_FadeFactor: 1
 --- !u!1 &2022856768
 GameObject:
   m_ObjectHideFlags: 0
@@ -28553,6 +29348,71 @@ Transform:
   m_Children:
   - {fileID: 1184628701}
   m_Father: {fileID: 1759037661}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2063890342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2063890343}
+  m_Layer: 0
+  m_Name: Decals
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2063890343
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063890342}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.241203, y: -57.373604, z: 158.40729}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 405121189}
+  - {fileID: 992397335}
+  - {fileID: 2002375265}
+  - {fileID: 282275268}
+  - {fileID: 1700323074}
+  - {fileID: 1057908651}
+  - {fileID: 28104746}
+  - {fileID: 532498538}
+  - {fileID: 1104378874}
+  - {fileID: 449092358}
+  - {fileID: 1823364156}
+  - {fileID: 850236338}
+  - {fileID: 2020894492}
+  - {fileID: 690747126}
+  - {fileID: 578782276}
+  - {fileID: 1120999517}
+  - {fileID: 891060802}
+  - {fileID: 43071937}
+  - {fileID: 827990688}
+  - {fileID: 545977865}
+  - {fileID: 397672899}
+  - {fileID: 873524498}
+  - {fileID: 1552529672}
+  - {fileID: 1282370769}
+  - {fileID: 1936330173}
+  - {fileID: 1338308282}
+  - {fileID: 421604081}
+  - {fileID: 412411333}
+  - {fileID: 206968974}
+  - {fileID: 1226044434}
+  - {fileID: 292686047}
+  - {fileID: 1069904506}
+  - {fileID: 275426636}
+  - {fileID: 1533779196}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2072552914
 GameObject:
@@ -28825,148 +29685,6 @@ Transform:
   - {fileID: 1272871950}
   m_Father: {fileID: 45180323}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2083995027
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2083995028}
-  - component: {fileID: 2083995030}
-  - component: {fileID: 2083995031}
-  m_Layer: 0
-  m_Name: BloodDecal (11)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2083995028
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083995027}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 6.92, y: 57.47, z: -113.65}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
---- !u!114 &2083995030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083995027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.17632234, y: 0.2618924}
-  m_UVBias: {x: 0.539066, y: 0.55186003}
-  m_DecalLayerMask: 2
-  m_ScaleMode: 0
-  m_Offset: {x: 8.39064, y: 3.412397, z: 0.5}
-  m_Size: {x: 4.2303925, y: 3.3115892, z: 1}
-  m_FadeFactor: 1
---- !u!114 &2083995031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083995027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
---- !u!1 &2085408074
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2085408075}
-  - component: {fileID: 2085408077}
-  - component: {fileID: 2085408078}
-  m_Layer: 0
-  m_Name: BloodDecal (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2085408075
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2085408074}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.847, y: 56.979, z: -95.975}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2085408077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2085408074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.31773257, y: 0.14472541}
-  m_UVBias: {x: 0.28328568, y: 0.8290716}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: -2.3031232, y: 2.8988395, z: 0.5}
-  m_Size: {x: 4.7193303, y: 0.9837301, z: 1}
-  m_FadeFactor: 1
---- !u!114 &2085408078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2085408074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!1 &2087306543
 GameObject:
   m_ObjectHideFlags: 0
@@ -29169,77 +29887,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098346269}
   m_Mesh: {fileID: -574192692965075861, guid: 887142c26ffd08149ad5d5c8009437ae, type: 3}
---- !u!1 &2102365055
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2102365056}
-  - component: {fileID: 2102365058}
-  - component: {fileID: 2102365059}
-  m_Layer: 0
-  m_Name: BloodDecal (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2102365056
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102365055}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -8.96, y: 56.979, z: -96.043}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &2102365058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102365055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.31773257, y: 0.08807654}
-  m_UVBias: {x: 0.28328568, y: 0.88572043}
-  m_DecalLayerMask: 1
-  m_ScaleMode: 0
-  m_Offset: {x: -2.897731, y: 3.1477122, z: 0.5}
-  m_Size: {x: 5.908546, y: 0.48598504, z: 1}
-  m_FadeFactor: 1
---- !u!114 &2102365059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2102365055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!1 &2105840807
 GameObject:
   m_ObjectHideFlags: 0
@@ -29461,77 +30108,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117494063}
   m_Mesh: {fileID: 6374379401341457097, guid: 1450f8b2efb2b494686553babed94b0b, type: 3}
---- !u!1 &2126586289
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2126586290}
-  - component: {fileID: 2126586292}
-  - component: {fileID: 2126586293}
-  m_Layer: 0
-  m_Name: BloodDecal (15)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2126586290
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126586289}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 24.22, y: 57.47, z: -116.73}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 238892274}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
---- !u!114 &2126586292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126586289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 2d04d2f3ab0782c43a8b9782c76ed741, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
-  m_StartAngleFade: 180
-  m_EndAngleFade: 180
-  m_UVScale: {x: 0.19680186, y: 0.33952844}
-  m_UVBias: {x: 0.7994711, y: 0.17533876}
-  m_DecalLayerMask: 2
-  m_ScaleMode: 0
-  m_Offset: {x: 14.884026, y: -0.85780716, z: 0.5}
-  m_Size: {x: 4.7217407, y: 4.293289, z: 1}
-  m_FadeFactor: 1
---- !u!114 &2126586293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126586289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726eaa7cd5838f747b3ccafd3cdb56f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerUVLight: {fileID: 1964213568}
-  material: {fileID: 2100000, guid: 23cf7e3ee0c997742a3eab148f51c998, type: 2}
 --- !u!1 &2127403819
 GameObject:
   m_ObjectHideFlags: 0
@@ -30071,7 +30647,7 @@ Animator:
   m_GameObject: {fileID: 4610196027445498012}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9c4806804f601cd44846696bde604996, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3991bb6038f6fdd4ea71458059eaf396, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -30353,13 +30929,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315443032}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 4.12, y: 1, z: 59.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &2338831504448196076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31371,6 +31947,8 @@ GameObject:
   - component: {fileID: 1224358524830701835}
   - component: {fileID: 1671309677941150060}
   - component: {fileID: 1374688675555915505}
+  - component: {fileID: 4610196027445498013}
+  - component: {fileID: 4610196027445498014}
   m_Layer: 0
   m_Name: Glass
   m_TagString: Untagged
@@ -31378,6 +31956,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &4610196027445498013
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4610196027445498012}
+  m_Material: {fileID: 13400000, guid: cfb0461bcabd55c44acaf35b14f1d0b7, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.018872641, y: 0.003561442, z: 0.033463053}
+  m_Center: {x: 0.009436261, y: 0.000000059604645, z: 0.000000008381903}
+--- !u!114 &4610196027445498014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4610196027445498012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eecbb27fe1eb7b4dabc8ffee90a1f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keypad: {fileID: 7343235594287515150}
 --- !u!114 &4647801678461358827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32532,7 +33144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79613e765ad01149a3246ca2587a3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  passcode: 1234
+  passcode: 6753
   keypad: {fileID: 5461867245350975514}
 --- !u!23 &7397905832928980663
 MeshRenderer:
@@ -33090,6 +33702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftDoor: {fileID: 4969297370129847198}
   rightDoor: {fileID: 9055147139841789794}
+  keypad: {fileID: 7343235594287515150}
 --- !u!4 &9211559060514799105
 Transform:
   m_ObjectHideFlags: 0
@@ -33127,7 +33740,7 @@ SceneRoots:
   - {fileID: 112255122}
   - {fileID: 667338198}
   - {fileID: 476555224}
-  - {fileID: 1533779196}
+  - {fileID: 2063890343}
   - {fileID: 1560309464}
   - {fileID: 1217214277}
   - {fileID: 1440338316}

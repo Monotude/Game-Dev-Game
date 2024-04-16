@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class PowerOff : MonoBehaviour
+public class Section2PowerOff : MonoBehaviour
 {
     private ProgressManager progressManager;
 

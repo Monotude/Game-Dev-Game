@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class UnlockDoor : MonoBehaviour
+public class UnlockLoreRoomDoor : MonoBehaviour
 {
     [SerializeField] private KeypadInteract keypad;
     private Animator animator;
@@ -24,6 +24,7 @@ public class UnlockDoor : MonoBehaviour
     {
         if (progressManager.Progress.GetIsLoreRoomOpen())
         {
+            keypad.IsCodeEntered = true;
             animator.Play("DoorOpening");
         }
     }
