@@ -18323,7 +18323,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210462118}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f655a663cd281340a62edbca94f5a91, type: 3}
   m_Name: 
@@ -18333,11 +18333,11 @@ MonoBehaviour:
   roamState:
     roamSpeed: 0
     destinations: []
-    destinationAccuracy: 0
+    destinationAccuracy: 2
   investigateState:
     investigateSpeed: 0
     clusters: []
-    destinationAccuracy: 0
+    destinationAccuracy: 2
   aggroState:
     aggroSpeed: 0
 --- !u!136 &1210462120
@@ -20744,7 +20744,6 @@ GameObject:
   - component: {fileID: 1362697487}
   - component: {fileID: 1362697486}
   - component: {fileID: 1362697485}
-  - component: {fileID: 1362697489}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -20872,18 +20871,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &1362697489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1362697484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0658d79478bfb544a859a87d98c35fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1381638675
 GameObject:
   m_ObjectHideFlags: 0
