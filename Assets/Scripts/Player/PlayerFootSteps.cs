@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerFootSteps : MonoBehaviour
+public class PlayerFootsteps : MonoBehaviour
 {
     private Rigidbody rigidBody;
     private PlayerSprint playerSprint;
@@ -27,13 +27,7 @@ public class PlayerFootSteps : MonoBehaviour
     {
         Vector3 velocity = rigidBody.velocity;
 
-        if (playerCrouch.IsCrouching)
-        {
-            return;
-        }
-
-
-        if (velocity.magnitude > 0.1f)
+        if (velocity.magnitude > 0.1f && !playerCrouch.IsCrouching)
         {
             float interval = playerSprint.IsSprinting ? sprintFootstepInterval : walkingFootstepInterval;
             float loudness = playerSprint.IsSprinting ? sprintFootstepLoudness : walkingFootstepLoudness;

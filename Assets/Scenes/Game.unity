@@ -3846,7 +3846,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 214465169}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.4
+  m_Radius: 0.375
   m_Speed: 5.1
   m_Acceleration: 10
   avoidancePriority: 50
@@ -3899,7 +3899,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.375
   m_Height: 1.75
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -32068,8 +32068,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactPrompt: {fileID: 755616102}
-  interactAccuracy: 0.15
-  interactRange: 1.5
+  interactAccuracy: 0.175
+  interactRange: 1.35
 --- !u!114 &2338831504448196077
 MonoBehaviour:
   m_ObjectHideFlags: 0
