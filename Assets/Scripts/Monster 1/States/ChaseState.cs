@@ -66,7 +66,7 @@ public class ChaseState : State
 
         if (IsStunned(stateMachine))
         {
-            stateMachine.SwitchState(stateMachine.AllStates[(int)Monster1States.FleeState]);
+            stateMachine.SwitchState(stateMachine.AllStates[(int)SubjectAlphaStates.FleeState]);
         }
     }
 }

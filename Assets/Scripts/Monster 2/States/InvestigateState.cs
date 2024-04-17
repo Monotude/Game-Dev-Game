@@ -1,4 +1,4 @@
-/*using System;
+using System;
 using UnityEngine;
 
 [Serializable]
@@ -21,7 +21,7 @@ public class InvestigateState : State
             if (currentDestination >= clusters[currentCluster].Destinations.Length)
             {
                 currentDestination = 0;
-                stateMachine.SwitchState(stateMachine.AllStates[(int)Monster2States.RoamState]);
+                stateMachine.SwitchState(stateMachine.AllStates[(int)SubjectBetaStates.RoamState]);
                 return;
             }
 
@@ -67,4 +67,4 @@ public class InvestigateState : State
 internal class Cluster
 {
     [SerializeField] public Transform[] Destinations;
-}*/
+}
