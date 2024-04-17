@@ -76,7 +76,7 @@ public class FleeState : State
         if (currentStunBuffer >= stunBufferSeconds)
         {
             stateMachine.NavMeshAgent.gameObject.GetComponent<LookAtConstraint>().constraintActive = false;
-            stateMachine.SwitchState(stateMachine.AllStates[(int)Monster1States.PatrolState]);
+            stateMachine.SwitchState(stateMachine.AllStates[(int)SubjectAlphaStates.PatrolState]);
         }
 
         else

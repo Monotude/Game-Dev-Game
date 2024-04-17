@@ -53,7 +53,7 @@ public class PatrolState : State
 
     private bool IsChaseCooldownOver(StateMachine stateMachine)
     {
-        ChaseState chaseState = (ChaseState)stateMachine.AllStates[(int)Monster1States.ChaseState];
+        ChaseState chaseState = (ChaseState)stateMachine.AllStates[(int)SubjectAlphaStates.ChaseState];
         return chaseCooldownTime <= chaseState.TimeUntilChase - chaseState.CurrentTimeUntilChase;
     }
 
@@ -66,7 +66,7 @@ public class PatrolState : State
 
     public override void Action(StateMachine stateMachine)
     {
-        ChaseState chaseState = (ChaseState)stateMachine.AllStates[(int)Monster1States.ChaseState];
+        ChaseState chaseState = (ChaseState)stateMachine.AllStates[(int)SubjectAlphaStates.ChaseState];
 
         if ((chaseState.IsTimeToChase() || IsPlayerSeen(stateMachine)) && IsChaseCooldownOver(stateMachine))
         {
@@ -75,7 +75,7 @@ public class PatrolState : State
 
         else if (AtDestination(stateMachine))
         {
-            stateMachine.SwitchState(stateMachine.AllStates[(int)Monster1States.IdleState]);
+            stateMachine.SwitchState(stateMachine.AllStates[(int)SubjectAlphaStates.IdleState]);
         }
     }
 }

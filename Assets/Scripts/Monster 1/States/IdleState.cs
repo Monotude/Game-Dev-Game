@@ -37,7 +37,7 @@ public class IdleState : State
 
     public override void Action(StateMachine stateMachine)
     {
-        ChaseState chaseState = (ChaseState)stateMachine.AllStates[(int)Monster1States.ChaseState];
+        ChaseState chaseState = (ChaseState)stateMachine.AllStates[(int)SubjectAlphaStates.ChaseState];
 
         if (chaseState.IsTimeToChase() || IsPlayerSeen(stateMachine))
         {
@@ -48,7 +48,7 @@ public class IdleState : State
 
         if (currentIdleTime >= idleTime)
         {
-            stateMachine.SwitchState(stateMachine.AllStates[(int)Monster1States.PatrolState]);
+            stateMachine.SwitchState(stateMachine.AllStates[(int)SubjectAlphaStates.PatrolState]);
         }
     }
 }

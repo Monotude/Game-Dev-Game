@@ -29,8 +29,8 @@ public class ProgressManager : MonoBehaviour
         if (Progress.GetFuseCount() == 1 && !isAFuseBoxOn)
         {
             monster1.SetActive(true);
-            StateMachine stateMachine = monster1.GetComponent<Monster1Behaviour>().StateMachine;
-            stateMachine.SwitchState(stateMachine.AllStates[(int)Monster1States.ChaseState]);
+            StateMachine stateMachine = monster1.GetComponent<SubjectAlphaBehaviour>().StateMachine;
+            stateMachine.SwitchState(stateMachine.AllStates[(int)SubjectAlphaStates.ChaseState]);
         }
     }
 
