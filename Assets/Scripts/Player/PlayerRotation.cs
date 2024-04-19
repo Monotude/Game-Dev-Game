@@ -7,13 +7,13 @@ public class PlayerRotation : MonoBehaviour
     private float rotationX;
     private float rotationY;
     [SerializeField] private GameObject player;
-    [SerializeField] private float mouseSensitivity;
     [SerializeField] private float lookAngle;
+    public float MouseSensitivity { get; set; }
 
     private void CalculateRotation()
     {
-        float horizontalMouseMovement = InputManager.Instance.HorizontalMouseMovement * Time.deltaTime * mouseSensitivity;
-        float verticalMouseMovement = InputManager.Instance.VerticalMouseMovement * Time.deltaTime * mouseSensitivity;
+        float horizontalMouseMovement = InputManager.Instance.HorizontalMouseMovement * Time.deltaTime * MouseSensitivity;
+        float verticalMouseMovement = InputManager.Instance.VerticalMouseMovement * Time.deltaTime * MouseSensitivity;
 
         rotationY += horizontalMouseMovement;
         rotationX -= verticalMouseMovement;

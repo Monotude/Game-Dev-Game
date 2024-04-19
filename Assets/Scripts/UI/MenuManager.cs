@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    [SerializeField] private GameObject controlsMenu;
+    [SerializeField] private GameObject optionsMenu;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
@@ -16,7 +19,18 @@ public class MenuManager : MonoBehaviour
 
     public void PlayGame()
     {
+        SaveManager.Instance.SaveConfig();
         SceneManager.LoadScene("Game");
+    }
+
+    public void OpenControlsMenu()
+    {
+        controlsMenu.SetActive(true);
+    }
+
+    public void OpenOptionsMenu()
+    {
+        optionsMenu.SetActive(true);
     }
 
     public void QuitGame()

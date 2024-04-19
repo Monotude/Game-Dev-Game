@@ -4,12 +4,18 @@ using UnityEngine;
 public class SaveManager : MonoBehaviour
 {
     [SerializeField] private string progressFileName;
+    [SerializeField] private string configFileName;
 
     public static SaveManager Instance { get; private set; }
 
     public ProgressManager GetProgressManager()
     {
         return GameObject.FindWithTag("Progress Manager")?.GetComponent<ProgressManager>();
+    }
+
+    public OptionsMenu GetOptionsMenu()
+    {
+        return GameObject.FindWithTag("UI Controller")?.GetComponent<OptionsMenu>();
     }
 
     public void DeleteProgress()
@@ -28,6 +34,13 @@ public class SaveManager : MonoBehaviour
         File.WriteAllText(path, json);
     }
 
+    public void SaveConfig()
+    {
+        string path = Application.persistentDataPath + "/" + configFileName + ".json";
+        string json = JsonUtility.ToJson(GetOptionsMenu()?.Config);
+        File.WriteAllText(path, json);
+    }
+
     public void LoadProgress()
     {
         string path = Application.persistentDataPath + "/" + progressFileName + ".json";
@@ -40,6 +53,21 @@ public class SaveManager : MonoBehaviour
         else
         {
             progressManager.Progress = new Progress(progressManager.FuseCount);
+        }
+    }
+
+    public void LoadConfig()
+    {
+        string path = Application.persistentDataPath + "/" + configFileName + ".json";
+        OptionsMenu optionsMenu = GetOptionsMenu();
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path);
+            optionsMenu.Config = JsonUtility.FromJson<Config>(json);
+        }
+        else
+        {
+            optionsMenu.Config = new Config();
         }
     }
 
@@ -60,5 +88,6 @@ public class SaveManager : MonoBehaviour
     private void OnApplicationQuit()
     {
         SaveProgress();
+        SaveConfig();
     }
 }

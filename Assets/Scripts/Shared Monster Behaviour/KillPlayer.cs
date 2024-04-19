@@ -54,6 +54,7 @@ public class KillPlayer : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             SaveManager.Instance.SaveProgress();
+            SaveManager.Instance.SaveConfig();
             StopMonster();
             DisablePlayer();
             ReadyAnimation();
