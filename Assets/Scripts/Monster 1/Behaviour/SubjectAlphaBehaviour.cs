@@ -32,6 +32,11 @@ public class SubjectAlphaBehaviour : MonoBehaviour
         StateMachine = InitializeStateMachine();
     }
 
+    private void OnEnable()
+    {
+        StateMachine.SwitchState(StateMachine.CurrentState);
+    }
+
     private void Update()
     {
         StateMachine.CurrentState.Action(StateMachine);

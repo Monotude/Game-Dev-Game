@@ -54,6 +54,11 @@ public class SubjectBetaBehaviour : MonoBehaviour
         playerSound.MakeSoundEvent += MonsterHearing;
     }
 
+    private void OnEnable()
+    {
+        StateMachine.SwitchState(StateMachine.CurrentState);
+    }
+
     private void Update()
     {
         StateMachine.CurrentState.Action(StateMachine);
