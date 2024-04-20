@@ -37,12 +37,12 @@ public class SubjectBetaBehaviour : MonoBehaviour
 
         if (soundLoudness / distanceFromSource >= aggroRange)
         {
-            StateMachine.NavMeshAgent.destination = soundPosition;
             StateMachine.SwitchState(StateMachine.AllStates[(int)SubjectBetaStates.AggroState]);
         }
 
         else if (soundLoudness / distanceFromSource >= investigationRange)
         {
+            StateMachine.NavMeshAgent.destination = soundPosition;
             StateMachine.SwitchState(StateMachine.AllStates[(int)SubjectBetaStates.InvestigateState]);
         }
     }
