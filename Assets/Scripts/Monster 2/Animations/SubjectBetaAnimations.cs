@@ -17,18 +17,28 @@ public class SubjectBetaAnimations : MonoBehaviour
         if (state is RoamState)
         {
             animator.SetBool("isInvestigating", false);
+            animator.SetBool("isSniffing", false);
             animator.SetBool("isAggroed", false);
         }
 
         else if (state is InvestigateState)
         {
             animator.SetBool("isInvestigating", true);
+            animator.SetBool("isSniffing", false);
+            animator.SetBool("isAggroed", false);
+        }
+
+        else if (state is SniffState)
+        {
+            animator.SetBool("isInvestigating", false);
+            animator.SetBool("isSniffing", true);
             animator.SetBool("isAggroed", false);
         }
 
         else if (state is AggroState)
         {
             animator.SetBool("isInvestigating", false);
+            animator.SetBool("isSniffing", false);
             animator.SetBool("isAggroed", true);
         }
     }

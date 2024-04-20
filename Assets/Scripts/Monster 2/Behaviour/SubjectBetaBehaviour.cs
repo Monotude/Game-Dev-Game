@@ -9,12 +9,14 @@ public class SubjectBetaBehaviour : MonoBehaviour
     [SerializeField] private float aggroRange;
     [SerializeField] private RoamState roamState;
     [SerializeField] private InvestigateState investigateState;
+    [SerializeField] private SniffState sniffState;
     [SerializeField] private AggroState aggroState;
     private PlayerSound playerSound;
 
     public StateMachine StateMachine { get; private set; }
     public RoamState RoamState { get => this.roamState; set => this.roamState = value; }
     public InvestigateState InvestigateState { get => this.investigateState; set => this.investigateState = value; }
+    public SniffState SniffState { get => this.sniffState; set => this.sniffState = value; }
     public AggroState AggroState { get => this.aggroState; set => this.aggroState = value; }
 
     private StateMachine InitializeStateMachine()
@@ -24,16 +26,18 @@ public class SubjectBetaBehaviour : MonoBehaviour
         State[] allStates = new State[3];
         allStates[0] = RoamState;
         allStates[1] = InvestigateState;
-        allStates[2] = AggroState;
+        allStates[2] = SniffState;
+        allStates[3] = AggroState;
         return new StateMachine(player, navMeshAgent, allStates, RoamState);
     }
 
-    private void MonsterHearing(float soundLoudness, Vector3 position)
+    private void MonsterHearing(float soundLoudness, Vector3 soundPosition)
     {
-        float distanceFromSource = (StateMachine.NavMeshAgent.transform.position - position).magnitude;
+        float distanceFromSource = (StateMachine.NavMeshAgent.transform.position - soundPosition).magnitude;
 
         if (soundLoudness / distanceFromSource >= aggroRange)
         {
+            StateMachine.NavMeshAgent.destination = soundPosition;
             StateMachine.SwitchState(StateMachine.AllStates[(int)SubjectBetaStates.AggroState]);
         }
 
@@ -60,5 +64,6 @@ public enum SubjectBetaStates
 {
     RoamState,
     InvestigateState,
+    SniffState,
     AggroState
 }
