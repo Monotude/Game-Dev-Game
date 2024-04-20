@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class KillPlayer : MonoBehaviour
 {
+    [SerializeField] private GameOverScreen GameOverScreen;
+
     private Animator animator;
     private NavMeshAgent navMeshAgent;
     private GameObject mainCamera;
@@ -58,13 +60,13 @@ public class KillPlayer : MonoBehaviour
             StopMonster();
             DisablePlayer();
             ReadyAnimation();
-            StartCoroutine(ReloadScene());
+            StartCoroutine(GameOver());
         }
     }
 
-    private IEnumerator ReloadScene()
+    private IEnumerator GameOver()
     {
         yield return new WaitForSeconds(jumpScareTime);
-        SceneManager.LoadScene("Game");
+        GameOverScreen.Setup();
     }
 }

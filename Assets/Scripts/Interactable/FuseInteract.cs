@@ -6,6 +6,8 @@ public class FuseInteract : MonoBehaviour, IInteractable
     private ProgressManager progressManager;
     private PlayerInventoryUI playerInventoryUI;
     [SerializeField] private int fuseNumber;
+    [SerializeField] private AudioClip pickupSound;
+    private AudioSource audioSource;
 
     public event Action CollectFuseEvent;
 
@@ -18,7 +20,16 @@ public class FuseInteract : MonoBehaviour, IInteractable
     {
         progressManager.Progress.CollectFuse(fuseNumber);
         CollectFuseEvent?.Invoke();
+        PlaySound();
         CollectFuse();
+    }
+
+    private void PlaySound()
+    {
+        if (audioSource != null && pickupSound != null)
+        {
+            audioSource.PlayOneShot(pickupSound); 
+        }
     }
 
     private void LoadFuseProgress()
@@ -33,6 +44,8 @@ public class FuseInteract : MonoBehaviour, IInteractable
     {
         progressManager = GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
         playerInventoryUI = GameObject.FindWithTag("UI Controller").GetComponent<PlayerInventoryUI>();
+        audioSource = GetComponent<AudioSource>();
+
         progressManager.LoadGameEvent += LoadFuseProgress;
         CollectFuseEvent += progressManager.CheckSpawnMonster1;
         CollectFuseEvent += playerInventoryUI.UpdateFuseUI;

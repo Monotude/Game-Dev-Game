@@ -8,11 +8,14 @@ public class FuseBoxInteract : MonoBehaviour, IInteractable
     [SerializeField] private GameObject fuse;
     [SerializeField] private int fuseBoxNumber;
     [SerializeField] private GameObject wire;
+    [SerializeField] private AudioClip sound;
+    private AudioSource audioSource;
 
     public Action PowerFuseBoxEvent;
 
     private void PowerFuseBox()
     {
+        PlaySound();
         fuse.SetActive(true);
         wire.GetComponent<Renderer>().material.color = Color.green;
     }
@@ -34,10 +37,20 @@ public class FuseBoxInteract : MonoBehaviour, IInteractable
         }
     }
 
+    private void PlaySound()
+    {
+        if (audioSource != null && sound != null)
+        {
+            audioSource.PlayOneShot(sound); 
+        }
+    }
+
     private void Awake()
     {
         progressManager = GameObject.FindWithTag("Progress Manager").GetComponent<ProgressManager>();
         playerInventoryUI = GameObject.FindWithTag("UI Controller").GetComponent<PlayerInventoryUI>();
+        audioSource = GetComponent<AudioSource>();
+
         progressManager.LoadGameEvent += LoadFuseBoxProgress;
         PowerFuseBoxEvent += playerInventoryUI.UpdateFuseUI;
     }
