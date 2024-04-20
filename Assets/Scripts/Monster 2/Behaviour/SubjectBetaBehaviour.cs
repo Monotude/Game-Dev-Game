@@ -23,7 +23,7 @@ public class SubjectBetaBehaviour : MonoBehaviour
     {
         Transform player = GameObject.FindWithTag("Player").transform;
         NavMeshAgent navMeshAgent = GetComponent<NavMeshAgent>();
-        State[] allStates = new State[3];
+        State[] allStates = new State[4];
         allStates[0] = RoamState;
         allStates[1] = InvestigateState;
         allStates[2] = SniffState;
