@@ -26,12 +26,12 @@ public class ProgressManager : MonoBehaviour
 
         if (Progress.GetIsLoreRoomOpen())
         {
-            startPosition = new Vector3(71f, -2f, 67f);
+            startPosition = new Vector3(73f, -2f, 80f);
         }
 
         else if (Progress.GetIsSection2Started())
         {
-            startPosition = new Vector3(84f, 1f, 58f);
+            startPosition = new Vector3(87.5f, 1f, 58f);
         }
 
         TeleportPlayer(startPosition);
