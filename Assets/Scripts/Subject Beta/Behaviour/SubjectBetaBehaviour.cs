@@ -63,6 +63,11 @@ public class SubjectBetaBehaviour : MonoBehaviour
     {
         StateMachine.CurrentState.Action(StateMachine);
     }
+
+    private void OnDestroy()
+    {
+        playerSound.MakeSoundEvent -= MonsterHearing;
+    }
 }
 
 public enum SubjectBetaStates

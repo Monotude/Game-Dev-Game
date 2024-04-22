@@ -17,6 +17,7 @@ public class UnlockSection2Door : MonoBehaviour
 
     private void OpenDoor()
     {
+        progressManager.ClearSection2();
         progressManager.Progress.ClearSection2();
         animator.Play("DoorOpening");
     }
@@ -26,7 +27,7 @@ public class UnlockSection2Door : MonoBehaviour
         if (progressManager.Progress.GetIsSection2Cleared())
         {
             keypad.IsCodeEntered = true;
-            animator.Play("DoorOpening");
+            OpenDoor();
         }
     }
 }
