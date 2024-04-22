@@ -11,6 +11,7 @@ public class ElectricalBoxInteract : MonoBehaviour, IInteractable
 
     private void ElectricalBoxOn()
     {
+        AudioManager.Instance.PlaySFX("Lever Pull");
         animator.Play("LeverDown");
     }
 

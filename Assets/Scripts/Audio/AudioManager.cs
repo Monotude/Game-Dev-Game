@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private Sound[] musicSounds, sFXSounds;
-    [SerializeField] private AudioSource musicSource, sFXSource;
+    [SerializeField] private Sound[] musicSounds, sFXSounds, Section1AmbienceSound, Section2AmbienceSound;
+    [SerializeField] private AudioSource musicSource, sFXSource, section1AmbienceSource, Section2AmbienceSource;
 
     public static AudioManager Instance { get; private set; }
 
@@ -14,6 +14,22 @@ public class AudioManager : MonoBehaviour
         musicSource.clip = sound.AudioClip;
         musicSource.Play();
     }
+
+    public void PlayAmbience(string name)
+    {
+        Sound sound = Array.Find(Section1AmbienceSound, sound => sound.Name == name);
+        section1AmbienceSource.clip = sound.AudioClip;
+        section1AmbienceSource.Play();
+    }
+
+    public void PlayAmbience2(string name)
+    {
+        Sound sound = Array.Find(Section2AmbienceSound, sound => sound.Name == name);
+        Section2AmbienceSource.clip = sound.AudioClip;
+        Section2AmbienceSource.Play();
+    }
+
+
 
     public void PauseMusic()
     {

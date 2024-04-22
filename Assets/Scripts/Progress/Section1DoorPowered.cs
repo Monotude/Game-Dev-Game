@@ -12,6 +12,8 @@ public class Section1DoorPowered : MonoBehaviour
 
     private void OpenDoor()
     {
+
+        AudioManager.Instance.PlaySFX("Door Open");
         leftDoor.Play("DoorOpenLeft");
         rightDoor.Play("DoorOpenRight");
     }

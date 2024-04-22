@@ -25,6 +25,7 @@ public class UnlockLoreRoomDoor : MonoBehaviour
         if (progressManager.Progress.GetIsLoreRoomOpen())
         {
             keypad.IsCodeEntered = true;
+            AudioManager.Instance.PlaySFX("Door Open");
             animator.Play("DoorOpening");
         }
     }
