@@ -20,9 +20,11 @@ public class CloseDoor : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && !isPowerOff && !progressManager.Progress.GetIsSection2Cleared())
         {
+            AudioManager.Instance.PlaySFX("Door Close");
             leftDoorAnimator.Play("DoorCloseLeft");
             rightDoorAnimator.Play("DoorCloseRight");
             isPowerOff = true;
+            AudioManager.Instance.PlayMusic("Section 1 Horror");
         }
     }
 }

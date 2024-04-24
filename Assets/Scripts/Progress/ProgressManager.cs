@@ -92,6 +92,7 @@ public class ProgressManager : MonoBehaviour
         PowerOnEvent?.Invoke();
         Destroy(subjectAlpha);
         AudioManager.Instance.StopMusic();
+        AudioManager.Instance.PlaySFX("Power Up SFX");
     }
 
     public void StartSection2()
@@ -104,6 +105,7 @@ public class ProgressManager : MonoBehaviour
         RenderSettings.ambientLight = new Color32(53, 53, 53, 0);
         Destroy(subjectBeta);
         AudioManager.Instance.StopMusic();
+        AudioManager.Instance.PlaySFX("Power Up SFX");
     }
 
     private void Start()

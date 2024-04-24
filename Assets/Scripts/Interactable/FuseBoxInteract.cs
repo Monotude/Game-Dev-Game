@@ -13,6 +13,7 @@ public class FuseBoxInteract : MonoBehaviour, IInteractable
 
     private void PowerFuseBox()
     {
+        AudioManager.Instance.PlaySFX("Place Fuse");
         fuse.SetActive(true);
         wire.GetComponent<Renderer>().material.color = Color.green;
     }

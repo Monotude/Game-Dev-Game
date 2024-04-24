@@ -4,6 +4,7 @@ public class SubjectAlphaSounds : MonoBehaviour
 {
     private StateMachine stateMachine;
     [SerializeField] private SoundEffect monsterScreams;
+    [SerializeField] private SoundEffect monsterHitScreams;
 
     private void Start()
     {
@@ -14,6 +15,11 @@ public class SubjectAlphaSounds : MonoBehaviour
     public void PlayMonsterScream()
     {
         monsterScreams.PlaySoundEffect();
+    }
+
+    public void PlayMonsterHitScream()
+    {
+        monsterHitScreams.PlaySoundEffect();
     }
 
     private void PlayStateSound(State state)

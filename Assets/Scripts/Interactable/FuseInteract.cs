@@ -11,6 +11,7 @@ public class FuseInteract : MonoBehaviour, IInteractable
 
     private void CollectFuse()
     {
+        AudioManager.Instance.PlaySFX("Item Pickup");
         Destroy(gameObject);
     }
 

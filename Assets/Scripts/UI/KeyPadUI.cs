@@ -12,6 +12,7 @@ public class KeypadUI : MonoBehaviour
 
     public void InputButton(int number)
     {
+        AudioManager.Instance.PlaySFX("Keypad Push");
         if (keypadText.text.Length < 4)
         {
             keypadText.text = keypadText.text + number;
@@ -20,11 +21,13 @@ public class KeypadUI : MonoBehaviour
 
     public void ClearInputCode()
     {
+        AudioManager.Instance.PlaySFX("Keypad Push");
         keypadText.text = "";
     }
 
     public void EnterInputCode()
     {
+        AudioManager.Instance.PlaySFX("Keypad Push");
         if (keypadText.text.Equals(Passcode))
         {
             CorrectCodeEvent?.Invoke();

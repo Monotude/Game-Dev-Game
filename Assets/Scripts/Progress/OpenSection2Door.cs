@@ -9,6 +9,8 @@ public class OpenSection2Door : MonoBehaviour
     private Animator leftDoorAnimator;
     private ProgressManager progressManager;
 
+    public bool IsDoorOpen { private get; set; }
+
     private void Awake()
     {
         rightDoorAnimator = rightDoor.GetComponent<Animator>();
@@ -20,7 +22,7 @@ public class OpenSection2Door : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !IsDoorOpen && !progressManager.Progress.GetIsSection2Cleared())
         {
             OpenDoor();
         }
@@ -36,6 +38,8 @@ public class OpenSection2Door : MonoBehaviour
 
     private void OpenDoor()
     {
+        IsDoorOpen = true;
+        AudioManager.Instance.PlaySFX("Door Open");
         rightDoorAnimator.Play("DoorOpenRight");
         leftDoorAnimator.Play("DoorOpenLeft");
     }

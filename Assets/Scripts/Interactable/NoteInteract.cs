@@ -6,6 +6,7 @@ public class NoteInteract : MonoBehaviour, IInteractable
 
     public void Interact()
     {
+        AudioManager.Instance.PlaySFX("Paper SFX");
         note.SetActive(true);
         PauseMenu.PauseGame();
     }

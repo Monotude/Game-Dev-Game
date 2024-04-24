@@ -35,12 +35,12 @@ public class SubjectBetaBehaviour : MonoBehaviour
     {
         float distanceFromSource = (StateMachine.NavMeshAgent.transform.position - soundPosition).magnitude;
 
-        if (soundLoudness / distanceFromSource >= aggroRange)
+        if (soundLoudness / distanceFromSource >= aggroRange && !(StateMachine.CurrentState is AggroState))
         {
             StateMachine.SwitchState(StateMachine.AllStates[(int)SubjectBetaStates.AggroState]);
         }
 
-        else if (soundLoudness / distanceFromSource >= investigationRange)
+        else if (soundLoudness / distanceFromSource >= investigationRange && !(StateMachine.CurrentState is AggroState))
         {
             StateMachine.NavMeshAgent.destination = soundPosition;
             StateMachine.SwitchState(StateMachine.AllStates[(int)SubjectBetaStates.InvestigateState]);

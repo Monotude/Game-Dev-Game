@@ -6,10 +6,14 @@ public class SoundEffect
 {
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] variations;
+    [Range(0.01f, 20f)]
+    [SerializeField] private float minPitchVariation;
+    [Range(0.01f, 20f)]
+    [SerializeField] private float maxPitchVariation;
 
     public void PlaySoundEffect()
     {
-        audioSource.pitch = UnityEngine.Random.Range(0.9f, 1.2f);
+        audioSource.pitch = UnityEngine.Random.Range(minPitchVariation, maxPitchVariation);
         audioSource.PlayOneShot(GetVariation());
     }
 

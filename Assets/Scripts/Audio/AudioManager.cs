@@ -3,15 +3,16 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private Sound[] musicSounds, sFXSounds;
+    [SerializeField] private Music[] music;
+    [SerializeField] private Sound[] sounds;
     [SerializeField] private AudioSource musicSource, sFXSource;
 
     public static AudioManager Instance { get; private set; }
 
     public void PlayMusic(string name)
     {
-        Sound sound = Array.Find(musicSounds, sound => sound.Name == name);
-        musicSource.clip = sound.AudioClip;
+        Music song = Array.Find(music, sound => sound.Name == name);
+        musicSource.clip = song.AudioClip;
         musicSource.Play();
     }
 
@@ -32,8 +33,8 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySFX(string name)
     {
-        Sound sound = Array.Find(sFXSounds, sound => sound.Name == name);
-        sFXSource.PlayOneShot(sound.AudioClip);
+        Sound sound = Array.Find(sounds, sound => sound.Name == name);
+        sound.SoundEffect.PlaySoundEffect();
     }
 
     public void StopSFX()
@@ -57,11 +58,21 @@ public class AudioManager : MonoBehaviour
 }
 
 [Serializable]
-internal class Sound
+internal class Music
 {
     [SerializeField] private string name;
     [SerializeField] private AudioClip audioClip;
 
-    public string Name { get => this.name; set => this.name = value; }
-    public AudioClip AudioClip { get => this.audioClip; set => this.audioClip = value; }
+    public string Name => this.name;
+    public AudioClip AudioClip => this.audioClip;
+}
+
+[Serializable]
+internal class Sound
+{
+    [SerializeField] private string name;
+    [SerializeField] private SoundEffect soundEffect;
+
+    public string Name => this.name;
+    public SoundEffect SoundEffect => this.soundEffect;
 }
