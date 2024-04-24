@@ -8,6 +8,7 @@ public class ProgressManager : MonoBehaviour
     [SerializeField] private Transform mainCamera;
     [SerializeField] private GameObject subjectAlpha;
     [SerializeField] private GameObject subjectBeta;
+    [SerializeField] private GameObject theGang;
 
     public int FuseCount { get => this.fuseCount; set => this.fuseCount = value; }
     public Progress Progress { get; set; }
@@ -117,7 +118,7 @@ public class ProgressManager : MonoBehaviour
         LoadGameEvent += LoadSubjectBeta;
         LoadGameEvent += CheckClearSection1;
         LoadGameEvent?.Invoke();
+        theGang.SetActive(false);
         AudioManager.Instance.StopSFX();
-        RenderSettings.ambientLight = new Color32(0, 0, 0, 0);
     }
 }
