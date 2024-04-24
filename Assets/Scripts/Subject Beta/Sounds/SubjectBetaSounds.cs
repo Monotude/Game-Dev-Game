@@ -26,13 +26,7 @@ public class SubjectBetaSounds : MonoBehaviour
     {
         if (state is AggroState)
         {
-            
             AudioManager.Instance.PlayMusic("Section 1 Chase");
         }
-
-        //else 
-        //{
-            //AudioManager.Instance.PlayMusic("Section 1 Horror");
-        //}
     }
 }

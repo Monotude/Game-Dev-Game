@@ -50,10 +50,8 @@ public class SaveManager : MonoBehaviour
             string json = File.ReadAllText(path);
             progressManager.Progress = JsonUtility.FromJson<Progress>(json);
         }
-        else
-        {
-            progressManager.Progress = new Progress(progressManager.FuseCount);
-        }
+
+        progressManager.Progress ??= new Progress(progressManager.FuseCount);
     }
 
     public void LoadConfig()
@@ -65,10 +63,8 @@ public class SaveManager : MonoBehaviour
             string json = File.ReadAllText(path);
             optionsMenu.Config = JsonUtility.FromJson<Config>(json);
         }
-        else
-        {
-            optionsMenu.Config = new Config();
-        }
+
+        optionsMenu.Config ??= new Config();
     }
 
     private void Awake()
@@ -83,11 +79,5 @@ public class SaveManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    private void OnApplicationQuit()
-    {
-        SaveProgress();
-        SaveConfig();
     }
 }

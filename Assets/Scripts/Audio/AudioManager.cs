@@ -3,33 +3,18 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private Sound[] musicSounds, sFXSounds, Section1AmbienceSound, Section2AmbienceSound;
-    [SerializeField] private AudioSource musicSource, sFXSource, section1AmbienceSource, Section2AmbienceSource;
+    [SerializeField] private Music[] music;
+    [SerializeField] private Sound[] sounds;
+    [SerializeField] private AudioSource musicSource, sFXSource;
 
     public static AudioManager Instance { get; private set; }
 
     public void PlayMusic(string name)
     {
-        Sound sound = Array.Find(musicSounds, sound => sound.Name == name);
-        musicSource.clip = sound.AudioClip;
+        Music song = Array.Find(music, sound => sound.Name == name);
+        musicSource.clip = song.AudioClip;
         musicSource.Play();
     }
-
-    public void PlayAmbience(string name)
-    {
-        Sound sound = Array.Find(Section1AmbienceSound, sound => sound.Name == name);
-        section1AmbienceSource.clip = sound.AudioClip;
-        section1AmbienceSource.Play();
-    }
-
-    public void PlayAmbience2(string name)
-    {
-        Sound sound = Array.Find(Section2AmbienceSound, sound => sound.Name == name);
-        Section2AmbienceSource.clip = sound.AudioClip;
-        Section2AmbienceSource.Play();
-    }
-
-
 
     public void PauseMusic()
     {
@@ -48,8 +33,8 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySFX(string name)
     {
-        Sound sound = Array.Find(sFXSounds, sound => sound.Name == name);
-        sFXSource.PlayOneShot(sound.AudioClip);
+        Sound sound = Array.Find(sounds, sound => sound.Name == name);
+        sound.SoundEffect.PlaySoundEffect();
     }
 
     public void StopSFX()
@@ -73,11 +58,21 @@ public class AudioManager : MonoBehaviour
 }
 
 [Serializable]
-internal class Sound
+internal class Music
 {
     [SerializeField] private string name;
     [SerializeField] private AudioClip audioClip;
 
-    public string Name { get => this.name; set => this.name = value; }
-    public AudioClip AudioClip { get => this.audioClip; set => this.audioClip = value; }
+    public string Name => this.name;
+    public AudioClip AudioClip => this.audioClip;
+}
+
+[Serializable]
+internal class Sound
+{
+    [SerializeField] private string name;
+    [SerializeField] private SoundEffect soundEffect;
+
+    public string Name => this.name;
+    public SoundEffect SoundEffect => this.soundEffect;
 }

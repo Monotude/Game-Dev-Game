@@ -106102,56 +106102,56 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: PlayAgroFootstep
+    functionName: PlayPatrolFootstep
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.68
-    functionName: PlayAgroFootstep
+    functionName: PlayPatrolFootstep
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.28
-    functionName: PlayAgroFootstep
+    functionName: PlayPatrolFootstep
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.8
-    functionName: PlayAgroFootstep
+    functionName: PlayPatrolFootstep
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 2.4
-    functionName: PlayAgroFootstep
+    functionName: PlayPatrolFootstep
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 3.04
-    functionName: PlayAgroFootstep
+    functionName: PlayPatrolFootstep
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 3.6
-    functionName: PlayAgroFootstep
+    functionName: PlayPatrolFootstep
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 4.24
-    functionName: PlayAgroFootstep
+    functionName: PlayPatrolFootstep
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

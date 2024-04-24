@@ -6,14 +6,13 @@ public class KeypadUI : MonoBehaviour
 {
     [SerializeField] private GameObject keypadUI;
     [SerializeField] private TextMeshProUGUI keypadText;
-    [SerializeField] private SoundEffect buttonSfx;
 
     public string Passcode { get; set; }
     public Action CorrectCodeEvent;
 
     public void InputButton(int number)
     {
-        buttonSfx.PlaySoundEffect();
+        AudioManager.Instance.PlaySFX("Keypad Push");
         if (keypadText.text.Length < 4)
         {
             keypadText.text = keypadText.text + number;
@@ -22,13 +21,13 @@ public class KeypadUI : MonoBehaviour
 
     public void ClearInputCode()
     {
-        buttonSfx.PlaySoundEffect();
+        AudioManager.Instance.PlaySFX("Keypad Push");
         keypadText.text = "";
     }
 
     public void EnterInputCode()
     {
-        buttonSfx.PlaySoundEffect();
+        AudioManager.Instance.PlaySFX("Keypad Push");
         if (keypadText.text.Equals(Passcode))
         {
             CorrectCodeEvent?.Invoke();
