@@ -117,5 +117,7 @@ public class ProgressManager : MonoBehaviour
         LoadGameEvent += LoadSubjectBeta;
         LoadGameEvent += CheckClearSection1;
         LoadGameEvent?.Invoke();
+        AudioManager.Instance.StopSFX();
+        RenderSettings.ambientLight = new Color32(0, 0, 0, 0);
     }
 }
