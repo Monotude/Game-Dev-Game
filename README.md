@@ -2,6 +2,11 @@
 
 Pre-made Assets Used:
 
+CC Licenses:
+https://creativecommons.org/licenses/by/4.0/
+https://creativecommons.org/public-domain/cc0/
+https://creativecommons.org/licenses/by/3.0/deed.en
+
 Classic 64 Asset Pack - https://craigsnedeker.itch.io/classic64-asset-library
 Hospital Horror Pack - https://assetstore.unity.com/packages/3d/environments/hospital-horror-pack-44045
 Urban Nightmares NYC inspired Texture Pack - https://thegasstation.itch.io/urban-nightmares-nyc-inspired-texture-pack
