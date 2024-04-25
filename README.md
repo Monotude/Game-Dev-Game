@@ -11,7 +11,7 @@ Concrete Texture Pack 2 - https://www.deviantart.com/agf81/art/Concrete-Texture-
 
 Dirty Sci-Fi Door Texture - https://www.deviantart.com/scifilicious/art/DIRTY-SCIFI-DOOR-TEXTURE-727910507
 
-Ink - Arrow Style PNG - https://www.pngkey.com/download/u2q8r5i1i1w7a9e6_ink-arrow-style-png/ ](https://www.pngkey.com/detail/u2q8r5i1i1w7a9e6_ink-arrow-style-png/
+Ink - Arrow Style PNG - https://www.pngkey.com/detail/u2q8r5i1i1w7a9e6_ink-arrow-style-png/
 
 PS1 PSX Old Interior Pack - https://crimsongcat.itch.io/ps1-old-interior-pack 
 
