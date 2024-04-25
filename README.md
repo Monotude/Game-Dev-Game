@@ -69,3 +69,14 @@ Flashlight SFX - https://youtu.be/-38q978nFnc
 
 Skin Walker SFX for monster 1 - https://youtu.be/cpk5UyA2mSE?t=7
 
+Invisible Ink:
+
+To create the desired invisible ink effect, we used decal projectors and a custom shader graph that took the status of the UV light as a parameter.
+
+When the UV light is off, the alpha channel of the material is set to 0 so that the decal is not visible. 
+
+When the UV light is turned on, the decal becomes emissive and a sphere mask is placed in the middle of the screen so that any part of the decal outside the light does not glow. 
+
+For blood, a similar shader is used; however, when the UV is off, the decal remains visible and red.  
+
+
