@@ -148,3 +148,14 @@ Spoilers for game puzzles:
 6753 is code for section 2 door
 
 1985 is code for hub door
+
+
+Bugs:
+
+If you open pause menu while using a note you can move around.
+
+If you havent done section 2 and you start the elevator sequence you can go into section 2.
+
+Audio issues with monsters.
+
+Main menu volume lower than intended.
