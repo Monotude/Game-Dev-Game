@@ -59,9 +59,17 @@ Industrial Pipes - https://sketchfab.com/3d-models/industrial-pipes-79f64d09a3cd
 
 Wood Shipping Box (low poly) - https://sketchfab.com/3d-models/wood-shipping-box-low-poly-6606aaf169b74eb6908fbce1090ca248
 
-Anthony Bonus: 
-1.	Flashlight SFX - https://youtu.be/-38q978nFnc
-2.	Skin Walker SFX for monster 1 - https://youtu.be/cpk5UyA2mSE?t=7
-3.	Monster Scream https://youtu.be/BaVIxQPheak?t=25
-4.	UV Light SFX - https://youtu.be/h30DtkXMBwI?t=2
-5.	Monster 1 Model and Animations - https://www.mixamo.com
+Monster 1 Model and Animations - https://www.mixamo.com
+
+Code Used:
+
+Interaction - https://www.youtube.com/watch?v=K06lVKiY-sY
+
+SFX Used:
+
+UV Light SFX - https://youtu.be/h30DtkXMBwI?t=2
+
+Flashlight SFX - https://youtu.be/-38q978nFnc
+
+Skin Walker SFX for monster 1 - https://youtu.be/cpk5UyA2mSE?t=7
+
