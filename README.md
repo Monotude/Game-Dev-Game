@@ -105,7 +105,7 @@ https://creativecommons.org/licenses/by/3.0/deed.en
 Subject Alpha State Machine: 
 
 
-The AI immediately goes into a chase state when the first fuse is grabbed. The flee state is triggered in contact with the raycast of the UV light, which then transitions into a patrol state. In the patrol state, it visits a random waypoint and idles when it gets there, after the idle period it patrols to a new waypoint. Alpha will chase based on line of sight when patrolling or idling, it can also chase if it hasnt been in chase for a random range (its 25-35 seconds).
+The AI immediately goes into a chase state when the first fuse is grabbed. The flee state is triggered when UV light is shining on the monster (and in chase state), and when the UV light is not on alpha (with a buffer) then he transitions into the patrol state. In the patrol state, it visits a random waypoint and idles when it gets there, after the idle period it patrols to a new waypoint. Alpha will chase based on line of sight when patrolling or idling, it can also chase if it hasnt been in chase for a random range (its 25-35 seconds).
 
 
 Subject Beta State Machine: 
