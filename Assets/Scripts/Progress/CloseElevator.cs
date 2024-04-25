@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CloseElevator : MonoBehaviour
 {
@@ -20,5 +21,10 @@ public class CloseElevator : MonoBehaviour
     private void CloseDoors()
     {
         animator.Play("ElevatorClose");
+    }
+
+    public void EndGame()
+    {
+        SceneManager.LoadScene("Main Menu");
     }
 }
