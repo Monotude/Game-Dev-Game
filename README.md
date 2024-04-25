@@ -1,13 +1,15 @@
 # Game-Dev-Game
-
-Pre-made Assets Used:
-
 CC Licenses:
+
 https://creativecommons.org/licenses/by/4.0/
 
 https://creativecommons.org/public-domain/cc0/
 
 https://creativecommons.org/licenses/by/3.0/deed.en
+
+
+Pre-made Assets Used:
+
 
 Classic 64 Asset Pack - https://craigsnedeker.itch.io/classic64-asset-library
 
