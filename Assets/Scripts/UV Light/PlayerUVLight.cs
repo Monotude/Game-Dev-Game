@@ -5,6 +5,7 @@ public class PlayerUVLight : MonoBehaviour
     private PlayerSound playerSound;
     private PlayerFlashlight playerFlashlight;
     private Light uVLight;
+    private AudioSource audioSource;
     private bool isFlashlightOn;
     private bool isUVLightOn;
     private float currentTimeHeld;
@@ -36,7 +37,7 @@ public class PlayerUVLight : MonoBehaviour
     {
         IsUVLightOn = false;
         playerFlashlight.IsFlashlightOn = isFlashlightOn;
-        AudioManager.Instance.StopSFX();
+        audioSource.Stop();
     }
 
     private void EnableUVLight()
@@ -45,7 +46,7 @@ public class PlayerUVLight : MonoBehaviour
         isFlashlightOn = playerFlashlight.IsFlashlightOn;
         playerFlashlight.IsFlashlightOn = false;
         IsUVLightOn = true;
-        AudioManager.Instance.PlaySFX("UV Light");
+        audioSource.Play();
     }
 
     private void IncreaseUVLightCharges()
@@ -58,7 +59,7 @@ public class PlayerUVLight : MonoBehaviour
         playerSound = GameObject.FindWithTag("Player").GetComponent<PlayerSound>();
         playerFlashlight = GameObject.FindWithTag("Flashlight").GetComponent<PlayerFlashlight>();
         uVLight = GameObject.FindWithTag("UV Light").GetComponent<Light>();
-        AudioManager.Instance.StopSFX();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
