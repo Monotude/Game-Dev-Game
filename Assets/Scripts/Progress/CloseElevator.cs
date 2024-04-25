@@ -1,9 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CloseElevator : MonoBehaviour
 {
+    private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -14,6 +19,6 @@ public class CloseElevator : MonoBehaviour
 
     private void CloseDoors()
     {
-        gameObject.GetComponent<Animator>().Play("ElevatorClose");
+        animator.Play("ElevatorClose");
     }
 }

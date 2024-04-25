@@ -11,7 +11,6 @@ public class OpenElevatorDoors : MonoBehaviour
 
     public void StartElevatorProgress()
     {
-        Destroy(gameObject.GetComponent<Collider>());
         progressBar.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
         gameObject.GetComponent<Animator>().Play("ElevatorProgressBar");
     }
