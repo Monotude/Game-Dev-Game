@@ -100,3 +100,48 @@ https://creativecommons.org/licenses/by/4.0/
 https://creativecommons.org/public-domain/cc0/
 
 https://creativecommons.org/licenses/by/3.0/deed.en
+
+
+Cool things in the game:
+
+
+State machines:
+
+
+
+
+
+Save system:
+
+
+Any settings that you change will be saved to JSON and will be loaded as soon as you relaunch the game. Going to menu and back to game does not get rid of your config. 
+
+This is the same for your progress. The following will be saved upon death or closing the game through game menu (force closing through windows does not save): 
+
+Putting a fuse in a fuse box (any fuses grabbed will be lost).
+
+Turning on an electrical box.
+
+Starting section 2 (will spawn you in section 2).
+
+Opening the hub (will spawn you in the hub).
+
+
+UV Light Environment:
+
+
+To create the desired invisible ink effect, we used decal projectors and a custom shader graph that took the status of the UV light as a parameter.
+
+When the UV light is off, the alpha channel of the material is set to 0 so that the decal is not visible.
+
+When the UV light is turned on, the decal becomes emissive and a sphere mask is placed in the middle of the screen so that any part of the decal outside the light does not glow.
+
+For blood, a similar shader is used; however, when the UV is off, the decal remains visible and red.
+
+
+Spoilers for game puzzles:
+
+
+6753 is code for section 2 door
+
+1985 is code for hub door
