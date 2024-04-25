@@ -102,13 +102,16 @@ https://creativecommons.org/public-domain/cc0/
 https://creativecommons.org/licenses/by/3.0/deed.en
 
 
-Cool things in the game:
+Subject Alpha State Machine: 
 
 
-State machines:
+The AI immediately goes into a chase state when the first fuse is grabbed. The flee state is triggered in contact with the raycast of the UV light, which then transitions into a patrol state. In the patrol state, it visits a random waypoint and idles when it gets there, after the idle period it patrols to a new waypoint. Alpha will chase based on line of sight when patrolling or idling, it can also chase if it hasnt been in chase for a random range (its 25-35 seconds).
 
 
+Subject Beta State Machine: 
 
+
+The AI begins in a roaming state that navigates to random waypoints when its in a certain range of a waypoint itll go to a different one. If a sound is loud enough, it will chase and kill the player. Otherwise, sounds that aren’t dangerously loud will cause an investigative state where it crawls to the audio source sniff the area. Then it will return to patrolling. 
 
 
 Save system:
