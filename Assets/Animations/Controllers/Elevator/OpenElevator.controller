@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6ed0da373688ffb42a6d9bdf1a07d891, type: 2}
+  m_Motion: {fileID: 7400000, guid: 6aa5f9a27247699419dedb208c5a495c, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -88,7 +88,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ElevatorProgressBar
-  m_Speed: 0.75
+  m_Speed: 0.08
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -100,7 +100,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 56e76fc4043a64c4e8ab4d60d626cefc, type: 2}
+  m_Motion: {fileID: 7400000, guid: c2a22bf135f75974bad0a95a5b2911f7, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
